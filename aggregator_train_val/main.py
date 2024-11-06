@@ -26,7 +26,7 @@ def parse_arguments():
     
     parser.add_argument('--output_dir', type=str, default='./predictions', help='Directory to save predictions') 
     
-    parser.add_argument('--model', type=str, default='AdaptedTransMIL', help='Model architecture to use') 
+    parser.add_argument('--model', type=str, default='ATransMIL', help='Model architecture to use') 
     parser.add_argument('--groups', type=int, default=3, help='Number of slide matrix divisions') 
     parser.add_argument('--classes', type=int, default=186, help='Output class number by the classifier') 
     parser.add_argument('--cl_weight', type=float, default=20, help='Weight for contrastive loss') 
