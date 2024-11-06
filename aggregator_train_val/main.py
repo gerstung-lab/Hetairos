@@ -5,7 +5,7 @@ import pytorch_lightning as pl
 from pytorch_lightning import Trainer
 
 from utils import *
-from models import ModelModule
+from model_module import ModelModule
 from data_module import DataModule
 
     

@@ -13,8 +13,6 @@ import pytorch_lightning as pl
 from nystrom_attention import NystromAttention
 
 from Optimizer import create_optimizer
-from Loss import create_loss
-from Loss import Contrastive_Loss
 from utils import cross_entropy_torch
 from utils import update_ema_variables
 
@@ -161,6 +159,38 @@ class ATransMIL(nn.Module):
         return results_dict
     
 
+class ContrastiveLoss(nn.Module):
+    def __init__(self, gap=0.2, eps=1e-8):
+        super(ContrastiveLoss, self).__init__()
+        self.gap = gap
+        self.eps = eps
+
+    def forward(self, embeddings: torch.Tensor, template: torch.Tensor, label: int, sub_embeddings: list):
+        # Normalize embeddings and template
+        embeddings_norm = F.normalize(embeddings, p=2, dim=1)
+        template_norm = F.normalize(template, p=2, dim=1)
+        template_norm = torch.nan_to_num(template_norm, nan=0.0)
+        
+        # Normalize concatenated sub-embeddings and calculate similarity matrix
+        sub_mean_embeddings = F.normalize(torch.cat(sub_embeddings, dim=0), p=2, dim=1)
+        sim_mat = torch.mm(sub_mean_embeddings, sub_mean_embeddings.t())
+        loss_inner = 3 - torch.sum(torch.tril(sim_mat, diagonal=-1))
+        
+        # Calculate cosine similarity between embeddings and template
+        cos_sim = torch.mm(embeddings_norm, template_norm.t())
+        
+        # Calculate loss for the correct label
+        loss_same = 1 - cos_sim[0, label]
+        
+        # Calculate loss for incorrect labels
+        loss_dif = torch.sum(torch.clamp(cos_sim[0, :] - self.gap, min=0) * (torch.arange(cos_sim.shape[1]) != label).float())
+        
+        # Compute final loss
+        loss = 0.5 * loss_same + 0.5 * loss_dif / (cos_sim.shape[1] - 1) + 0.2 * loss_inner
+        
+        return loss
+
+
 class ModelModule(pl.LightningModule):
     def __init__(self, Model, Loss, Optimizer, **kargs):
         super(ModelModule, self).__init__()
@@ -168,8 +198,8 @@ class ModelModule(pl.LightningModule):
         self.load_model()
 
         # Initialize loss and optimizer
-        self.loss = create_loss(Loss)
-        self.contrastive_loss = Contrastive_Loss()
+        self.loss = nn.CrossEntropyLoss()
+        self.contrastive_loss = ContrastiveLoss()
         self.cl_w = float(Model.cl_w)
         self.optimizer = Optimizer
 
