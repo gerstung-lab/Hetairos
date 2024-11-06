@@ -268,7 +268,6 @@ class ModelModule(pl.LightningModule):
         return group_loss
     
     def on_train_epoch_end(self):
-        # Log accuracy for each class
         for c in range(self.n_classes):
             count = self.train_count[c]["count"]
             correct = self.train_count[c]["correct"]
@@ -323,7 +322,7 @@ class ModelModule(pl.LightningModule):
                 acc = None
             else:
                 acc = float(correct) / count
-            print('class {}: acc {}, correct {}/{}'.format(c, acc, correct, count))
+                print('class {}: acc {}, correct {}/{}'.format(c, acc, correct, count))
 
         self.val_count = [{"count": 0, "correct": 0} for i in range(self.n_classes)]
         self.val_step_outputs.clear()
@@ -344,12 +343,11 @@ class ModelModule(pl.LightningModule):
         self.test_count[Y]["count"] += 1
 
         results_dict = {'logits': logits, 'Y_prob': Y_prob, 'Y_hat': Y_hat, 'label': label, 
-                        'slide_id': slide_id, 'slide_features': embeddings}  # 'embeddings': embeddings
+                        'slide_id': slide_id, 'slide_features': embeddings} 
         self.test_step_outputs.append(results_dict)
         return results_dict
 
     def on_test_epoch_end(self):
-
         if isinstance(self.test_step_outputs[0]['logits'], dict):
             probs = torch.cat([x['Y_prob']['slide_logit'] for x in self.test_step_outputs], dim=0)
             max_probs = torch.stack([x['Y_hat']['slide_logit'] for x in self.test_step_outputs])
@@ -362,20 +360,13 @@ class ModelModule(pl.LightningModule):
         slide_embed = torch.cat([x['slide_features'] for x in self.test_step_outputs], dim=0)
         id_set = [x['slide_id'][0] for x in self.test_step_outputs]
 
+        # Save predictions (slide IDs, predicted probabilities, labels, slide features) to a .h5 file
         os.makedirs(self.preds_save_dir, exist_ok=True)
-
         with h5py.File(os.path.join(self.preds_save_dir, self.exp_name+'_predictions.h5'), 'w') as prediction_file:
-            prediction_file.create_dataset('embeddings', data=slide_embed.cpu().numpy())
+            prediction_file.create_dataset('slide_id', data=id_set)
             prediction_file.create_dataset('probs', data=probs.cpu().numpy())
             prediction_file.create_dataset('labels', data=target.cpu().numpy()[:, 0])
-            prediction_file.create_dataset('slide_id', data=id_set)
-
-        auc = self.AUROC(probs, target.squeeze())
-        metrics = self.test_metrics(max_probs.squeeze() , target.squeeze())
-        metrics['auc'] = auc
-        for keys, values in metrics.items():
-            print(f'{keys} = {values}')
-            metrics[keys] = values.cpu().numpy()
+            prediction_file.create_dataset('embeddings', data=slide_embed.cpu().numpy())
         
         for c in range(self.n_classes):
             count = self.test_count[c]["count"]
@@ -384,8 +375,15 @@ class ModelModule(pl.LightningModule):
                 acc = None
             else:
                 acc = float(correct) / count
-            print('class {}: acc {}, correct {}/{}'.format(c, acc, correct, count))
+                print('class {}: acc {}, correct {}/{}'.format(c, acc, correct, count))
         
+        auc = self.AUROC(probs, target.squeeze())
+        metrics = self.test_metrics(max_probs.squeeze() , target.squeeze())
+        metrics['auc'] = auc
+        for keys, values in metrics.items():
+            print(f'{keys} = {values}')
+            metrics[keys] = values.cpu().numpy()
+
         result = pd.DataFrame([metrics])
         result.to_csv(self.log_path / f'result{self.fold}.csv')
         self.test_step_outputs.clear()
