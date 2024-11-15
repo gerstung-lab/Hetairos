@@ -13,9 +13,7 @@ import pytorch_lightning as pl
 from nystrom_attention import NystromAttention
 
 from Optimizer import create_optimizer
-from utils import cross_entropy_torch
-from utils import update_ema_variables
-from utils import set_seed
+from utils import cross_entropy_torch, update_ema_variables, set_seed
 
 
 class TransLayer(nn.Module):
@@ -311,7 +309,6 @@ class ModelModule(pl.LightningModule):
         self.train_count = [{"count": 0, "correct": 0} for i in range(self.n_classes)]
 
     def validation_step(self, batch, batch_idx):
-        set_seed(42)  # 固定随机种子
         data, age, loc, label, _ = batch
         results_dict = self.model(data=data, label=label, age=age, loc=loc, shuffle=False)
         logits = results_dict['logits']
@@ -361,7 +358,6 @@ class ModelModule(pl.LightningModule):
         self.val_step_outputs.clear()
 
     def test_step(self, batch, batch_idx):
-        set_seed(42)  # 固定随机种子
         data, age, loc, label, slide_id = batch
         results_dict = self.model(data=data, label=label, age=age, loc=loc, shuffle=False)
         logits = results_dict['logits']

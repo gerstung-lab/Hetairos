@@ -38,6 +38,9 @@ def parse_arguments():
 
 # Main function that orchestrates the training/testing process
 def main(cfg):
+    # Set random seed for reproducibility
+    if cfg['General']['mode'] != 'train':
+        set_seed(42)
 
     # Load loggers and callbacks based on configuration
     loggers = load_loggers(cfg)
