@@ -38,6 +38,7 @@ def parse_arguments():
 
 # Main function that orchestrates the training/testing process
 def main(cfg):
+
     # Load loggers and callbacks based on configuration
     loggers = load_loggers(cfg)
     callbacks = load_callbacks(cfg)
@@ -52,6 +53,7 @@ def main(cfg):
         callbacks=callbacks,
         max_epochs=cfg['General']['epochs'],
         accelerator='gpu',
+        devices='auto',
         precision=cfg['General']['precision'],
         accumulate_grad_batches=cfg['General']['grad_acc'],
         check_val_every_n_epoch=1,
@@ -61,15 +63,17 @@ def main(cfg):
     if cfg['General']['mode'] == 'train':
         # Resume training if the resume flag is set
         if cfg['resume']:
-            last_checkpoint_path = os.path.join(cfg['log_path'], 'last.ckpt')
+            last_checkpoint_path = os.path.join(cfg['General']['log_path'], 'last.ckpt')
             model = model.load_from_checkpoint(checkpoint_path=last_checkpoint_path, cfg=cfg)
         trainer.fit(model=model, datamodule=data_module)
+
     else:
         # Test the model using the latest checkpoints
-        latest_checkpoint_path = max(cfg['log_path'].glob('*.ckpt'), key=os.path.getctime)
+        latest_checkpoint_path = max(cfg['General']['log_path'].glob('*.ckpt'), key=os.path.getctime)
         print(f'Testing with checkpoint: {latest_checkpoint_path}')
         loaded_model = model.load_from_checkpoint(checkpoint_path=latest_checkpoint_path, Data=cfg['Data'])
         trainer.test(model=loaded_model, datamodule=data_module)
+
 
 
 if __name__ == '__main__':

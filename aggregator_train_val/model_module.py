@@ -15,6 +15,7 @@ from nystrom_attention import NystromAttention
 from Optimizer import create_optimizer
 from utils import cross_entropy_torch
 from utils import update_ema_variables
+from utils import set_seed
 
 
 class TransLayer(nn.Module):
@@ -73,7 +74,7 @@ class ATransMIL(nn.Module):
         super(ATransMIL, self).__init__()
         self.pos_layer = PPEG(dim=512)
         self._fc1 = nn.Sequential(nn.Linear(embedding_size, 512), nn.ReLU())
-        self.cls_tokens = nn.Parameter(torch.randn(group_num, 1, 512))
+        self.cls_tokens = nn.Parameter(torch.randn(1, 512))
         self.n_classes = n_classes
         self.layer1 = TransLayer(dim=512)
         self.layer2 = TransLayer(dim=512)
@@ -111,7 +112,7 @@ class ATransMIL(nn.Module):
 
             #---->add a unique token for each sub-bag
             B = h_sub.shape[0]
-            cls_token = self.cls_tokens[sub_num].expand(B, -1, -1).cuda()
+            cls_token = self.cls_tokens.expand(B, -1, -1).cuda()
             h_sub = torch.cat((cls_token, h_sub), dim=1)
 
             #---->Translayer x1
@@ -310,6 +311,7 @@ class ModelModule(pl.LightningModule):
         self.train_count = [{"count": 0, "correct": 0} for i in range(self.n_classes)]
 
     def validation_step(self, batch, batch_idx):
+        set_seed(42)  # 固定随机种子
         data, age, loc, label, _ = batch
         results_dict = self.model(data=data, label=label, age=age, loc=loc, shuffle=False)
         logits = results_dict['logits']
@@ -325,6 +327,7 @@ class ModelModule(pl.LightningModule):
 
         val_results = {'logits': logits, 'Y_prob': Y_prob, 'Y_hat': Y_hat, 'label': label}
         self.val_step_outputs.append(val_results)
+        
         return val_results
     
     def on_validation_epoch_end(self):
@@ -358,6 +361,7 @@ class ModelModule(pl.LightningModule):
         self.val_step_outputs.clear()
 
     def test_step(self, batch, batch_idx):
+        set_seed(42)  # 固定随机种子
         data, age, loc, label, slide_id = batch
         results_dict = self.model(data=data, label=label, age=age, loc=loc, shuffle=False)
         logits = results_dict['logits']
@@ -375,6 +379,7 @@ class ModelModule(pl.LightningModule):
         results_dict = {'logits': logits, 'Y_prob': Y_prob, 'Y_hat': Y_hat, 'label': label, 
                         'slide_id': slide_id, 'slide_features': embeddings} 
         self.test_step_outputs.append(results_dict)
+        
         return results_dict
 
     def on_test_epoch_end(self):
@@ -425,7 +430,7 @@ class ModelModule(pl.LightningModule):
         else:
             camel_name = name
         try:
-            Model = getattr(importlib.import_module(f'models.{name}'), camel_name)
+            Model = getattr(importlib.import_module(f'model_module.{name}'), camel_name)
         except:
             raise ValueError('Invalid Module File Name or Invalid Class Name!')
         self.model = self.instancialize(Model)
