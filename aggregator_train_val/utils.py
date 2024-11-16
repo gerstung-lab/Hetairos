@@ -49,6 +49,8 @@ def load_loggers(cfg):
     cfg.log_path = Path(log_path) / f'{cfg.Model.exp_name}' 
     print(f'---->Log dir: {cfg.log_path}')
     wandb_logger = pl_loggers.WandbLogger(project=cfg.Model.exp_name, save_dir=str(cfg.log_path))
+    log_dir = cfg.log_path / 'wandb'
+    Path(log_dir).mkdir(exist_ok=True, parents=True) # in case wandb fails to store the logs
     return wandb_logger
 
 
@@ -71,7 +73,7 @@ def load_callbacks(cfg):
     Mycallbacks.append(early_stop_callback)
     
     # Model checkpoint callback to save the best model based on acc
-    if cfg.General.server == 'train' :
+    if cfg.General.mode == 'train' :
         Mycallbacks.append(ModelCheckpoint(monitor = 'multi_acc',
                                          dirpath = str(cfg.log_path),
                                          filename = '{epoch:02d}-{multi_acc:.4f}',
@@ -167,7 +169,7 @@ def update_ema_variables(old_params, new_params, current_epoch):
 
 
 def cross_entropy_torch(x, y):
-    x_softmax = [F.softmax(x[i]) for i in range(len(x))]
+    x_softmax = [F.softmax(x[i], dim=0) for i in range(len(x))]
     x_log = torch.tensor([torch.log(x_softmax[i][y[i]]) for i in range(len(y))])
     loss = - torch.sum(x_log) / len(y)
     return loss

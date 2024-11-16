@@ -1,4 +1,5 @@
 import os
+import sys
 import h5py
 import inspect
 import importlib
@@ -182,7 +183,8 @@ class ContrastiveLoss(nn.Module):
         loss_same = 1 - cos_sim[0, label]
         
         # Calculate loss for incorrect labels
-        loss_dif = torch.sum(torch.clamp(cos_sim[0, :] - self.gap, min=0) * (torch.arange(cos_sim.shape[1]) != label).float())
+        mask = (torch.arange(cos_sim.shape[1]) != label).float().to('cuda')
+        loss_dif = torch.sum(torch.clamp(cos_sim[0, :] - self.gap, min=0) * mask)
         
         # Compute final loss
         loss = 0.5 * loss_same + 0.5 * loss_dif / (cos_sim.shape[1] - 1) + 0.2 * loss_inner
@@ -191,7 +193,7 @@ class ContrastiveLoss(nn.Module):
 
 
 class ModelModule(pl.LightningModule):
-    def __init__(self, Model, Loss, Optimizer, **kargs):
+    def __init__(self, Model, Optimizer, **kargs):
         super(ModelModule, self).__init__()
         self.save_hyperparameters()
         self.load_model()
@@ -266,7 +268,7 @@ class ModelModule(pl.LightningModule):
             loss = self.loss(logits['slide_logit'], label)  # Cross-entropy loss for slide-level logits
             loss += self.calculate_group_loss(logits, label)  # +Cross-entropy loss for sub-group logits
             # Log losses
-            self.log('train_loss', loss, prog_bar=True, on_epoch=True, logger=True)
+            self.log('train_loss', loss, batch_size=data.shape[0], prog_bar=True, on_epoch=True, logger=True)
             
             # Add contrastive loss if epoch > 0
             if current_epoch > 0:
@@ -420,13 +422,9 @@ class ModelModule(pl.LightningModule):
         self.test_step_outputs.clear()
 
     def load_model(self):
-        name = self.hparams.Model.name
-        if '_' in name:
-            camel_name = ''.join([i.capitalize() for i in name.split('_')])
-        else:
-            camel_name = name
+        model_name = self.hparams.Model.name
         try:
-            Model = getattr(importlib.import_module(f'model_module.{name}'), camel_name)
+            Model = getattr(sys.modules[__name__], model_name)
         except:
             raise ValueError('Invalid Module File Name or Invalid Class Name!')
         self.model = self.instancialize(Model)
