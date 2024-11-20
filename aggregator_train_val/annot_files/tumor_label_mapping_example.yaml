@@ -1,0 +1,7 @@
+mapping:
+  glioblastoma, IDH-wildtype: 0
+  posterior fossa ependymoma group A: 1
+  supratentorial ependymoma, ZFTA fusion-positive: 2
+  Astrocytoma, IDH-mutant: 3
+
+
