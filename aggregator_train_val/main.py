@@ -40,7 +40,7 @@ def parse_arguments():
 def main(cfg):
     # Set random seed for reproducibility
     if cfg['General']['mode'] != 'train':
-        set_seed(42)
+        set_seed(cfg['General']['seed'])
 
     # Load loggers and callbacks based on configuration
     loggers = load_loggers(cfg)
@@ -60,6 +60,7 @@ def main(cfg):
         precision=cfg['General']['precision'],
         accumulate_grad_batches=cfg['General']['grad_acc'],
         check_val_every_n_epoch=1,
+        num_sanity_val_steps=0
     )
 
     # Train or test based on the mode specified in the configuration

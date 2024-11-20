@@ -1,5 +1,6 @@
 import numpy as np
 import yaml
+import os
 from addict import Dict
 import torch
 import torch.nn.functional as F
@@ -47,10 +48,11 @@ def load_loggers(cfg):
     log_path = cfg.General.log_path
     Path(log_path).mkdir(exist_ok=True, parents=True)
     cfg.log_path = Path(log_path) / f'{cfg.Model.exp_name}' 
-    print(f'---->Log dir: {cfg.log_path}')
-    wandb_logger = pl_loggers.WandbLogger(project=cfg.Model.exp_name, save_dir=str(cfg.log_path))
+    print(f'---->Log dir: {cfg.log_path}') 
+     
     log_dir = cfg.log_path / 'wandb'
     Path(log_dir).mkdir(exist_ok=True, parents=True) # in case wandb fails to store the logs
+    wandb_logger = pl_loggers.WandbLogger(project='Paion', save_dir=str(cfg.log_path), name=cfg.Model.exp_name)
     return wandb_logger
 
 

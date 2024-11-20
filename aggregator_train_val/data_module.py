@@ -144,7 +144,7 @@ class DataModule(pl.LightningDataModule):
         self.loc_dict = kwargs['loc_dict']
         self.dim_age_embed = kwargs['dim_age_embed']  # Dimension for age embedding
 
-        self.batch_size = batch_size
+        self.batch_size = int(batch_size)
     
     def prepare_data(self):
         pass
@@ -160,8 +160,9 @@ class DataModule(pl.LightningDataModule):
     
     def _initialize_dataset(self, split_key):
         # Helper function to initialize dataset for given split
+        aug = self.aug if split_key == 'train' else False  # Apply augmentation only during training
         return LocalDataset(data_dir=self.data_dir, split=self.data_split[split_key], labels=self.labels, 
-                            mapping=self.str2label_mapping, soft_labels=self.soft_labels, 
+                            mapping=self.str2label_mapping, soft_labels=self.soft_labels, augmentation=aug,
                             loc_dict=self.loc_dict, dim_age_embed=self.dim_age_embed, mode=split_key, **self.aug_params)
 
     def train_dataloader(self):

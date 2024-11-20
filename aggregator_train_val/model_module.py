@@ -69,11 +69,11 @@ def generate_subbags(slide_embeddings, group_num, shuffle=False)->list:
 
 
 class ATransMIL(nn.Module):
-    def __init__(self, n_classes, embedding_size, group_num, dim_age_embed):
+    def __init__(self, n_classes=186, embedding_size=1536, group_num=3, dim_age_embed=32):
         super(ATransMIL, self).__init__()
         self.pos_layer = PPEG(dim=512)
         self._fc1 = nn.Sequential(nn.Linear(embedding_size, 512), nn.ReLU())
-        self.cls_tokens = nn.Parameter(torch.randn(1, 512))
+        self.cls_tokens = nn.Parameter(torch.randn(1, 1, 512))
         self.n_classes = n_classes
         self.layer1 = TransLayer(dim=512)
         self.layer2 = TransLayer(dim=512)
@@ -136,7 +136,7 @@ class ATransMIL(nn.Module):
             instance_embeddings_dict[f'subbag_instance_embed_{sub_num}'] = h_sub[:, 1:]
 
         # Concatenate sub-group embeddings to create a slide-level embedding
-        slide_embed = torch.cat([subembeddings_dict[f'subbag_embed_{i}'] for i in range(self.group_num)], dim = 1)  # [B, 3*(512+m+n)]
+        slide_embed = torch.cat([subembeddings_dict[f'subbag_embed_{i}'] for i in range(self.group_num)], dim=1)  # [B, 3*(512+m+n)]
         # Calculate mean instance embedding for each sub-group
         mean_inst_embed = torch.cat([instance_embeddings_dict[f'subbag_instance_embed_{i}'] for i in range(self.group_num)], dim=1).mean(dim=1)  # [1, 512+m+n] 
         # Generate a list of mean instance embeddings for each sub-group
@@ -146,7 +146,7 @@ class ATransMIL(nn.Module):
         logits_dict['slide_logit'] = slide_logit
         # Generate predictions and probabilities for each sub-group and slide-level logits
         Y_hat = {key: torch.argmax(values, dim=1) for key, values in logits_dict.items()}
-        Y_prob = {key: F.softmax(values, dim = 1) for key, values in logits_dict.items()} 
+        Y_prob = {key: F.softmax(values, dim=1) for key, values in logits_dict.items()} 
         
         results_dict = {
             'logits': logits_dict, 
@@ -168,7 +168,8 @@ class ContrastiveLoss(nn.Module):
     def forward(self, embeddings: torch.Tensor, template: torch.Tensor, label: int, sub_embeddings: list):
         # Normalize embeddings and template
         embeddings_norm = F.normalize(embeddings, p=2, dim=1)
-        template_norm = F.normalize(template, p=2, dim=1)
+        template_norm = F.normalize(template, p=2, dim=1) #[:108]
+        # nan_row_idx = torch.isnan(template_norm).any(dim=1)
         template_norm = torch.nan_to_num(template_norm, nan=0.0)
         
         # Normalize concatenated sub-embeddings and calculate similarity matrix
@@ -183,12 +184,10 @@ class ContrastiveLoss(nn.Module):
         loss_same = 1 - cos_sim[0, label]
         
         # Calculate loss for incorrect labels
-        mask = (torch.arange(cos_sim.shape[1]) != label).float().to('cuda')
-        loss_dif = torch.sum(torch.clamp(cos_sim[0, :] - self.gap, min=0) * mask)
-        
+        mask = (torch.arange(cos_sim.shape[1]) != label).cuda()# & (~nan_row_idx)
+        loss_dif = torch.sum(torch.clamp(cos_sim-self.gap, min=0) * mask.float())
         # Compute final loss
-        loss = 0.5 * loss_same + 0.5 * loss_dif / (cos_sim.shape[1] - 1) + 0.2 * loss_inner
-        
+        loss = 0.4 * loss_same + 0.5 * loss_dif / (cos_sim.shape[1] - 1) + 0.1 * loss_inner
         return loss
 
 
@@ -205,7 +204,7 @@ class ModelModule(pl.LightningModule):
         self.optimizer = Optimizer
 
         # Clustering template for hidden space
-        self.cls_template = torch.full((Model.n_classes, 512), torch.nan).to('cuda')
+        self.cls_template = torch.full((int(Model.n_classes), 512), torch.nan).to('cuda')
 
         # Experiment settings
         self.exp_name = Model.exp_name
@@ -267,6 +266,7 @@ class ModelModule(pl.LightningModule):
             # Classification loss
             loss = self.loss(logits['slide_logit'], label)  # Cross-entropy loss for slide-level logits
             loss += self.calculate_group_loss(logits, label)  # +Cross-entropy loss for sub-group logits
+            
             # Log losses
             self.log('train_loss', loss, batch_size=data.shape[0], prog_bar=True, on_epoch=True, logger=True)
             
@@ -279,15 +279,14 @@ class ModelModule(pl.LightningModule):
             if torch.isnan(self.cls_template[Y]).any():
                 self.cls_template[Y, :] = mean_inst_embeddings.detach()
             else:
-                self.cls_template[Y, :] = update_ema_variables(self.cls_template[Y], mean_inst_embeddings.detach(), current_epoch)
-            
+                self.cls_template[Y, :] = update_ema_variables(self.cls_template[Y], mean_inst_embeddings.detach(), current_epoch)  
+                        
         else:
             loss = self.loss(logits, label)
             Y = int(torch.argmax(label).item())
             self.train_count[Y]["correct"] += (Y_hat.item() == Y)
             self.train_count[Y]["count"] += 1
         #---->acc log
-
 
         return {'loss': loss}     
     
@@ -299,6 +298,7 @@ class ModelModule(pl.LightningModule):
         return group_loss
     
     def on_train_epoch_end(self):
+        cls_acc_train = []
         for c in range(self.n_classes):
             count = self.train_count[c]["count"]
             correct = self.train_count[c]["correct"]
@@ -306,8 +306,10 @@ class ModelModule(pl.LightningModule):
                 acc = None
             else:
                 acc = float(correct) / count
-                print('class {}: acc {}, correct {}/{}'.format(c, acc, correct, count))
+                # print('class {}: acc {}, correct {}/{}'.format(c, acc, correct, count))
+                cls_acc_train.append(acc)
         
+        print("Macro Acc: ", np.mean(cls_acc_train))
         self.train_count = [{"count": 0, "correct": 0} for i in range(self.n_classes)]
 
     def validation_step(self, batch, batch_idx):
