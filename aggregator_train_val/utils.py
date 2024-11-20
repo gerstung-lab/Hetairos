@@ -1,6 +1,5 @@
 import numpy as np
 import yaml
-import os
 from addict import Dict
 import torch
 import torch.nn.functional as F
