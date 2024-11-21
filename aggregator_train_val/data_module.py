@@ -5,7 +5,7 @@ import pytorch_lightning as pl
 from torch.utils.data import Dataset, DataLoader
 import ast
 import pandas as pd
-from utils import *
+from .utils import *
 from dataclasses import dataclass
 from typing import Union
 

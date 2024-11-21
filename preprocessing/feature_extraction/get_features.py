@@ -8,7 +8,6 @@ from PIL import Image
 import numpy as np
 from torchvision import transforms
 from torch.utils.data import Dataset
-from timm.models.vision_transformer import VisionTransformer
 
 
 # imagenet normalization
@@ -66,16 +65,12 @@ def save_hdf5(output_path, asset_dict, attr_dict=None, mode='w'):
     return output_path
 
 
-@click.command()
-@click.option('--split', type=str, help='path to the split file (.txt)')
-@click.option('--batchsize', type=int, help='batch size for inference')
-@click.option('--feature_dir', type=str, help='path to the save directory')
-# @click.option('--ckpt', type=str, help='path to the save directory')
-def inference(split, batchsize, feature_dir):
+def extract_features(split, batchsize=768, feature_dir='./features'):
     slide_ls = [line.rstrip('\n') for line in open(split)]
     os.remove(split) # remove the split file after reading
     test_datat=roi_dataset(slide_ls)
     database_loader = torch.utils.data.DataLoader(test_datat, batch_size=batchsize, shuffle=False)
+    
     # change the name to the model you want to use here
     os.environ['HF_HOME'] = './model_cache'
     model = timm.create_model("hf_hub:prov-gigapath/prov-gigapath", pretrained=True)  
@@ -113,6 +108,18 @@ def inference(split, batchsize, feature_dir):
             features = file['features'][:]
             features = torch.from_numpy(features)
             torch.save(features, os.path.join(feature_dir, 'pt_files', os.path.basename(h5file)+'.pt'))
+            file.close()
+            
+    print('Feature extraction done!')
+
+@click.command()
+@click.option('--split', type=str, help='path to the split file (.txt)')
+@click.option('--batchsize', type=int, help='batch size for inference')
+@click.option('--feature_dir', type=str, help='path to the save directory')
+# @click.option('--ckpt', type=str, help='path to the save directory')
+def inference(split, batchsize, feature_dir):
+    extract_features(split, batchsize, feature_dir)
+
 
 if __name__ == '__main__':
     inference()

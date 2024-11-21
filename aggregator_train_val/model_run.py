@@ -4,9 +4,9 @@ import argparse
 import pytorch_lightning as pl
 from pytorch_lightning import Trainer
 
-from utils import *
-from model_module import ModelModule
-from data_module import DataModule
+from .utils import *
+from .model_module import ModelModule
+from .data_module import DataModule
 
     
 # Parse command-line arguments to set parameters for the script
@@ -37,7 +37,7 @@ def parse_arguments():
 
 
 # Main function that orchestrates the training/testing process
-def main(cfg):
+def model_run(cfg):
     # Set random seed for reproducibility
     if cfg['General']['mode'] != 'train':
         set_seed(cfg['General']['seed'])
@@ -73,7 +73,7 @@ def main(cfg):
 
     else:
         # Test the model using the latest checkpoints
-        latest_checkpoint_path = max(cfg['General']['log_path'].glob('*.ckpt'), key=os.path.getctime)
+        latest_checkpoint_path = max(cfg.log_path.glob('*.ckpt'), key=os.path.getctime)
         print(f'Testing with checkpoint: {latest_checkpoint_path}')
         loaded_model = model.load_from_checkpoint(checkpoint_path=latest_checkpoint_path, Data=cfg['Data'])
         trainer.test(model=loaded_model, datamodule=data_module)
@@ -104,6 +104,6 @@ if __name__ == '__main__':
     cfg.resume = args.resume
 
     # Run the main function
-    main(cfg)
+    model_run(cfg)
 
 

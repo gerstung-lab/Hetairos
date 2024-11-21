@@ -8,7 +8,7 @@ import typing as tp
 from typing import Union
 import skimage.filters as sk_filters
 from PIL import Image
-from slide_lib import PENS_RGB
+from .constants_color import PENS_RGB
 import multiprocessing as mp
 import concurrent.futures
 

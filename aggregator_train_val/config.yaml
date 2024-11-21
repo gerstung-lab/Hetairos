@@ -31,6 +31,7 @@ Model:
     aug: False
     soft_labels: False
     dim_age_embed: 32
+    cl_w: 20
     
 Optimizer:
     opt: lookahead_radam

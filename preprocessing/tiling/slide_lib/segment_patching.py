@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import multiprocessing as mp
-from slide_lib import *
+from .utils import *
 
 
 def segment(wsi: openslide.OpenSlide)->tuple[list, list, Image.Image, float]:

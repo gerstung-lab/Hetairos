@@ -13,8 +13,8 @@ import torch.nn.functional as F
 import pytorch_lightning as pl
 from nystrom_attention import NystromAttention
 
-from Optimizer import create_optimizer
-from utils import cross_entropy_torch, update_ema_variables, set_seed
+from .Optimizer import create_optimizer
+from .utils import cross_entropy_torch, update_ema_variables, set_seed
 
 
 class TransLayer(nn.Module):
@@ -420,7 +420,7 @@ class ModelModule(pl.LightningModule):
             metrics[keys] = values.cpu().numpy()
 
         result = pd.DataFrame([metrics])
-        result.to_csv(self.log_path / f'result{self.fold}.csv')
+        result.to_csv(self.log_path / f'result.csv')
         self.test_step_outputs.clear()
 
     def load_model(self):
