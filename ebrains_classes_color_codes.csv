@@ -1,0 +1,127 @@
+class,color_code,superfamily
+"Glioblastoma, IDH-wildtype",#68C62D,ADG
+"Anaplastic astrocytoma, IDH-wildtype",#50df35,ADG
+"Diffuse astrocytoma, IDH-wildtype",#57bc20,ADG
+"Gemistocytic astrocytoma, IDH-mutant",#DDCA11,ADG
+"Diffuse astrocytoma, IDH-mutant",#f0bf28,ADG
+"Anaplastic astrocytoma, IDH-mutant",#e6cf10,ADG
+"Anaplastic oligodendroglioma, IDH-mutant and 1p-19q codeleted",#FFE336,ADG
+"Oligodendroglioma, IDH-mutant and 1p-19q codeleted",#ffd935,ADG
+"Glioblastoma, IDH-mutant",#FFF700,ADG
+"Ependymoma, RELA fusion-positive",#df6d6c,EPN
+Papillary ependymoma,#B90F38,EPN
+Myxopapillary ependymoma,#bf1151,EPN
+Ependymoma,#FF044C,EPN
+Tanycytic ependymoma,#ff0457,EPN
+Anaplastic ependymoma,#ef1835,EPN
+Subependymoma,#ff1a5b,EPN
+Papillary meningioma,#400040,MNG
+Angiomatous meningioma,#4d004d,MNG
+Psammomatous meningioma,#5a005a,MNG
+Chordoid meningioma,#660066,MNG
+Meningothelial meningioma,#730073,MNG
+Clear cell meningioma,#800080,MNG
+Microcystic meningioma,#8d0d8d,MNG
+Secretory meningioma,#9a1a9a,MNG
+Anaplastic meningioma,#a626a6,MNG
+Rhabdoid meningioma,#b333b3,MNG
+Transitional meningioma,#931393,MNG
+Atypical meningioma,#a020a0,MNG
+Metaplastic meningioma,#ad2dad,MNG
+Fibrous meningioma,#b939b9,MNG
+Lymphoplasmacyte-rich meningioma,#c646c6,MNG
+Pilomyxoid astrocytoma,#9D73C9,LGG/NT
+Pilocytic astrocytoma,#846cd9,LGG/NT
+Dysembryoplastic neuroepithelial tumour,#CB5216,LGG/NT
+Rosette-forming glioneuronal tumour,#F79246,LGG/NT
+Extraventricular neurocytoma,#e7b598,LGG/NT
+Papillary glioneuronal tumour,#ba602b,LGG/NT
+Angiocentric glioma,#E4703A,LGG/NT
+Paraganglioma,#db7450,LGG/NT
+Ganglioneuroma,#dc6d51,LGG/NT
+Gangliocytoma,#d96623,LGG/NT
+Anaplastic ganglioglioma,#f07e27,LGG/NT
+Ganglioglioma,#e76639,LGG/NT
+"Diffuse midline glioma, H3 K27M-mutant",#a3f187,PedDHGG
+"Medulloblastoma, SHH-activated and TP53-wildtype",#8BC0FF,MB
+"Medulloblastoma, SHH-activated and TP53-mutant",#8aaef8,MB
+"Medulloblastoma, non-WNT-non-SHH",#6DA7D9,MB
+"Medulloblastoma, WNT-activated",#5aa5e4,MB
+Pituitary adenoma,#137D75,TSR
+Pituicytoma,#277d75,TSR
+Papillary craniopharyngioma,#4bcccb,TSR
+Adamantinomatous craniopharyngioma,#73edb6,TSR
+Atypical teratoid-rhabdoid tumour,#006EAD,CNS_ET
+"Embryonal tumour with multilayered rosette, C19MC-altered",#1693D6,CNS_ET
+Ewing sarcoma,#CE69EC,MNMT_CNS
+Angiosarcoma,#d27fe4,MNMT_CNS
+Gliosarcoma,#bb7af1,MNMT_CNS
+Osteochondroma,#FA8CFF,MNMT_CNS
+Chondrosarcoma,#f59ff6,MNMT_CNS
+Chordoma,#ff83ff,MNMT_CNS
+Haemangiopericytoma,#ED5CFC,MNMT_CNS
+Haemangioma,#f05cf5,MNMT_CNS
+Haemangioblastoma,#d658ff,MNMT_CNS
+Hybrid nerve sheath tumours,#F7CA8A,CNPT
+Malignant peripheral nerve sheath tumour,#decd77,CNPT
+Neurofibroma,#ff9999,CNPT
+Plexiform neurofibroma,#ec8589,CNPT
+Melanotic schwannoma,#FFE1B2,CNPT
+Schwannoma,#ffcdad,CNPT
+Cellular schwannoma,#ffe1c0,CNPT
+Control,#D3D3D3,CT
+Anaplastic pleomorphic xanthoastrocytoma,#7C46C9,DGMACCA
+Pleomorphic xanthoastrocytoma,#7440dd,DGMACCA
+Pineoblastoma,#98eb60,PPRT
+CNS ganglioneuroblastoma,#81f95f,PPRT
+Papillary tumour of the pineal region,#AEDE8A,PPRT
+Pineal parenchymal tumour of intermediate differentiation,#b4f79b,PPRT
+Pineocytoma,#DE7B2C,PPRT
+Low-grade B-cell lymphomas of the CNS,#3C1B46,HT_CNS
+"EBV-positive diffuse large B-cell lymphoma, NOS",#431b46,HT_CNS
+Diffuse large B-cell lymphoma of the CNS,#250b35,HT_CNS
+Immature teratoma,#996a4d,GCT
+Osteoma,#8a663d,GCT
+Mature teratoma,#a45548,GCT
+Perineurioma,#c39f88,GCT
+Germinoma,#c5b391,GCT
+Atypical choroid plexus papilloma,#7B3E0A,CPT
+Choroid plexus papilloma,#923c13,CPT
+Choroid plexus carcinoma,#855912,CPT
+Choriocarcinoma,#79502b,CPT
+Rhabdomyosarcoma,#007BB8,
+Fibrosarcoma,#0085ab,
+Osteosarcoma,#0070be,
+Leiomyosarcoma,#007bce,
+Spindle cell oncocytoma,#AD6EF1,
+Subependymal giant cell astrocytoma,#b26eee,
+Olfactory neuroblastoma,#aa4a1c,
+Central neurocytoma,#B85400,
+Granular cell tumour of the sellar region,#c1dd8d,
+Metastatic tumours,#77523c,
+Meningeal melanoma,#b6dc95,
+Giant cell glioblastoma,#9df4a4,
+Meningeal melanocytoma,#102A46,
+Diffuse leptomeningeal glioneuronal tumour,#d1723a,
+Cerebellar liponeurocytoma,#d17421,
+Langerhans cell histiocytosis,#4dcc8e,
+Liposarcoma,#e17e33,
+Astroblastoma,#ded9d9,
+Undifferentiated pleomorphic sarcoma,#000000,
+Leiomyoma,#000f00,
+Epitheloid MPNST,#000500,
+Dysplastic cerebellar gangliocytoma,#00030d,
+Inflammatory myofibroblastic tumour,#0a0000,
+Desmoplastic infantile astrocytoma and ganglioglioma,#041100,
+Teratoma with malignant transformation,#000300,
+Erdheim-Chester disease,#0d1800,
+Juvenile xanthogranuloma,#060f09,
+Chordoid glioma of the third ventricle,#000009,
+Follicular lymphoma,#060000,
+Mixed germ cell tumour,#00000f,
+Immunodeficiency-associated CNS lymphoma,#000813,
+Intravascular large B-cell lymphoma,#001400,
+Crystal-storing histiocytosis,#020a12,
+Embryonal carcinoma,#011200,
+MALT lymphoma of the dura,#030f00,
+Lipoma,#001600,

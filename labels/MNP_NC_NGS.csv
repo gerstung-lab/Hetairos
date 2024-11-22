@@ -1,0 +1,51 @@
+uuid,integrated_diagnosis,subclass prediction (max. score)
+3C2DA981-EF87-42C8-9F82-D1A51718BE8B,"Astrocytoma, IDH-mutant","diffuse glioma, IDH-mutant and 1p19q retained [astroglial type]"
+E3D13CC8-B234-4552-B70C-7C450441A91A,"Astrocytoma, IDH-mutant","diffuse glioma, IDH-mutant and 1p19q retained [astroglial type]"
+9815DBF4-FD82-4F37-BA59-8A1CA8387C68,Desmoplastic infantile ganglioglioma / desmoplastic infantile astrocytoma,desmoplastic infantile ganglioglioma/astrocytoma
+65C35A1F-CA25-4052-BB92-AD1BAE409923,"Diffuse midline glioma, H3 K27-altered","diffuse glioma, IDH-mutant and 1p19q retained [astroglial type]"
+F41D0EFA-1DE9-48EC-B2C0-3DEC733DDAD4,"Diffuse midline glioma, H3 K27-altered","glioblastoma, IDH-wildtype, [typical mesenchymal type]"
+D22DA0D5-C185-433B-B082-2C588ED96B8A,"Diffuse midline glioma, H3 K27-altered",
+3BD3AD35-7626-43E6-8537-C35F0F58D433,Ganglioglioma,supratentorial pilocytic astrocytoma
+6BE84416-9C40-41FA-93AE-198A7398E634,Ganglioglioma,high-grade astrocytoma with piloid features
+AF8A0F49-1050-4688-BCE0-4223ACCC2C74,Ganglioglioma,
+D1C6E21A-1DD4-4C79-B216-55F9A7F59A0D,Ganglioglioma,"control tissue, reactive tumor microenvironment"
+0EAEFB6B-28E1-4F83-9C33-DF88361F1CAC,"glioblastoma, IDH-wildtype","glioblastoma, IDH-wildtype, RTK2 type"
+4537D505-D7DB-468E-B692-5C08D9F12176,"glioblastoma, IDH-wildtype","glioblastoma [pediatric-type, RTK1a]"
+93F8030B-3E13-4691-BB18-ECEDF6DEB002,Langerhans cell histiocytosis,"neuroblastoma, 2s"
+A29C50B0-C3BF-47CD-80D1-441F6214FFC9,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+A0E89694-E818-48BB-80E4-8AA3D8BF729B,pilocytic astrocytoma,ganglioglioma
+8184A0F9-2282-4830-88B1-BA406653EE23,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+BA73430C-98E8-45D5-93D7-ACECF6B6C8CD,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+39549853-06C4-47D9-A6A4-AE5F269D1AF2,pilocytic astrocytoma,ganglioglioma
+1A0C8C20-2934-46DC-877B-09843FDE8672,pilocytic astrocytoma,infantile hemispheric glioma
+43D3BE1C-D915-408B-A3BA-59FC9EA29191,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+2FC74E63-9D24-46DD-B9C4-B89C179F92CD,pilocytic astrocytoma,high-grade diffuse glioma of the midline/posterior fossa; H3/IDH-wildtype
+579BCC2F-EC04-4114-A5E1-4A3A9E2F53D6,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+E2842BDF-6E00-4B8F-A5BD-53D6444430CA,pilocytic astrocytoma,"control tissue, inflammatory tumor microenvironment"
+03DFAC2B-EC40-4D30-B85B-6B2EFB9DFA67,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+123A1197-3F8B-407A-BF34-B591B7CE18CA,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+68A5CE2F-34A3-4FFF-98C3-7F9212383FA3,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+172DABFC-9B52-4787-9194-92577B8F303A,pilocytic astrocytoma,high-grade astrocytoma with piloid features
+EF492D8C-9DCD-4321-AF0C-674B6A34B744,pilocytic astrocytoma,ganglioglioma
+B4BDFC75-8BE0-4A7B-A3FB-FBA5C4BF0696,pilocytic astrocytoma,
+982218D3-6B2D-4567-986B-67BCEB12D782,pilocytic astrocytoma,
+140EB36A-96E1-4FA0-888B-639D0109A5C8,pilocytic astrocytoma,
+E2CD7494-CAEB-4655-80FD-713A58C52595,pilocytic astrocytoma,
+35D95CD7-3042-4C37-962C-D6361E8AD27C,pilocytic astrocytoma,
+3A1A9ABE-43F6-4E10-B55C-13F3DF55C4EB,pilocytic astrocytoma,
+F47550BC-A578-4A06-B72A-3678BCD0DDE0,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+F63C0449-C2FF-447B-9733-6363371DE001,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+451B254A-5F5F-403B-A875-AED29B8D6A42,pilocytic astrocytoma,"control tissue, reactive tumor microenvironment"
+CD1E3B99-4844-4E4B-A439-7BC7087A8E92,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+83E3C169-67AB-4DD2-ADF2-FB825E084E69,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+5D5E6BAB-0DA8-4836-93AF-1EDB41A67381,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+A8B1A8C1-1C42-4C8D-9853-359816E986A6,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+42C7BE94-DEE5-4614-8BDC-94EF48B199EB,pilocytic astrocytoma,supratentorial pilocytic astrocytoma
+C472A755-B23A-4AE2-8072-FA7D65786EEF,pilocytic astrocytoma,"diffuse leptomeningeal glioneuronal tumor, subclass 1"
+A12B10EF-ED9B-4A86-9677-E9E4B7E2323E,pilocytic astrocytoma,"medulloblastoma, SHH-activated [type 2]"
+3F8184F7-F788-460E-A786-02FA1871441C,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+8D238490-174C-4100-958A-B45DAA33F92F,pilocytic astrocytoma,infratentorial pilocytic astrocytoma
+A3028FA5-172B-4EA8-A59C-C97D9F2DC49D,pilocytic astrocytoma,"medulloblastoma, SHH-activated [type 2]"
+C77B32B8-843A-4BC9-9570-448C021B6075,pilocytic astrocytoma,"medulloblastoma, SHH-activated [type 2]"
+0422BA6F-4D42-49B9-A908-50545030BB83,pilocytic astrocytoma,"control tissue, reactive tumor microenvironment"
+BF15B785-3F9B-499D-B833-8B36BF05CD0A,posterior fossa ependymoma group A,neuroepithelial tumor with PATZ1 fusion
