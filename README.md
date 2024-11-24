@@ -8,8 +8,14 @@ Darui Jin*, Artem Shmatko*, Areeba Patel*, Ramin Rahmanzade, Rouzbeh Banan, Luka
 
 ![Paion Model](img/workflow_icon.png)
 ## Repository overview
-<img src="img/Paion-logo.png" alt="Paion Model" width="32" height="32" style="vertical-align: bottom;"/>
-<span style="font-size:20px;"> Welcome to the official repository of Paion <span style="font-size:14px;">(Precise AI enabled neuro-ONcolgy)</span>!</span> <br><br>
+<!-- <img src="img/Paion-logo.png" alt="Paion Model" width="32" height="32" style="vertical-align: bottom;"/>
+<span style="font-size:20px;"> Welcome to the official repository of Paion <span style="font-size:14px;">(Precise AI enabled neuro-ONcolgy)</span>!</span> <br><br> -->
+<p style="display: inline-block; vertical-align: middle;">
+    <img src="img/Paion-logo.png" alt="Paion Model" width="32" height="32" style="vertical-align: middle;"/>
+    <span style="font-size: 20px; vertical-align: middle;"> Welcome to the official repository of Paion 
+        <span style="font-size: 14px;">(Precise AI enabled neuro-ONcology)</span>
+    </span>
+</p>
 
 Paion is a **multiple instance learning (MIL)** model designed for predict methylation-based CNS tumour subtypes from digital images of **H&E slides**. 
 This repository provides the complete implementation for preprocessing, including slide tiling and feature extraction, as well as the training and testing workflows for the PAION model. 
@@ -42,7 +48,7 @@ This repository provides **two** main ways to use the model:
 ### 1. Running individual modules
 Each module is designed for a specific task. Below are the basic functionalities and usage instructions for each module:
 
----
+***
 #### Tiling
 Purpose: Converts whole slide images (WSI) into manageable image tiles for further processing.
 ```bash
@@ -58,7 +64,7 @@ Key arguments:
 
 If you have access to an LSF cluster, you can use `python preprocessing/tiling/run.py` to parallelize the tiling process, significantly reducing the processing time. Before that, please update the `preprocessing/tiling/run.py` file with the correct paths and parameters.
 
----
+***
 #### Feature extraction
 Purpose: Extracts features from the image tiles using a pre-trained model.
 ```bash
@@ -71,7 +77,7 @@ Key arguments:
 
 Similarly, if an LSF cluster is available, you can use `python preprocessing/feature_extraction/run.py`. Update the parameters in `preprocessing/feature_extraction/run.py` file before running.
 
----
+***
 #### Model training/evaluation
 Purpose: To Train and evaluate the PAION model using features extracted in the previous step.
 ```bash
@@ -97,7 +103,7 @@ More parameters to specify:
 Other parameters can be modified in the `aggregator_train_val/config.yaml` file.
 Examples of the label mapping, split files and label CSV files can be found in the `aggregator_train_val/annot_files` directory. log files and checkpoints will be saved in the `aggregator_train_val/logs/exp_name` directory by default.
 
----
+***
 ### 2. Running the end-to-end workflow
 The `pipeline.py` script is designed to run the complete pipeline from slide tiling to model training and evaluation in one go.
 
