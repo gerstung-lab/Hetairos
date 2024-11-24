@@ -48,7 +48,7 @@ This repository provides **two** main ways to use the model:
 ### 1. Running individual modules
 Each module is designed for a specific task. Below are the basic functionalities and usage instructions for each module:
 
-#### :sciccors: Tiling
+#### :scissors: Tiling
 Purpose: Converts whole slide images (WSI) into manageable image tiles for further processing.
 ```bash
 python preprocessing/tiling/slide_tiling.py --source_dir <WSIs_store_path> --source_list <slide_path_list.txt> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
