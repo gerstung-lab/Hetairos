@@ -17,8 +17,8 @@ Darui Jin*, Artem Shmatko*, Areeba Patel*, Ramin Rahmanzade, Rouzbeh Banan, Luka
     </span>
 </p>
 
-Paion is a **multiple instance learning (MIL)** model designed for predict methylation-based CNS tumour subtypes from digital images of **H&E slides**. 
-This repository provides the complete implementation for preprocessing, including slide tiling and feature extraction, as well as the training and testing workflows for the PAION model. 
+Paion is a **multiple instance learning (MIL)** model designed to predict methylation-based CNS tumour subtypes from digital images of **H&E slides**. 
+This repository provides the complete implementation for preprocessing, including slide tiling and feature extraction, as well as the training and testing workflows for the Paion model. 
 Additionally, it contains Jupyter notebooks for reproducing the figures presented in our paper, along with necessary data such as prediction results and annotations.
 
 ## Installation
@@ -38,7 +38,7 @@ Step 3: Install dependencies
 conda activate paion
 pip install -r requirements.txt
 ```
-The foundation models required for the feature extraction session are not included in the requirements file. Please access them from the corresponding sources and update the model paths in `/preprocessing/feature_extraction/get_features.py`, specifically at lines 75-76. We recommend using the following models: [https://huggingface.co/prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) (Prov-Gigapath, Xu et al., *Nature*, 2024) and [https://huggingface.co/MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) (UNI, Chen et al., *Nature Medicine*, 2024). 
+The foundation models required for the feature extraction is not included in the requirements file. Please access them from the corresponding sources and update the model paths in `/preprocessing/feature_extraction/get_features.py`, specifically at lines 75-76. We recommend using the following models: [https://huggingface.co/prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) (Prov-Gigapath, Xu et al., *Nature*, 2024) and [https://huggingface.co/MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) (UNI, Chen et al., *Nature Medicine*, 2024). The Prov-Gigapath tile-level encoder was used for the results in the paper.
 
 ## Usage
 This repository provides **two** main ways to use the model:
@@ -54,14 +54,14 @@ Purpose: Converts whole slide images (WSI) into manageable image tiles for furth
 python preprocessing/tiling/slide_tiling.py --source_dir <WSIs_store_path> --source_list <slide_path_list.txt> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
 ```
 Key arguments:
-- `source_dir`: Path to the source slide image (.svs) directory.
+- `source_dir`: Path to the source slide image (.svs/.ndpi/...) directory.
 - `source_list`: Path to the text file containing the list of specific slide paths. If provided, not necessary to specify `source_dir`.
 - `save_dir`: Path to the directory where the tiles will be saved.
 - `patch_size`: Size of the tile (default: 256).
-- `step_size`: Overlap between tiles (default: 256).
-- `mag`: Magnification level of the slide (default: 20).
+- `step_size`: Step size between neighboring tiles (default: 256).
+- `mag`: Nominal magnification level of the slide (default: 20).
 
-If you have access to an LSF cluster, you can use `python preprocessing/tiling/run.py` to parallelize the tiling process, significantly reducing the processing time. Before that, please update the `preprocessing/tiling/run.py` file with the correct paths and parameters.
+If you have access to an LSF cluster, you can use `python preprocessing/tiling/run.py` to parallelize the tiling process, significantly reducing the processing latency. Before that, please update the `preprocessing/tiling/run.py` file with the correct paths and parameters.
 
 #### :wrench: Feature extraction
 Purpose: Extracts features from the image tiles using a pre-trained model.
@@ -91,7 +91,7 @@ Key arguments:
 - `exp_name`: Name of the experiment.
 
 More parameters to specify:
-- `groups`: Number of feature matrix divisions within a slide during training (default: 3).
+- `groups`: Number of feature matrix splits within a slide during training (default: 3).
 - `classes`: Output class number by the classifier. Redundant classes could be set (*n*>actual classes) to improve classification performance (default: 186).
 - `cl_weight`: Weight for contrastive loss (default: 20).
 - `resume`: Resume training from the latest checkpoint (default: false, store_true).
@@ -99,6 +99,15 @@ More parameters to specify:
 
 Other parameters can be modified in the `aggregator_train_val/config.yaml` file.
 Examples of the label mapping, split files and label CSV files can be found in the `aggregator_train_val/annot_files` directory. log files and checkpoints will be saved in the `aggregator_train_val/logs/exp_name` directory by default.
+
+The tumor locations that are available are: 
+- `'Extracranial'`
+- `Infratentorial`
+- `'Intra- or Peri-Ventricular'`
+- `'Intra- or Supra-Sellar':`
+- `'Pineal'`
+- `'Spinal'`
+- and `'Supratentorial'`
 
 ### 2. Running the end-to-end workflow
 The `pipeline.py` script is designed to run the complete pipeline from slide tiling to model training and evaluation in one go.
