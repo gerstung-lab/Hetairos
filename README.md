@@ -6,36 +6,36 @@ Darui Jin*, Artem Shmatko*, Areeba Patel*, Ramin Rahmanzade, Rouzbeh Banan, Luka
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Paion Model](img/workflow_icon.png)
+![Hetairos Model](img/workflow_icon.png)
 ## Repository overview
 <!-- <img src="img/Paion-logo.png" alt="Paion Model" width="32" height="32" style="vertical-align: bottom;"/>
 <span style="font-size:20px;"> Welcome to the official repository of Paion <span style="font-size:14px;">(Precise AI enabled neuro-ONcolgy)</span>!</span> <br><br> -->
 <p style="display: inline-block; vertical-align: middle;">
-    <img src="img/Paion-logo.png" alt="Paion Model" width="32" height="32" style="vertical-align: bottom;"/>
-    <span style="font-size: 20px; vertical-align: middle;"> Welcome to the official repository of Paion 
-        <span style="font-size: 14px;">(Precise AI enabled neuro-ONcology)</span>
+    <img src="img/Hetairos-logo.png" alt="Hetairos Model" width="32" height="32" style="vertical-align: bottom;"/>
+    <span style="font-size: 20px; vertical-align: middle;"> Welcome to the official repository of Hetairos 
+        <span style="font-size: 14px;">(H&E Trained AI for Recognition of Oncology Slides)</span>
     </span>
 </p>
 
-Paion is a **multiple instance learning (MIL)** model designed to predict methylation-based CNS tumour subtypes from digital images of **H&E slides**. 
-This repository provides the complete implementation for preprocessing, including slide tiling and feature extraction, as well as the training and testing workflows for the Paion model. 
+Hetairos is a **multiple instance learning (MIL)** model designed to predict methylation-based CNS tumour subtypes from digital images of **H&E slides**. 
+This repository provides the complete implementation for preprocessing, including slide tiling and feature extraction, as well as the training and testing workflows for the Hetairos model. 
 Additionally, it contains Jupyter notebooks for reproducing the figures presented in our paper, along with necessary data such as prediction results and annotations.
 
 ## Installation
 Step 1: Clone the repository
 ```bash
-git clone https://github.com/gerstung-lab/Paion.git
-cd Paion
+git clone https://github.com/gerstung-lab/Hetairos.git
+cd Hetairos
 ```
 
 Step 2: Set up a virtual environment
 ```bash
-conda create -n paion python=3.10
+conda create -n hetairos python=3.10
 ```
 
 Step 3: Install dependencies
 ```bash
-conda activate paion
+conda activate hetairos
 pip install -r requirements.txt
 ```
 The foundation models required for the feature extraction is not included in the requirements file. Please access them from the corresponding sources and update the model paths in `/preprocessing/feature_extraction/get_features.py`, specifically at lines 75-76. We recommend using the following models: [https://huggingface.co/prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) (Prov-Gigapath, Xu et al., *Nature*, 2024) and [https://huggingface.co/MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) (UNI, Chen et al., *Nature Medicine*, 2024). The Prov-Gigapath tile-level encoder was used for the results in the paper.
@@ -76,7 +76,7 @@ Key arguments:
 Similarly, if an LSF cluster is available, you can use `python preprocessing/feature_extraction/run.py`. Update the parameters in `preprocessing/feature_extraction/run.py` file before running.
 
 #### :robot: Model training/evaluation
-Purpose: To Train and evaluate the PAION model using features extracted in the previous step.
+Purpose: To Train and evaluate the Hetairos model using features extracted in the previous step.
 ```bash
 python aggregator_train_val/model_run.py --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name> 
 ``` 
@@ -119,7 +119,7 @@ python pipeline.py --tiling  --model_run --slide_dir <WSIs_store_path> --slide_l
 The key arguments `--tiling`, `--feature_extraction`, and `--model_run` are used to specify the tasks to be executed. At least one of them should be set as `True` when runnig the script. The rest of the arguments are the same as described in the individual modules.
 
 ## Figure reproduction
-The scripts for reproducing the figures presented in the paper are available in the `Paion_plots.ipynb` directory. The necessary data files are provided in the `human_vs_machine` and `labels` directory. `matplotlib`, `seaborn`, `sklearn`, `h5py` and `pandas` are required to run the notebook.
+The scripts for reproducing the figures presented in the paper are available in the `Hetairos_plots.ipynb` directory. The necessary data files are provided in the `human_vs_machine` and `labels` directory. `matplotlib`, `seaborn`, `sklearn`, `h5py` and `pandas` are required to run the notebook.
 
 ## Hardware requirements
 The model training/evaluation and the feature extraction require a GPU with at least 11GB of memory. Feature extraction with larger batch sizes may require more memory. The tiling process can be run on a CPU with support for multi-core parallel processing to improve efficiency.
