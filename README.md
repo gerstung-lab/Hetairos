@@ -101,13 +101,13 @@ Other parameters can be modified in the `aggregator_train_val/config.yaml` file.
 Examples of the label mapping, split files and label CSV files can be found in the `aggregator_train_val/annot_files` directory. log files and checkpoints will be saved in the `aggregator_train_val/logs/exp_name` directory by default.
 
 The tumor locations that are available are: 
-- `'Extracranial'`
+- `Extracranial`
 - `Infratentorial`
-- `'Intra- or Peri-Ventricular'`
-- `'Intra- or Supra-Sellar':`
-- `'Pineal'`
-- `'Spinal'`
-- and `'Supratentorial'`
+- `Intra- or Peri-Ventricular`
+- `Intra- or Supra-Sellar`
+- `Pineal`
+- `Spinal`
+- and `Supratentorial`
 
 ### 2. Running the end-to-end workflow
 The `pipeline.py` script is designed to run the complete pipeline from slide tiling to model training and evaluation in one go.
