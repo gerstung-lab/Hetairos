@@ -36,7 +36,7 @@ def tile_slide_images(source_dir: str, source_list: list, save_dir: str, patch_s
     mask_save_dir = os.path.join(save_dir, 'masks')
     stitch_save_dir = os.path.join(save_dir, 'stitches')
 
-    directories = {'source': slide_list if source_list else glob.glob(source_dir),
+    directories = {'source': slide_list if source_list else glob.glob(os.path.join(source_dir, '*.svs')),
                    'save_dir': save_dir,
                    'tile_save_dir': tile_save_dir,
                    'mask_save_dir': mask_save_dir,
