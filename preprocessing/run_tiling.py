@@ -37,8 +37,8 @@ for i in range(job_num):
         for item in slide_sub_list:
             f.write("%s\n" % item)
     
-    cmd = f'python -W ignore main_create_tiles.py --index {i} --source_list {list_loc_tmp} --save_dir {save_dir} --patch_size 256 --step_size 256 --mag 20'
-    bsub_cmd = f'bsub -R "rusage[mem=30G]" -J {dataset}_{i} -q long -o ./log_{i}.out -e ./log_{i}.err {cmd}'
+    cmd = f'python -W ignore -m tiling.main_create_tiles --index {i} --source_list {list_loc_tmp} --save_dir {save_dir} --patch_size 256 --step_size 256 --mag 20'
+    bsub_cmd = f'bsub -R "rusage[mem=30G]" -J {dataset}_{i} -q long -o tiling/log_file/log_{i}.out -e tiling/log_file/log_{i}.err {cmd}'
     try:
         subprocess.run(bsub_cmd, shell=True)
         time.sleep(1)

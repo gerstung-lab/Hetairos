@@ -72,8 +72,8 @@ def extract_features(split, batchsize=768, feature_dir='./features'):
     database_loader = torch.utils.data.DataLoader(test_datat, batch_size=batchsize, shuffle=False)
     
     # change the name to the model you want to use here
-    os.environ['HF_HOME'] = './model_cache'
     model = timm.create_model("hf_hub:prov-gigapath/prov-gigapath", pretrained=True)  
+    
     model.cuda()
     model.eval()
 

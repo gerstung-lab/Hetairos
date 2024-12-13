@@ -4,17 +4,17 @@ General:
     grad_acc: 2
     patience: 10
     mode: test
-    log_path: logs/
+    log_path: ./aggregator_train_val/logs/
     seed: 13
 
 Data:
-    data_dir: ./data/dataset
-    data_split: ./split/split.yaml
-    label_file: ./labels/labels.csv
+    data_dir: ./aggregator_train_val/data/dataset
+    data_split: ./aggregator_train_val/annot_files/split.yaml
+    label_file: ./aggregator_train_val/annot_files/labels.csv
     aug: True
     soft_labels: False
-    preds_save: ./results/
-    label_mapping: ./102_classes.yaml
+    preds_save: ./aggregator_train_val/results/
+    label_mapping: ./aggregator_train_val/102_classes.yaml
     batch_size: 1 
     age_loc_drop_prob: 0.7
     aug_prob: 0.7

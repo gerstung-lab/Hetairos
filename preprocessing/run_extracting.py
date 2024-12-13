@@ -29,7 +29,7 @@ for i in range(job_num):
             f.write("%s\n" % item)
 
     batchsize = 768
-    cmd = f"python -W ignore get_features.py --split '{list_loc_tmp}' --batchsize {batchsize} --feature_dir {save_dir}"
+    cmd = f"python -W ignore feature_extraction/get_features.py --split '{list_loc_tmp}' --batchsize {batchsize} --feature_dir {save_dir}"
     bsub_cmd = f'bsub -gpu num=1:j_exclusive=yes:gmem=23.5G -R "rusage[mem=20G]" -L /bin/bash -q gpu -J {dataset}_{i} -o ./log_{i}.log -e ./log_{i}.err "source ~/.bashrc && {cmd}"'
     try:
         subprocess.run(bsub_cmd, shell=True)

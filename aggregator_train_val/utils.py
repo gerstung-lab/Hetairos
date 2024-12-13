@@ -51,7 +51,7 @@ def load_loggers(cfg):
      
     log_dir = cfg.log_path / 'wandb'
     Path(log_dir).mkdir(exist_ok=True, parents=True) # in case wandb fails to store the logs
-    wandb_logger = pl_loggers.WandbLogger(project='Paion', save_dir=str(cfg.log_path), name=cfg.Model.exp_name)
+    wandb_logger = pl_loggers.WandbLogger(project='Hetairos', save_dir=str(cfg.log_path), name=cfg.Model.exp_name)
     return wandb_logger
 
 

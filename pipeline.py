@@ -34,15 +34,18 @@ def parse_arguments():
         model_group = parser.add_argument_group('Model run arguments')
         model_group.add_argument('--dataset', type=str, default=None, 
                             help='Path to the dataset directory. If not provided, the dataset will be generated from the feature extraction results')
-        model_group.add_argument('--label', type=str, default='./labels/labels.csv',
+        model_group.add_argument('--label', type=str, default='./aggregator_train_val/labels/labels.csv',
                             help='Path to the slide label CSV file, which should contain columns including slide, family, probability vector, age, and location')
+        model_group.add_argument('--label_map', type=str, default='./aggregator_train_val/annot_files/class_ID.yaml', help='Path to label mapping file')
         model_group.add_argument('--split', type=str, default=None,
                             help='Path to the dataset split file (YAML) containing train and test slide IDs, structured as {"train": [slide_id], "test": [slide_id]}. If not provided, the file will be generated from the dataset')
         model_group.add_argument('--mode', type=str, default='train', help='Operation mode: train or test') 
         model_group.add_argument('--exp_name', type=str, default='default_exp', help='Identifier for the experiment') 
-        model_group.add_argument('--output_dir', type=str, default='./predictions', help='Directory to save predictions') 
+        model_group.add_argument('--output_dir', type=str, default='./aggregator_train_val/predictions', help='Directory to save predictions') 
         model_group.add_argument('--resume', action='store_true', help='Resume training from the latest checkpoint') 
         model_group.add_argument('--config', type=str, default='./aggregator_train_val/config.yaml', help='Path to configuration file') 
+        model_group.add_argument('--data_aug', action='store_true', help='Apply data augmentation during training')
+        model_group.add_argument('--soft_labels', action='store_true', help='Use soft labels during training') 
 
     return parser.parse_args() 
     
@@ -78,18 +81,23 @@ if __name__ == '__main__':
             try:
                 testset = os.listdir(args.dataset)
                 testset = [os.path.splitext(item)[0] for item in testset]
-                with open('./split.yaml', 'w') as f:
+                with open('./aggregator_train_val/split.yaml', 'w') as f:
                     yaml.dump({'train': [], 'test': testset}, f)
-                args.split = './split.yaml'
+                args.split = './aggregator_train_val/split.yaml'
             except:
                 print('No split file found, please provide the split file path')
                 exit()
-            cfg = read_yaml(args.config)
-            cfg['Data']['data_dir'] = args.dataset
-            cfg['Data']['data_split'] = args.split
-            cfg['Data']['label_file'] = args.label
-            cfg['General']['mode'] = args.mode
-            cfg['Model']['exp_name'] = args.exp_name
-            cfg['Model']['preds_save'] = args.output_dir
-            cfg['resume'] = args.resume
-            model_run(cfg)
+        
+        cfg = read_yaml(args.config)
+        cfg['Data']['data_dir'] = args.dataset
+        cfg['Data']['data_split'] = args.split
+        cfg['Data']['label_file'] = args.label
+        cfg['Data']['soft_labels'] = args.soft_labels
+        cfg['Data']['aug'] = args.data_aug
+        cfg['Data']['label_file'] = args.label
+        cfg['Data']['label_mapping'] = args.label_map
+        cfg['General']['mode'] = args.mode
+        cfg['Model']['exp_name'] = args.exp_name
+        cfg['Model']['preds_save'] = args.output_dir
+        cfg['resume'] = args.resume
+        model_run(cfg)

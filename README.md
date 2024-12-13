@@ -51,7 +51,8 @@ Each module is designed for a specific task. Below are the basic functionalities
 #### :scissors: Tiling
 Purpose: Converts whole slide images (WSI) into manageable image tiles for further processing.
 ```bash
-python preprocessing/tiling/slide_tiling.py --source_dir <WSIs_store_path> --source_list <slide_path_list.txt> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
+cd preprocessing
+python -m tiling.main_create_tiles --source_dir <WSIs_store_path> --source_list <slide_path_list.txt> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
 ```
 Key arguments:
 - `source_dir`: Path to the source slide image (.svs/.ndpi/...) directory.
@@ -61,7 +62,7 @@ Key arguments:
 - `step_size`: Step size between neighboring tiles (default: 256).
 - `mag`: Nominal magnification level of the slide (default: 20).
 
-If you have access to an LSF cluster, you can use `python preprocessing/tiling/run.py` to parallelize the tiling process, significantly reducing the processing latency. Before that, please update the `preprocessing/tiling/run.py` file with the correct paths and parameters.
+If you have access to an LSF cluster, you can use `python run_tiling.py` to parallelize the tiling process, significantly reducing the processing latency. Before that, please update the `preprocessing/run_tiling.py` file with the correct paths and parameters.
 
 #### :wrench: Feature extraction
 Purpose: Extracts features from the image tiles using a pre-trained model.
@@ -73,12 +74,12 @@ Key arguments:
 - `feature_dir`: Path to the directory where the extracted features will be saved.
 - `batchsize`: Batch size for feature extraction (default: 384).
 
-Similarly, if an LSF cluster is available, you can use `python preprocessing/feature_extraction/run.py`. Update the parameters in `preprocessing/feature_extraction/run.py` file before running.
+Similarly, if an LSF cluster is available, you can use `python preprocessing/run_extracting.py`. Update the parameters in `preprocessing/run_extracting.py` file before running.
 
 #### :robot: Model training/evaluation
 Purpose: To Train and evaluate the Hetairos model using features extracted in the previous step.
 ```bash
-python aggregator_train_val/model_run.py --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name> 
+python -m aggregator_train_val.model_run --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name> 
 ``` 
 Key arguments:
 - `dataset`: Path to the directory containing the extracted features (saved in .pt format).
@@ -113,7 +114,7 @@ The tumor locations that are available are:
 The `pipeline.py` script is designed to run the complete pipeline from slide tiling to model training and evaluation in one go.
 
 ```bash
-python pipeline.py --tiling  --model_run --slide_dir <WSIs_store_path> --slide_list <slide_path_list.txt> --tile_savedir <tiles_path> --feature_extraction --batchsize 256 --feature_dir <features_path> --model_run --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name>
+python pipeline.py --tiling --slide_dir <WSIs_store_path> --slide_list <slide_path_list.txt> --tile_savedir <tiles_path> --feature_extraction --batchsize 256 --feature_dir <features_path> --model_run --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name>
 ```
 
 The key arguments `--tiling`, `--feature_extraction`, and `--model_run` are used to specify the tasks to be executed. At least one of them should be set as `True` when runnig the script. The rest of the arguments are the same as described in the individual modules.
