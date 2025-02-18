@@ -1,0 +1,76 @@
+:A_IDH_pred #DDCA11
+:DIG_DIA_pred #cd4d00
+:DMG_K27_pred #a3f187
+:GBM_pred #68C62D
+:PA_pred #9D73C9
+:CTRL_REACTIVE_pred #D7D7D7
+:EPN_MPE_pred #B90F38
+:CTRL_pred #D3D3D3
+:A_IDH #DDCA11
+:A_IDH_pred #DDCA11
+A_IDH [2] A_IDH_pred
+:DIG_DIA #cd4d00
+:DIG_DIA_pred #cd4d00
+DIG_DIA [1] DIG_DIA_pred
+:DMG_K27 #a3f187
+:DMG_K27_pred #a3f187
+DMG_K27 [1] DMG_K27_pred
+:GG #E4703A
+:GG_pred #E4703A
+GG [2] GBM_pred
+GG [1] PA_pred
+GG [1] CTRL_REACTIVE_pred
+:GBM #68C62D
+:GBM_pred #68C62D
+GBM [2] GBM_pred
+:PA #9D73C9
+:PA_pred #9D73C9
+PA [5] PA_pred
+PA [3] DMG_K27_pred
+PA [2] GBM_pred
+PA [1] EPN_MPE_pred
+PA [1] A_IDH_pred
+PA [1] CTRL_pred
+PA [1] CTRL_REACTIVE_pred
+PA [1] DIG_DIA_pred
+:EPN_PFA #ffb3cb
+:EPN_PFA_pred #ffb3cb
+EPN_PFA [1] PA_pred
+:A_IDH_pred #DDCA11
+:DIG_DIA_pred #cd4d00
+:DMG_K27_pred #a3f187
+:GBM_pred #68C62D
+:PA_pred #9D73C9
+:CTRL_REACTIVE_pred #D7D7D7
+:EPN_MPE_pred #B90F38
+:CTRL_pred #D3D3D3
+:A_IDH #DDCA11
+:A_IDH_pred #DDCA11
+A_IDH [2] A_IDH_pred
+:DIG_DIA #cd4d00
+:DIG_DIA_pred #cd4d00
+DIG_DIA [1] DIG_DIA_pred
+:DMG_K27 #a3f187
+:DMG_K27_pred #a3f187
+DMG_K27 [1] DMG_K27_pred
+:GG #E4703A
+:GG_pred #E4703A
+GG [2] GBM_pred
+GG [1] PA_pred
+GG [1] CTRL_REACTIVE_pred
+:GBM #68C62D
+:GBM_pred #68C62D
+GBM [2] GBM_pred
+:PA #9D73C9
+:PA_pred #9D73C9
+PA [5] PA_pred
+PA [3] DMG_K27_pred
+PA [2] GBM_pred
+PA [1] EPN_MPE_pred
+PA [1] A_IDH_pred
+PA [1] CTRL_pred
+PA [1] CTRL_REACTIVE_pred
+PA [1] DIG_DIA_pred
+:EPN_PFA #ffb3cb
+:EPN_PFA_pred #ffb3cb
+EPN_PFA [1] PA_pred

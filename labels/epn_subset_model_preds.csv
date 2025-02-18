@@ -1,0 +1,91 @@
+uuid,patient_ID,model_pred_class,tumor_type_model_preds,pred_confidence,event_code,os,who_type
+597513E5-D5E3-4863-B87D-E276A31C146D,mnp-20-1132,13,Myxopapillary ependymoma,0.9243434,0,40,ependymal tumor
+92DFBD11-84A7-414C-871D-ED9C595743E4,mnp-20-0774,2,"supratentorial ependymoma, ZFTA fusion-positive",0.4589302,0,25,ependymal tumor
+E40F23C8-8044-482D-8C4C-08D8546C3B56,mnp-20-1524,1,posterior fossa ependymoma group A,0.826486,0,29,ependymal tumor
+E01123AF-8811-4511-9AB8-A5F7AFC85CAC,mnp-20-0812,13,Myxopapillary ependymoma,0.48734322,0,54,ependymal tumor
+B5347631-3EC0-4F0C-9E8E-546E578A64AF,mnp-20-0012,13,Myxopapillary ependymoma,0.68993556,0,33,ependymal tumor
+C90AA3B9-29D0-49B7-8AF8-D066D0C18FFE,mnp-20-1400,37,posterior fossa ependymoma group B,0.9128868,0,61,ependymal tumor
+EE6386EE-9798-4840-9B78-7A6FDFA18096,mnp-20-0563,1,posterior fossa ependymoma group A,0.73618144,1,25,ependymal tumor
+BBAFA98A-22B4-4617-BBC0-AC31D5E23CEE,mnp-20-0500,1,posterior fossa ependymoma group A,0.8106874,0,20,ependymal tumor
+395DD2FC-505D-42DB-8EF6-B01F5E921FF3,mnp-20-1482,1,posterior fossa ependymoma group A,0.89801884,0,23,ependymal tumor
+701B10B0-C937-4CD7-9E38-12E2EA2821BC,mnp-20-0358,1,posterior fossa ependymoma group A,0.9355014,0,67,ependymal tumor
+9E8A436F-470E-49DE-BF38-C5C8EFA66C2E,mnp-20-0107,2,"supratentorial ependymoma, ZFTA fusion-positive",0.32022244,0,26,ependymal tumor
+80A23CAD-7132-4A77-BDE1-0132D2506071,mnp-20-0451,1,posterior fossa ependymoma group A,0.7329333,0,27,ependymal tumor
+C7A34776-2F58-4FE4-AFD0-23B6BE6FA008,mnp-20-1011,13,Myxopapillary ependymoma,0.27855602,0,21,embryonal/pineal tumor
+A069C088-63E0-4B05-B96E-0CE51658463C,mnp-20-0924,2,"supratentorial ependymoma, ZFTA fusion-positive",0.92624223,0,39,ependymal tumor
+3302D5E0-94E8-4D98-BCC1-EF1653EA88DA,mnp-20-0712,1,posterior fossa ependymoma group A,0.75645053,0,20,ependymal tumor
+4378F898-0DD0-4053-BBC2-4FA4FB38AFB3,mnp-20-0904,1,posterior fossa ependymoma group A,0.77799344,0,43,ependymal tumor
+7763A402-C1EF-40A9-A8A9-2A864D3E3658,mnp-20-1012,1,posterior fossa ependymoma group A,0.43989062,1,27,ependymal tumor
+EE2F4EA6-9989-4178-983B-5EE5320A116A,mnp-20-1140,13,Myxopapillary ependymoma,0.14444666,0,27,high-grade glioma
+3D63C123-AC9F-4D10-BED1-56F1F6D99071,mnp-20-0571,1,posterior fossa ependymoma group A,0.7807375,0,30,ependymal tumor
+2E7EFA8E-9EB4-4C1D-8B65-BA702205A27B,mnp-20-0260,13,Myxopapillary ependymoma,0.8459123,0,43,ependymal tumor
+B647A9F6-2023-4944-A74E-B1B80286EC76,mnp-20-1193,2,"supratentorial ependymoma, ZFTA fusion-positive",0.7741078,0,30,ependymal tumor
+0B911671-1C02-4231-BF28-7D502198ABA8,mnp-20-0972,1,posterior fossa ependymoma group A,0.84154683,0,39,ependymal tumor
+E2F64268-9FFB-4C0A-9C1E-5930B679A4EE,mnp-20-0079,1,posterior fossa ependymoma group A,0.7119121,0,27,ependymal tumor
+09CEF454-8917-4C7B-955C-8DA5A5888BE3,mnp-20-1013,37,posterior fossa ependymoma group B,0.7389574,0,48,ependymal tumor
+539508A9-B8E3-498F-A454-885EF9CA3E9E,mnp-20-0885,1,posterior fossa ependymoma group A,0.66707736,0,9,ependymal tumor
+E12152AD-F79B-4D14-BD0E-5D13579C9A16,mnp-20-0392,1,posterior fossa ependymoma group A,0.70783377,0,25,ependymal tumor
+4C73023D-3F48-4E7D-A98B-D5F6FBBB9683,mnp-20-1359,1,posterior fossa ependymoma group A,0.8264345,0,20,ependymal tumor
+B14C06CE-23EC-4143-AF99-A7E8DC6783D1,mnp-20-0875,22,Spinal ependymoma,0.4368021,0,24,ependymal tumor
+8F7ACBDC-5D27-4F2A-B5BD-4322A014B2C0,mnp-20-0702,2,"supratentorial ependymoma, ZFTA fusion-positive",0.21170585,0,24,ependymal tumor
+065D9ACC-D623-41D6-A04A-D29EA5094579,mnp-20-0560,1,posterior fossa ependymoma group A,0.31865793,0,24,ependymal tumor
+55E42C9D-8E76-45DC-973B-F33610CA7C71,mnp-20-0424,1,posterior fossa ependymoma group A,0.79231346,0,31,ependymal tumor
+678398BA-A0A6-4287-A7ED-548FFA2A9DB4,mnp-20-1073,1,posterior fossa ependymoma group A,0.76139706,0,19,ependymal tumor
+2E899F9D-3B50-4E2F-A89F-469969A31D41,mnp-20-1079,1,posterior fossa ependymoma group A,0.5291238,0,25,ependymal tumor
+8787B788-F25A-4548-B686-8F494A58E0F6,mnp-20-1437,1,posterior fossa ependymoma group A,0.78327113,0,21,ependymal tumor
+216812BC-6C4A-4673-ADC7-1CEA12946D2C,mnp-20-0198,1,posterior fossa ependymoma group A,0.8791729,0,26,ependymal tumor
+4662C2D5-B7D8-43BA-BA07-E7040EB1D32C,mnp-20-0097,1,posterior fossa ependymoma group A,0.30452466,0,14,ependymal tumor
+E71F74CB-8053-4918-88CD-03E096896AB6,mnp-20-0471,2,"supratentorial ependymoma, ZFTA fusion-positive",0.88590205,0,46,ependymal tumor
+11FCDE83-6416-4F8E-A984-179139E801B3,mnp-20-0503,2,"supratentorial ependymoma, ZFTA fusion-positive",0.6046703,0,11,ependymal tumor
+5980BC42-B7E5-4C25-AEBB-26191E8E4245,mnp-20-0754,13,Myxopapillary ependymoma,0.73774326,0,62,ependymal tumor
+D207A814-6B78-426E-ADAD-7A836A995E79,mnp-20-1532,1,posterior fossa ependymoma group A,0.9533922,0,44,ependymal tumor
+E327DC3C-FF92-43D4-84F0-DCA8AD42087C,mnp-20-0004,1,posterior fossa ependymoma group A,0.37996557,0,25,ependymal tumor
+A3D562D7-E15C-4C63-AFA7-4E3340C0D236,mnp-20-0888,1,posterior fossa ependymoma group A,0.25160873,0,28,ependymal tumor
+B7210408-6080-4580-AAE6-69BB03C1B01D,mnp-20-1447,1,posterior fossa ependymoma group A,0.5148933,0,31,ependymal tumor
+0A27E949-F63C-4CD9-B842-1ACA5051EDFB,mnp-20-1016,2,"supratentorial ependymoma, ZFTA fusion-positive",0.19369884,1,30,ependymal tumor
+11D3E124-2EFE-4CBC-91EA-3D31DAA7A4F8,mnp-20-1465,2,"supratentorial ependymoma, ZFTA fusion-positive",0.69005203,0,37,ependymal tumor
+7FE9013F-6EEA-4B61-9228-922BFC3033AB,mnp-20-0181,1,posterior fossa ependymoma group A,0.67082936,0,20,ependymal tumor
+7ED89831-E4F3-47CC-A8C9-707771E00429,mnp-20-0498,2,"supratentorial ependymoma, ZFTA fusion-positive",0.27537706,0,41,ependymal tumor
+8DF73E52-30F7-41D4-887C-3C78BEFA9B0D,mnp-20-0082,1,posterior fossa ependymoma group A,0.31645054,0,39,ependymal tumor
+26B38D15-E857-4515-89F5-73D097F93C8E,mnp-20-0597,1,posterior fossa ependymoma group A,0.5896927,0,8,ependymal tumor
+F435296D-CD36-4894-AEFE-D255E60CD1F9,mnp-20-1095,1,posterior fossa ependymoma group A,0.80125874,0,35,ependymal tumor
+CFEE96F9-99F9-4B59-AEF5-40CBAD12CE87,mnp-20-1095,1,posterior fossa ependymoma group A,0.80056846,0,35,ependymal tumor
+11E07E46-17D5-49FE-A3FD-A4670126A15A,mnp-20-0341,2,"supratentorial ependymoma, ZFTA fusion-positive",0.25302774,0,6,other tumor
+1B6D39F2-AE52-48B4-9A77-8846D6BCFF10,mnp-20-0544,1,posterior fossa ependymoma group A,0.44342285,1,41,ependymal tumor
+94A44B90-2400-4CCF-8E72-322A288B7947,mnp-20-0839,13,Myxopapillary ependymoma,0.72400844,0,38,ependymal tumor
+B86AB1F1-5A95-45C6-AF73-6BD32FF347A1,mnp-20-0616,2,"supratentorial ependymoma, ZFTA fusion-positive",0.750497,0,20,ependymal tumor
+AB569D34-C94A-428F-BA7A-23079F54C941,mnp-20-0161,13,Myxopapillary ependymoma,0.3569625,0,12,ependymal tumor
+4840B995-CB82-4F2D-B276-A122EB41B28C,mnp-20-0718,1,posterior fossa ependymoma group A,0.7046147,0,30,ependymal tumor
+0D376B96-7543-4EEB-A57E-95175BC2E7DC,mnp-20-1080,1,posterior fossa ependymoma group A,0.6027474,1,26,ependymal tumor
+933A9D33-1484-4A16-91E0-950B82FA0424,mnp-20-1386,1,posterior fossa ependymoma group A,0.67919314,1,43,ependymal tumor
+3CFA473F-1E30-4E17-89FD-AA91BA0D0487,mnp-20-0850,37,posterior fossa ependymoma group B,0.38726526,0,50,ependymal tumor
+2B24526C-C57D-46EC-B27F-BA91362C42D5,mnp-20-0357,2,"supratentorial ependymoma, ZFTA fusion-positive",0.69886357,1,21,ependymal tumor
+7A5BC421-7DEE-40CE-8526-98798A3EC34B,mnp-20-0320,1,posterior fossa ependymoma group A,0.5713452,0,28,ependymal tumor
+982C0DF4-115E-411C-A232-A29FB8D382E6,mnp-20-0175,13,Myxopapillary ependymoma,0.26396894,0,55,high-grade glioma
+57CEACCA-7BAC-48BA-AE59-42F687AF1942,mnp-20-0112,1,posterior fossa ependymoma group A,0.36463708,0,42,ependymal tumor
+1CE84C3B-9BE2-42BB-9931-3CF451E7A3E7,mnp-20-0057,13,Myxopapillary ependymoma,0.87985116,0,48,ependymal tumor
+34E10DEE-0232-4B3A-9607-1ED6D4BAF5DA,mnp-20-1290,13,Myxopapillary ependymoma,0.855826,0,42,ependymal tumor
+63CB7C14-781B-4FE7-A369-27BB76D70DDD,mnp-20-0736,1,posterior fossa ependymoma group A,0.5527781,0,62,ependymal tumor
+7007D70D-4EC5-402E-9812-85F3ECF2636D,mnp-20-0043,1,posterior fossa ependymoma group A,0.7776593,1,44,ependymal tumor
+0ACEBF18-3EF7-4B61-A002-031A214E76A6,mnp-20-0427,1,posterior fossa ependymoma group A,0.90788716,0,17,ependymal tumor
+F0811841-1654-4C97-BDBB-CBB533CC60A3,mnp-20-1237,2,"supratentorial ependymoma, ZFTA fusion-positive",0.91288453,0,52,ependymal tumor
+ACB59D0A-4767-4ECC-BD0F-F1927EF3C443,mnp-20-0459,1,posterior fossa ependymoma group A,0.63571155,0,12,ependymal tumor
+5F058D76-B456-481E-A8A8-8B2DE75F9964,mnp-20-0711,22,Spinal ependymoma,0.22232811,0,9,ependymal tumor
+27054B03-760C-49A4-AD31-96A8996084A6,mnp-20-0998,1,posterior fossa ependymoma group A,0.8723601,0,49,ependymal tumor
+F35F5C88-04FF-4C2D-893A-3BC77529FA63,mnp-20-0991,2,"supratentorial ependymoma, ZFTA fusion-positive",0.9196334,1,33,ependymal tumor
+F8B05028-3D3C-4312-92C5-0DC5362DC5E5,mnp-20-0457,37,posterior fossa ependymoma group B,0.7530739,0,21,ependymal tumor
+983D5EF6-4C6E-41FF-A565-7296F5F0CFBF,mnp-20-0740,1,posterior fossa ependymoma group A,0.63665456,0,23,ependymal tumor
+02BDE74B-E573-4AE0-8AE5-F8476D280DBF,mnp-20-1022,1,posterior fossa ependymoma group A,0.8059208,1,12,ependymal tumor
+5CB5BC93-C0B7-40A8-BD25-EDA72580EAF3,mnp-20-0647,1,posterior fossa ependymoma group A,0.79208267,0,9,ependymal tumor
+9CE68D59-31D7-4A4A-B997-91127F740B3B,mnp-20-0337,1,posterior fossa ependymoma group A,0.72595394,0,41,ependymal tumor
+51806BC1-E57F-4740-B30B-7A88D8875D04,mnp-20-1259,2,"supratentorial ependymoma, ZFTA fusion-positive",0.48625526,0,21,ependymal tumor
+DE04AB7E-C985-4C44-B7DA-1EE2A783C340,mnp-20-0530,1,posterior fossa ependymoma group A,0.73005855,0,40,ependymal tumor
+92635AD6-6FA4-4EB2-A76C-46C989EC2DE6,mnp-20-0813,1,posterior fossa ependymoma group A,0.8014881,0,21,ependymal tumor
+5627D9BE-F3D5-483A-ADC8-7F9D869E67FB,mnp-20-1145,1,posterior fossa ependymoma group A,0.40955043,0,35,ependymal tumor
+763E34F9-F47B-4712-AFA2-62DF75C91493,mnp-20-0279,2,"supratentorial ependymoma, ZFTA fusion-positive",0.07884709,0,21,embryonal/pineal tumor
+0E15F9AA-7ADB-4F2A-813B-544A2F35FDDA,mnp-20-0894,1,posterior fossa ependymoma group A,0.6221744,0,63,ependymal tumor
+00A0D172-A186-49B6-AD75-AE6B9E9E1122,mnp-20-1303,22,Spinal ependymoma,0.67204326,0,57,ependymal tumor
+F72185ED-8109-49E7-8194-3496BB136ECF,mnp-20-1175,2,"supratentorial ependymoma, ZFTA fusion-positive",0.6981656,0,14,ependymal tumor
+CB918424-8DF5-4AEA-83D9-20C2BFE88127,mnp-20-1184,1,posterior fossa ependymoma group A,0.5129279,0,20,ependymal tumor
+9160BACC-D7CE-40CB-8A49-80D5449D9DB9,mnp-20-0201,1,posterior fossa ependymoma group A,0.8689864,1,39,ependymal tumor
+D482C9B0-6E77-48C0-918D-02F3E79A55E6,mnp-20-1565,2,"supratentorial ependymoma, ZFTA fusion-positive",0.88153714,0,29,no category applicable

@@ -1,0 +1,854 @@
+:GBM #68C62D
+:GBM_pred #68C62D
+GBM [54] GBM_pred
+GBM [2] A_IDH_pred
+GBM [2] pedHGG_pred
+GBM [1] PITAD_pred
+GBM [1] O_IDH_pred
+GBM [1] CTRL_pred
+GBM [1] HGG_pred
+:A_IDH #DDCA11
+:A_IDH_pred #DDCA11
+A_IDH [74] A_IDH_pred
+A_IDH [14] O_IDH_pred
+A_IDH [13] GBM_pred
+A_IDH [6] HGG_pred
+A_IDH [4] DMG_K27_pred
+A_IDH [3] pedHGG_pred
+A_IDH [2] PA_pred
+A_IDH [2] GG_pred
+A_IDH [1] HGAP_pred
+A_IDH [1] DGONC_pred
+:O_IDH #FFE336
+:O_IDH_pred #FFE336
+O_IDH [46] O_IDH_pred
+O_IDH [26] GBM_pred
+O_IDH [10] A_IDH_pred
+O_IDH [3] HGG_pred
+O_IDH [2] PITAD_pred
+O_IDH [1] PA_pred
+O_IDH [1] MB_G4_pred
+O_IDH [1] CTRL_pred
+O_IDH [1] DNET_pred
+O_IDH [1] GG_pred
+:HGG #7ea2ce
+:HGG_pred #7ea2ce
+HGG [6] A_IDH_pred
+HGG [4] GBM_pred
+HGG [2] HGG_pred
+HGG [1] EPN_ST_ZFTA_FUS_pred
+HGG [1] pedHGG_pred
+HGG [1] DMG_K27_pred
+:OLIGOSARC_IDH #FFF700
+:OLIGOSARC_IDH_pred #FFF700
+OLIGOSARC_IDH [1] A_IDH_pred
+OLIGOSARC_IDH [1] O_IDH_pred
+:GBM_CBM #58c159
+:GBM_CBM_pred #58c159
+GBM_CBM [2] PA_pred
+GBM_CBM [1] GBM_pred
+:ANT #ff9e4d
+:ANT_pred #ff9e4d
+ANT [1] A_IDH_pred
+:EPN_PFA #ffb3cb
+:EPN_PFA_pred #ffb3cb
+EPN_PFA [1] GBM_pred
+EPN_PFA [1] MNG_BEN_pred
+:EPN_ST_ZFTA_FUS #df6d6c
+:EPN_ST_ZFTA_FUS_pred #df6d6c
+EPN_ST_ZFTA_FUS [7] EPN_ST_ZFTA_FUS_pred
+EPN_ST_ZFTA_FUS [4] GBM_pred
+EPN_ST_ZFTA_FUS [1] PA_pred
+EPN_ST_ZFTA_FUS [1] PXA_pred
+:EPN_MPE #B90F38
+:EPN_MPE_pred #B90F38
+EPN_MPE [3] EPN_MPE_pred
+EPN_MPE [1] EPN_ST_ZFTA_FUS_pred
+:EPN_SPINE #FF044C
+:EPN_SPINE_pred #FF044C
+EPN_SPINE [5] EPN_SPINE_pred
+EPN_SPINE [2] EPN_MPE_pred
+EPN_SPINE [1] ANT_pred
+:EPN_PF_SE #DD052E
+:EPN_PF_SE_pred #DD052E
+EPN_PF_SE [3] EPN_PF_SE_pred
+EPN_PF_SE [2] GBM_pred
+EPN_PF_SE [1] MNG_BEN_pred
+EPN_PF_SE [1] PA_pred
+:EPN_PFB #e6657b
+:EPN_PFB_pred #e6657b
+EPN_PFB [17] EPN_PFB_pred
+EPN_PFB [2] GBM_pred
+EPN_PFB [1] EPN_PFA_pred
+EPN_PFB [1] EPN_ST_ZFTA_FUS_pred
+EPN_PFB [1] O_IDH_pred
+EPN_PFB [1] MNG_INT_pred
+:EPN_ST_SE #FF4156
+:EPN_ST_SE_pred #FF4156
+EPN_ST_SE [2] EPN_ST_SE_pred
+EPN_ST_SE [1] A_IDH_pred
+:EPN_SPINE_MYCN #b30033
+:EPN_SPINE_MYCN_pred #b30033
+EPN_SPINE_MYCN [1] EPN_PFA_pred
+EPN_SPINE_MYCN [1] PA_pred
+EPN_SPINE_MYCN [1] EPN_SPINE_MYCN_pred
+EPN_SPINE_MYCN [1] NORM_PIN_CYT_pred
+:MNG_BEN #e39ae5
+:MNG_BEN_pred #e39ae5
+MNG_BEN [9] MNG_BEN_pred
+MNG_BEN [1] GBM_pred
+MNG_BEN [1] PA_pred
+MNG_BEN [1] MNG_INT_pred
+:MNG_INT #8c258d
+:MNG_INT_pred #8c258d
+MNG_INT [6] MNG_INT_pred
+MNG_INT [2] MNG_BEN_pred
+:MNG_MAL #e382fd
+:MNG_MAL_pred #e382fd
+MNG_MAL [3] MNG_BEN_pred
+MNG_MAL [3] MNG_INT_pred
+MNG_MAL [1] MNG_MAL_pred
+:MNG_SMARCE1 #b430b6
+:MNG_SMARCE1_pred #b430b6
+MNG_SMARCE1 [1] MNG_BEN_pred
+:PA #9D73C9
+:PA_pred #9D73C9
+PA [14] PA_pred
+PA [6] GG_pred
+PA [4] GBM_pred
+PA [3] DNET_pred
+PA [2] DMG_K27_pred
+PA [1] EPN_ST_ZFTA_FUS_pred
+PA [1] A_IDH_pred
+PA [1] CTRL_pred
+PA [1] PITUI_pred
+PA [1] SEGA_pred
+:DNET #CB5216
+:DNET_pred #CB5216
+DNET [7] DNET_pred
+DNET [3] PA_pred
+DNET [1] A_IDH_pred
+DNET [1] O_IDH_pred
+DNET [1] EPN_MPE_pred
+:GG #E4703A
+:GG_pred #E4703A
+GG [8] GG_pred
+GG [4] GBM_pred
+GG [1] PA_pred
+GG [1] PXA_pred
+:DIG_DIA #cd4d00
+:DIG_DIA_pred #cd4d00
+DIG_DIA [2] IHG_pred
+DIG_DIA [2] DIG_DIA_pred
+DIG_DIA [1] GBM_pred
+DIG_DIA [1] MNG_BEN_pred
+DIG_DIA [1] MMNST_pred
+DIG_DIA [1] PXA_pred
+:DGONC #ff701a
+:DGONC_pred #ff701a
+DGONC [1] A_IDH_pred
+:AG_MYB #9159DE
+:AG_MYB_pred #9159DE
+AG_MYB [1] PA_pred
+:RGNT #F79246
+:RGNT_pred #F79246
+RGNT [8] PA_pred
+RGNT [2] DNET_pred
+RGNT [1] EPN_SPINE_SE_pred
+:EVNCYT #e7b598
+:EVNCYT_pred #e7b598
+EVNCYT [1] DNET_pred
+:LGG_MYB #9c6ae1
+:LGG_MYB_pred #9c6ae1
+LGG_MYB [2] PA_pred
+LGG_MYB [1] GG_pred
+:MYXGNT #d47a45
+:MYXGNT_pred #d47a45
+MYXGNT [2] PA_pred
+MYXGNT [2] DNET_pred
+MYXGNT [1] MYXGNT_pred
+:PLNTY #914b22
+:PLNTY_pred #914b22
+PLNTY [1] EPN_PFA_pred
+:pedHGG #19cd19
+:pedHGG_pred #19cd19
+pedHGG [7] EPN_ST_ZFTA_FUS_pred
+pedHGG [4] A_IDH_pred
+pedHGG [3] GBM_pred
+pedHGG [3] pedHGG_pred
+pedHGG [2] PA_pred
+pedHGG [2] O_IDH_pred
+pedHGG [2] ATRT_pred
+pedHGG [2] DMG_K27_pred
+pedHGG [1] MB_G3_pred
+pedHGG [1] EPN_SPINE_pred
+pedHGG [1] EWS_pred
+pedHGG [1] GG_pred
+:DMG_K27 #a3f187
+:DMG_K27_pred #a3f187
+DMG_K27 [5] A_IDH_pred
+DMG_K27 [5] DMG_K27_pred
+DMG_K27 [1] GBM_pred
+DMG_K27 [1] PA_pred
+DMG_K27 [1] pedHGG_pred
+DMG_K27 [1] GG_pred
+:DHG_G34 #55C056
+:DHG_G34_pred #55C056
+DHG_G34 [3] GBM_pred
+DHG_G34 [1] A_IDH_pred
+DHG_G34 [1] pedHGG_pred
+DHG_G34 [1] PB_GRP1_pred
+DHG_G34 [1] DHG_G34_pred
+DHG_G34 [1] HGAP_pred
+:IHG #d0bbd8
+:IHG_pred #d0bbd8
+IHG [1] IHG_pred
+:MB_SHH #8BC0FF
+:MB_SHH_pred #8BC0FF
+MB_SHH [3] MB_SHH_pred
+MB_SHH [1] A_IDH_pred
+:MB_G4 #1566d0
+:MB_G4_pred #1566d0
+MB_G4 [1] MB_G4_pred
+:MB_G3 #bad5f8
+:MB_G3_pred #bad5f8
+MB_G3 [1] MB_G3_pred
+:MB_WNT #6DA7D9
+:MB_WNT_pred #6DA7D9
+MB_WNT [1] MNG_BEN_pred
+MB_WNT [1] PA_pred
+MB_WNT [1] MB_SHH_pred
+MB_WNT [1] pedHGG_pred
+MB_WNT [1] EWS_pred
+:CPH_PAP #43DAD7
+:CPH_PAP_pred #43DAD7
+CPH_PAP [1] GBM_pred
+CPH_PAP [1] MNG_BEN_pred
+CPH_PAP [1] CPH_PAP_pred
+:CPH_ADM #72D4C8
+:CPH_ADM_pred #72D4C8
+CPH_ADM [2] CPH_ADM_pred
+:ATRT #006EAD
+:ATRT_pred #006EAD
+ATRT [5] ATRT_pred
+ATRT [1] GBM_pred
+ATRT [1] EPN_ST_ZFTA_FUS_pred
+ATRT [1] ABM_MN1_pred
+ATRT [1] MET_MEL_pred
+:CNS_NB_FOXR2 #518ccb
+:CNS_NB_FOXR2_pred #518ccb
+CNS_NB_FOXR2 [3] CNS_NB_FOXR2_pred
+CNS_NB_FOXR2 [2] EPN_ST_ZFTA_FUS_pred
+CNS_NB_FOXR2 [1] GBM_pred
+CNS_NB_FOXR2 [1] EPN_MPE_pred
+CNS_NB_FOXR2 [1] DGONC_pred
+:CNS_BCOR_ITD #739ACA
+:CNS_BCOR_ITD_pred #739ACA
+CNS_BCOR_ITD [2] EPN_ST_ZFTA_FUS_pred
+CNS_BCOR_ITD [1] EPN_PFA_pred
+CNS_BCOR_ITD [1] DMG_K27_pred
+:ET_PLAG #315581
+:ET_PLAG_pred #315581
+ET_PLAG [1] EPN_ST_ZFTA_FUS_pred
+ET_PLAG [1] PA_pred
+:CNS_BCOR_FUS #5987c0
+:CNS_BCOR_FUS_pred #5987c0
+CNS_BCOR_FUS [2] EPN_ST_ZFTA_FUS_pred
+CNS_BCOR_FUS [1] A_IDH_pred
+CNS_BCOR_FUS [1] GG_pred
+:ET_BRD4_LEUTX #51c3fa
+:ET_BRD4_LEUTX_pred #51c3fa
+ET_BRD4_LEUTX [1] MB_G3_pred
+:MMNST #F7CA8A
+:MMNST_pred #F7CA8A
+MMNST [1] MNG_BEN_pred
+MMNST [1] MMNST_pred
+:NFIB_PLEX #ff9999
+:NFIB_PLEX_pred #ff9999
+NFIB_PLEX [4] MMNST_pred
+NFIB_PLEX [3] SCHW_pred
+NFIB_PLEX [1] CHORDM_pred
+NFIB_PLEX [1] RMS_pred
+:SCHW #FFE1B2
+:SCHW_pred #FFE1B2
+SCHW [4] GBM_pred
+SCHW [3] SCHW_pred
+:CAUDEQU_NET #F5811D
+:CAUDEQU_NET_pred #F5811D
+CAUDEQU_NET [19] CAUDEQU_NET_pred
+CAUDEQU_NET [12] O_IDH_pred
+CAUDEQU_NET [5] MNG_BEN_pred
+CAUDEQU_NET [4] PITAD_pred
+CAUDEQU_NET [2] EPN_SPINE_pred
+CAUDEQU_NET [1] GBM_pred
+CAUDEQU_NET [1] A_IDH_pred
+:CNS_SCHW_VGLL #ff904d
+:CNS_SCHW_VGLL_pred #ff904d
+CNS_SCHW_VGLL [1] MNG_BEN_pred
+:CHORDM #FA8CFF
+:CHORDM_pred #FA8CFF
+CHORDM [1] CHORDM_pred
+:EWS #CE69EC
+:EWS_pred #CE69EC
+EWS [3] EWS_pred
+EWS [1] MB_G3_pred
+:HMB #ED5CFC
+:HMB_pred #ED5CFC
+HMB [2] HMB_pred
+HMB [1] PA_pred
+:SFT_HMPC #FF6DFA
+:SFT_HMPC_pred #FF6DFA
+SFT_HMPC [9] SFT_HMPC_pred
+SFT_HMPC [3] MNG_BEN_pred
+SFT_HMPC [1] EPN_ST_ZFTA_FUS_pred
+SFT_HMPC [1] ABM_MN1_pred
+SFT_HMPC [1] OLIGOSARC_IDH_pred
+SFT_HMPC [1] CNS_SARC_CIC_pred
+:CNS_SARC_CIC #955C9D
+:CNS_SARC_CIC_pred #955C9D
+CNS_SARC_CIC [2] PA_pred
+CNS_SARC_CIC [2] RMS_pred
+CNS_SARC_CIC [1] ATRT_pred
+CNS_SARC_CIC [1] CNS_SARC_CIC_pred
+:CNS_SARC_DICER #cb61eb
+:CNS_SARC_DICER_pred #cb61eb
+CNS_SARC_DICER [3] RMS_pred
+CNS_SARC_DICER [1] GBM_pred
+CNS_SARC_DICER [1] MNG_BEN_pred
+CNS_SARC_DICER [1] MMNST_pred
+:CTRL #D3D3D3
+:CTRL_pred #D3D3D3
+CTRL [2] PA_pred
+CTRL [2] O_IDH_pred
+CTRL [2] CTRL_pred
+CTRL [1] A_IDH_pred
+:CTRL_REACTIVE #D7D7D7
+:CTRL_REACTIVE_pred #D7D7D7
+CTRL_REACTIVE [8] PA_pred
+CTRL_REACTIVE [1] GBM_pred
+CTRL_REACTIVE [1] DNET_pred
+CTRL_REACTIVE [1] CTRL_REACTIVE_pred
+:PXA #7C46C9
+:PXA_pred #7C46C9
+PXA [5] PXA_pred
+PXA [2] CTRL_REACTIVE_pred
+PXA [1] GBM_pred
+PXA [1] MNG_BEN_pred
+PXA [1] PA_pred
+PXA [1] EPN_MPE_pred
+PXA [1] ABM_MN1_pred
+:HGAP #734ba9
+:HGAP_pred #734ba9
+HGAP [12] GBM_pred
+HGAP [4] PA_pred
+HGAP [2] DMG_K27_pred
+HGAP [1] A_IDH_pred
+HGAP [1] PXA_pred
+HGAP [1] EPN_SPINE_pred
+HGAP [1] OLIGOSARC_IDH_pred
+:PB_GRP1 #cbf5af
+:PB_GRP1_pred #cbf5af
+PB_GRP1 [1] MB_G4_pred
+:PPTID #b4f79b
+:PPTID_pred #b4f79b
+PPTID [1] PITAD_pred
+PPTID [1] PPTID_pred
+:NORM_PIN_CYT #696969
+:NORM_PIN_CYT_pred #696969
+NORM_PIN_CYT [2] NORM_PIN_CYT_pred
+NORM_PIN_CYT [1] EPN_ST_ZFTA_FUS_pred
+:DLBCL #3C1B46
+:DLBCL_pred #3C1B46
+DLBCL [1] DLBCL_pred
+:LCH #4dcc8e
+:LCH_pred #4dcc8e
+LCH [1] GBM_pred
+:NB_MYCN #85c7b0
+:NB_MYCN_pred #85c7b0
+NB_MYCN [1] PB_pred
+:CPP #7B3E0A
+:CPP_pred #7B3E0A
+CPP [1] EPN_ST_ZFTA_FUS_pred
+CPP [1] CPP_pred
+:RMS #007BB8
+:RMS_pred #007BB8
+RMS [1] EPN_ST_ZFTA_FUS_pred
+:CHGL #B37DEC
+:CHGL_pred #B37DEC
+CHGL [1] ABM_MN1_pred
+:INFLAM_ENV #DBDBDB
+:INFLAM_ENV_pred #DBDBDB
+INFLAM_ENV [1] DMG_K27_pred
+:ONB #aa4a1c
+:ONB_pred #aa4a1c
+ONB [1] EPN_ST_ZFTA_FUS_pred
+ONB [1] ONB_pred
+:ABM_MN1 #AB94C1
+:ABM_MN1_pred #AB94C1
+ABM_MN1 [3] ABM_MN1_pred
+ABM_MN1 [1] EPN_ST_ZFTA_FUS_pred
+ABM_MN1 [1] ATRT_pred
+ABM_MN1 [1] EPN_MPE_pred
+:MET_MEL #0B4068
+:MET_MEL_pred #0B4068
+MET_MEL [2] PXA_pred
+MET_MEL [1] MMNST_pred
+:NET_PATZ1 #233d5c
+:NET_PATZ1_pred #233d5c
+NET_PATZ1 [1] A_IDH_pred
+NET_PATZ1 [1] MNG_BEN_pred
+:CN #B85400
+:CN_pred #B85400
+CN [4] CN_pred
+CN [1] PPTID_pred
+:PTPR #AEDE8A
+:PTPR_pred #AEDE8A
+PTPR [1] GBM_pred
+PTPR [1] EPN_MPE_pred
+PTPR [1] PTPR_pred
+:MELN #102A46
+:MELN_pred #102A46
+MELN [4] MELN_pred
+:DLGNT #d1723a
+:DLGNT_pred #d1723a
+DLGNT [5] PA_pred
+DLGNT [1] EPN_ST_ZFTA_FUS_pred
+DLGNT [1] O_IDH_pred
+DLGNT [1] DNET_pred
+:SNUC_IDH2 #ff8339
+:SNUC_IDH2_pred #ff8339
+SNUC_IDH2 [1] RMS_pred
+:NET_PLAGL1_FUS #e60019
+:NET_PLAGL1_FUS_pred #e60019
+NET_PLAGL1_FUS [3] EPN_ST_SE_pred
+NET_PLAGL1_FUS [1] EPN_ST_ZFTA_FUS_pred
+:IO_MEPL #46bcd2
+:IO_MEPL_pred #46bcd2
+IO_MEPL [2] MB_G3_pred
+:GBM #68C62D
+:GBM_pred #68C62D
+GBM [54] GBM_pred
+GBM [2] A_IDH_pred
+GBM [2] pedHGG_pred
+GBM [1] PITAD_pred
+GBM [1] O_IDH_pred
+GBM [1] CTRL_pred
+GBM [1] HGG_pred
+:A_IDH #DDCA11
+:A_IDH_pred #DDCA11
+A_IDH [74] A_IDH_pred
+A_IDH [14] O_IDH_pred
+A_IDH [13] GBM_pred
+A_IDH [6] HGG_pred
+A_IDH [4] DMG_K27_pred
+A_IDH [3] pedHGG_pred
+A_IDH [2] PA_pred
+A_IDH [2] GG_pred
+A_IDH [1] HGAP_pred
+A_IDH [1] DGONC_pred
+:O_IDH #FFE336
+:O_IDH_pred #FFE336
+O_IDH [46] O_IDH_pred
+O_IDH [26] GBM_pred
+O_IDH [10] A_IDH_pred
+O_IDH [3] HGG_pred
+O_IDH [2] PITAD_pred
+O_IDH [1] PA_pred
+O_IDH [1] MB_G4_pred
+O_IDH [1] CTRL_pred
+O_IDH [1] DNET_pred
+O_IDH [1] GG_pred
+:HGG #7ea2ce
+:HGG_pred #7ea2ce
+HGG [6] A_IDH_pred
+HGG [4] GBM_pred
+HGG [2] HGG_pred
+HGG [1] EPN_ST_ZFTA_FUS_pred
+HGG [1] pedHGG_pred
+HGG [1] DMG_K27_pred
+:OLIGOSARC_IDH #FFF700
+:OLIGOSARC_IDH_pred #FFF700
+OLIGOSARC_IDH [1] A_IDH_pred
+OLIGOSARC_IDH [1] O_IDH_pred
+:GBM_CBM #58c159
+:GBM_CBM_pred #58c159
+GBM_CBM [2] PA_pred
+GBM_CBM [1] GBM_pred
+:ANT #ff9e4d
+:ANT_pred #ff9e4d
+ANT [1] A_IDH_pred
+:EPN_PFA #ffb3cb
+:EPN_PFA_pred #ffb3cb
+EPN_PFA [1] GBM_pred
+EPN_PFA [1] MNG_BEN_pred
+:EPN_ST_ZFTA_FUS #df6d6c
+:EPN_ST_ZFTA_FUS_pred #df6d6c
+EPN_ST_ZFTA_FUS [7] EPN_ST_ZFTA_FUS_pred
+EPN_ST_ZFTA_FUS [4] GBM_pred
+EPN_ST_ZFTA_FUS [1] PA_pred
+EPN_ST_ZFTA_FUS [1] PXA_pred
+:EPN_MPE #B90F38
+:EPN_MPE_pred #B90F38
+EPN_MPE [3] EPN_MPE_pred
+EPN_MPE [1] EPN_ST_ZFTA_FUS_pred
+:EPN_SPINE #FF044C
+:EPN_SPINE_pred #FF044C
+EPN_SPINE [5] EPN_SPINE_pred
+EPN_SPINE [2] EPN_MPE_pred
+EPN_SPINE [1] ANT_pred
+:EPN_PF_SE #DD052E
+:EPN_PF_SE_pred #DD052E
+EPN_PF_SE [3] EPN_PF_SE_pred
+EPN_PF_SE [2] GBM_pred
+EPN_PF_SE [1] MNG_BEN_pred
+EPN_PF_SE [1] PA_pred
+:EPN_PFB #e6657b
+:EPN_PFB_pred #e6657b
+EPN_PFB [17] EPN_PFB_pred
+EPN_PFB [2] GBM_pred
+EPN_PFB [1] EPN_PFA_pred
+EPN_PFB [1] EPN_ST_ZFTA_FUS_pred
+EPN_PFB [1] O_IDH_pred
+EPN_PFB [1] MNG_INT_pred
+:EPN_ST_SE #FF4156
+:EPN_ST_SE_pred #FF4156
+EPN_ST_SE [2] EPN_ST_SE_pred
+EPN_ST_SE [1] A_IDH_pred
+:EPN_SPINE_MYCN #b30033
+:EPN_SPINE_MYCN_pred #b30033
+EPN_SPINE_MYCN [1] EPN_PFA_pred
+EPN_SPINE_MYCN [1] PA_pred
+EPN_SPINE_MYCN [1] EPN_SPINE_MYCN_pred
+EPN_SPINE_MYCN [1] NORM_PIN_CYT_pred
+:MNG_BEN #e39ae5
+:MNG_BEN_pred #e39ae5
+MNG_BEN [9] MNG_BEN_pred
+MNG_BEN [1] GBM_pred
+MNG_BEN [1] PA_pred
+MNG_BEN [1] MNG_INT_pred
+:MNG_INT #8c258d
+:MNG_INT_pred #8c258d
+MNG_INT [6] MNG_INT_pred
+MNG_INT [2] MNG_BEN_pred
+:MNG_MAL #e382fd
+:MNG_MAL_pred #e382fd
+MNG_MAL [3] MNG_BEN_pred
+MNG_MAL [3] MNG_INT_pred
+MNG_MAL [1] MNG_MAL_pred
+:MNG_SMARCE1 #b430b6
+:MNG_SMARCE1_pred #b430b6
+MNG_SMARCE1 [1] MNG_BEN_pred
+:PA #9D73C9
+:PA_pred #9D73C9
+PA [14] PA_pred
+PA [6] GG_pred
+PA [4] GBM_pred
+PA [3] DNET_pred
+PA [2] DMG_K27_pred
+PA [1] EPN_ST_ZFTA_FUS_pred
+PA [1] A_IDH_pred
+PA [1] CTRL_pred
+PA [1] PITUI_pred
+PA [1] SEGA_pred
+:DNET #CB5216
+:DNET_pred #CB5216
+DNET [7] DNET_pred
+DNET [3] PA_pred
+DNET [1] A_IDH_pred
+DNET [1] O_IDH_pred
+DNET [1] EPN_MPE_pred
+:GG #E4703A
+:GG_pred #E4703A
+GG [8] GG_pred
+GG [4] GBM_pred
+GG [1] PA_pred
+GG [1] PXA_pred
+:DIG_DIA #cd4d00
+:DIG_DIA_pred #cd4d00
+DIG_DIA [2] IHG_pred
+DIG_DIA [2] DIG_DIA_pred
+DIG_DIA [1] GBM_pred
+DIG_DIA [1] MNG_BEN_pred
+DIG_DIA [1] MMNST_pred
+DIG_DIA [1] PXA_pred
+:DGONC #ff701a
+:DGONC_pred #ff701a
+DGONC [1] A_IDH_pred
+:AG_MYB #9159DE
+:AG_MYB_pred #9159DE
+AG_MYB [1] PA_pred
+:RGNT #F79246
+:RGNT_pred #F79246
+RGNT [8] PA_pred
+RGNT [2] DNET_pred
+RGNT [1] EPN_SPINE_SE_pred
+:EVNCYT #e7b598
+:EVNCYT_pred #e7b598
+EVNCYT [1] DNET_pred
+:LGG_MYB #9c6ae1
+:LGG_MYB_pred #9c6ae1
+LGG_MYB [2] PA_pred
+LGG_MYB [1] GG_pred
+:MYXGNT #d47a45
+:MYXGNT_pred #d47a45
+MYXGNT [2] PA_pred
+MYXGNT [2] DNET_pred
+MYXGNT [1] MYXGNT_pred
+:PLNTY #914b22
+:PLNTY_pred #914b22
+PLNTY [1] EPN_PFA_pred
+:pedHGG #19cd19
+:pedHGG_pred #19cd19
+pedHGG [7] EPN_ST_ZFTA_FUS_pred
+pedHGG [4] A_IDH_pred
+pedHGG [3] GBM_pred
+pedHGG [3] pedHGG_pred
+pedHGG [2] PA_pred
+pedHGG [2] O_IDH_pred
+pedHGG [2] ATRT_pred
+pedHGG [2] DMG_K27_pred
+pedHGG [1] MB_G3_pred
+pedHGG [1] EPN_SPINE_pred
+pedHGG [1] EWS_pred
+pedHGG [1] GG_pred
+:DMG_K27 #a3f187
+:DMG_K27_pred #a3f187
+DMG_K27 [5] A_IDH_pred
+DMG_K27 [5] DMG_K27_pred
+DMG_K27 [1] GBM_pred
+DMG_K27 [1] PA_pred
+DMG_K27 [1] pedHGG_pred
+DMG_K27 [1] GG_pred
+:DHG_G34 #55C056
+:DHG_G34_pred #55C056
+DHG_G34 [3] GBM_pred
+DHG_G34 [1] A_IDH_pred
+DHG_G34 [1] pedHGG_pred
+DHG_G34 [1] PB_GRP1_pred
+DHG_G34 [1] DHG_G34_pred
+DHG_G34 [1] HGAP_pred
+:IHG #d0bbd8
+:IHG_pred #d0bbd8
+IHG [1] IHG_pred
+:MB_SHH #8BC0FF
+:MB_SHH_pred #8BC0FF
+MB_SHH [3] MB_SHH_pred
+MB_SHH [1] A_IDH_pred
+:MB_G4 #1566d0
+:MB_G4_pred #1566d0
+MB_G4 [1] MB_G4_pred
+:MB_G3 #bad5f8
+:MB_G3_pred #bad5f8
+MB_G3 [1] MB_G3_pred
+:MB_WNT #6DA7D9
+:MB_WNT_pred #6DA7D9
+MB_WNT [1] MNG_BEN_pred
+MB_WNT [1] PA_pred
+MB_WNT [1] MB_SHH_pred
+MB_WNT [1] pedHGG_pred
+MB_WNT [1] EWS_pred
+:CPH_PAP #43DAD7
+:CPH_PAP_pred #43DAD7
+CPH_PAP [1] GBM_pred
+CPH_PAP [1] MNG_BEN_pred
+CPH_PAP [1] CPH_PAP_pred
+:CPH_ADM #72D4C8
+:CPH_ADM_pred #72D4C8
+CPH_ADM [2] CPH_ADM_pred
+:ATRT #006EAD
+:ATRT_pred #006EAD
+ATRT [5] ATRT_pred
+ATRT [1] GBM_pred
+ATRT [1] EPN_ST_ZFTA_FUS_pred
+ATRT [1] ABM_MN1_pred
+ATRT [1] MET_MEL_pred
+:CNS_NB_FOXR2 #518ccb
+:CNS_NB_FOXR2_pred #518ccb
+CNS_NB_FOXR2 [3] CNS_NB_FOXR2_pred
+CNS_NB_FOXR2 [2] EPN_ST_ZFTA_FUS_pred
+CNS_NB_FOXR2 [1] GBM_pred
+CNS_NB_FOXR2 [1] EPN_MPE_pred
+CNS_NB_FOXR2 [1] DGONC_pred
+:CNS_BCOR_ITD #739ACA
+:CNS_BCOR_ITD_pred #739ACA
+CNS_BCOR_ITD [2] EPN_ST_ZFTA_FUS_pred
+CNS_BCOR_ITD [1] EPN_PFA_pred
+CNS_BCOR_ITD [1] DMG_K27_pred
+:ET_PLAG #315581
+:ET_PLAG_pred #315581
+ET_PLAG [1] EPN_ST_ZFTA_FUS_pred
+ET_PLAG [1] PA_pred
+:CNS_BCOR_FUS #5987c0
+:CNS_BCOR_FUS_pred #5987c0
+CNS_BCOR_FUS [2] EPN_ST_ZFTA_FUS_pred
+CNS_BCOR_FUS [1] A_IDH_pred
+CNS_BCOR_FUS [1] GG_pred
+:ET_BRD4_LEUTX #51c3fa
+:ET_BRD4_LEUTX_pred #51c3fa
+ET_BRD4_LEUTX [1] MB_G3_pred
+:MMNST #F7CA8A
+:MMNST_pred #F7CA8A
+MMNST [1] MNG_BEN_pred
+MMNST [1] MMNST_pred
+:NFIB_PLEX #ff9999
+:NFIB_PLEX_pred #ff9999
+NFIB_PLEX [4] MMNST_pred
+NFIB_PLEX [3] SCHW_pred
+NFIB_PLEX [1] CHORDM_pred
+NFIB_PLEX [1] RMS_pred
+:SCHW #FFE1B2
+:SCHW_pred #FFE1B2
+SCHW [4] GBM_pred
+SCHW [3] SCHW_pred
+:CAUDEQU_NET #F5811D
+:CAUDEQU_NET_pred #F5811D
+CAUDEQU_NET [19] CAUDEQU_NET_pred
+CAUDEQU_NET [12] O_IDH_pred
+CAUDEQU_NET [5] MNG_BEN_pred
+CAUDEQU_NET [4] PITAD_pred
+CAUDEQU_NET [2] EPN_SPINE_pred
+CAUDEQU_NET [1] GBM_pred
+CAUDEQU_NET [1] A_IDH_pred
+:CNS_SCHW_VGLL #ff904d
+:CNS_SCHW_VGLL_pred #ff904d
+CNS_SCHW_VGLL [1] MNG_BEN_pred
+:CHORDM #FA8CFF
+:CHORDM_pred #FA8CFF
+CHORDM [1] CHORDM_pred
+:EWS #CE69EC
+:EWS_pred #CE69EC
+EWS [3] EWS_pred
+EWS [1] MB_G3_pred
+:HMB #ED5CFC
+:HMB_pred #ED5CFC
+HMB [2] HMB_pred
+HMB [1] PA_pred
+:SFT_HMPC #FF6DFA
+:SFT_HMPC_pred #FF6DFA
+SFT_HMPC [9] SFT_HMPC_pred
+SFT_HMPC [3] MNG_BEN_pred
+SFT_HMPC [1] EPN_ST_ZFTA_FUS_pred
+SFT_HMPC [1] ABM_MN1_pred
+SFT_HMPC [1] OLIGOSARC_IDH_pred
+SFT_HMPC [1] CNS_SARC_CIC_pred
+:CNS_SARC_CIC #955C9D
+:CNS_SARC_CIC_pred #955C9D
+CNS_SARC_CIC [2] PA_pred
+CNS_SARC_CIC [2] RMS_pred
+CNS_SARC_CIC [1] ATRT_pred
+CNS_SARC_CIC [1] CNS_SARC_CIC_pred
+:CNS_SARC_DICER #cb61eb
+:CNS_SARC_DICER_pred #cb61eb
+CNS_SARC_DICER [3] RMS_pred
+CNS_SARC_DICER [1] GBM_pred
+CNS_SARC_DICER [1] MNG_BEN_pred
+CNS_SARC_DICER [1] MMNST_pred
+:CTRL #D3D3D3
+:CTRL_pred #D3D3D3
+CTRL [2] PA_pred
+CTRL [2] O_IDH_pred
+CTRL [2] CTRL_pred
+CTRL [1] A_IDH_pred
+:CTRL_REACTIVE #D7D7D7
+:CTRL_REACTIVE_pred #D7D7D7
+CTRL_REACTIVE [8] PA_pred
+CTRL_REACTIVE [1] GBM_pred
+CTRL_REACTIVE [1] DNET_pred
+CTRL_REACTIVE [1] CTRL_REACTIVE_pred
+:PXA #7C46C9
+:PXA_pred #7C46C9
+PXA [5] PXA_pred
+PXA [2] CTRL_REACTIVE_pred
+PXA [1] GBM_pred
+PXA [1] MNG_BEN_pred
+PXA [1] PA_pred
+PXA [1] EPN_MPE_pred
+PXA [1] ABM_MN1_pred
+:HGAP #734ba9
+:HGAP_pred #734ba9
+HGAP [12] GBM_pred
+HGAP [4] PA_pred
+HGAP [2] DMG_K27_pred
+HGAP [1] A_IDH_pred
+HGAP [1] PXA_pred
+HGAP [1] EPN_SPINE_pred
+HGAP [1] OLIGOSARC_IDH_pred
+:PB_GRP1 #cbf5af
+:PB_GRP1_pred #cbf5af
+PB_GRP1 [1] MB_G4_pred
+:PPTID #b4f79b
+:PPTID_pred #b4f79b
+PPTID [1] PITAD_pred
+PPTID [1] PPTID_pred
+:NORM_PIN_CYT #696969
+:NORM_PIN_CYT_pred #696969
+NORM_PIN_CYT [2] NORM_PIN_CYT_pred
+NORM_PIN_CYT [1] EPN_ST_ZFTA_FUS_pred
+:DLBCL #3C1B46
+:DLBCL_pred #3C1B46
+DLBCL [1] DLBCL_pred
+:LCH #4dcc8e
+:LCH_pred #4dcc8e
+LCH [1] GBM_pred
+:NB_MYCN #85c7b0
+:NB_MYCN_pred #85c7b0
+NB_MYCN [1] PB_pred
+:CPP #7B3E0A
+:CPP_pred #7B3E0A
+CPP [1] EPN_ST_ZFTA_FUS_pred
+CPP [1] CPP_pred
+:RMS #007BB8
+:RMS_pred #007BB8
+RMS [1] EPN_ST_ZFTA_FUS_pred
+:CHGL #B37DEC
+:CHGL_pred #B37DEC
+CHGL [1] ABM_MN1_pred
+:INFLAM_ENV #DBDBDB
+:INFLAM_ENV_pred #DBDBDB
+INFLAM_ENV [1] DMG_K27_pred
+:ONB #aa4a1c
+:ONB_pred #aa4a1c
+ONB [1] EPN_ST_ZFTA_FUS_pred
+ONB [1] ONB_pred
+:ABM_MN1 #AB94C1
+:ABM_MN1_pred #AB94C1
+ABM_MN1 [3] ABM_MN1_pred
+ABM_MN1 [1] EPN_ST_ZFTA_FUS_pred
+ABM_MN1 [1] ATRT_pred
+ABM_MN1 [1] EPN_MPE_pred
+:MET_MEL #0B4068
+:MET_MEL_pred #0B4068
+MET_MEL [2] PXA_pred
+MET_MEL [1] MMNST_pred
+:NET_PATZ1 #233d5c
+:NET_PATZ1_pred #233d5c
+NET_PATZ1 [1] A_IDH_pred
+NET_PATZ1 [1] MNG_BEN_pred
+:CN #B85400
+:CN_pred #B85400
+CN [4] CN_pred
+CN [1] PPTID_pred
+:PTPR #AEDE8A
+:PTPR_pred #AEDE8A
+PTPR [1] GBM_pred
+PTPR [1] EPN_MPE_pred
+PTPR [1] PTPR_pred
+:MELN #102A46
+:MELN_pred #102A46
+MELN [4] MELN_pred
+:DLGNT #d1723a
+:DLGNT_pred #d1723a
+DLGNT [5] PA_pred
+DLGNT [1] EPN_ST_ZFTA_FUS_pred
+DLGNT [1] O_IDH_pred
+DLGNT [1] DNET_pred
+:SNUC_IDH2 #ff8339
+:SNUC_IDH2_pred #ff8339
+SNUC_IDH2 [1] RMS_pred
+:NET_PLAGL1_FUS #e60019
+:NET_PLAGL1_FUS_pred #e60019
+NET_PLAGL1_FUS [3] EPN_ST_SE_pred
+NET_PLAGL1_FUS [1] EPN_ST_ZFTA_FUS_pred
+:IO_MEPL #46bcd2
+:IO_MEPL_pred #46bcd2
+IO_MEPL [2] MB_G3_pred
