@@ -1,0 +1,166 @@
+uuid,patient_ID,model_pred_class,tumor_type_model_preds,pred_confidence,event_code,os,who_type
+7967F656-4904-441F-9D93-A0BA0D0C46B6,mnp-20-0374,12,medulloblastoma Group 4,0.8796771,0,27,medulloblastoma
+428E8FDD-D6BB-4669-B85F-8101B97A0B47,mnp-20-0709,18,medulloblastoma Group 3,0.19010334,1,6,high-grade glioma
+69A69CF0-0710-4D43-A494-E1B0A912402C,mnp-20-0962,7,"medulloblastoma, SHH-activated",0.8728588,0,28,medulloblastoma
+74ED2959-C450-4666-89F8-4D91C0E30081,mnp-20-0287,18,medulloblastoma Group 3,0.8379158,0,17,medulloblastoma
+A32FC2DB-4392-4423-9E41-B92EEC460695,mnp-20-0742,7,"medulloblastoma, SHH-activated",0.97788584,0,25,medulloblastoma
+B1CBB9C7-7A2E-43EC-84E1-DC700B02A4F9,mnp-20-1019,12,medulloblastoma Group 4,0.568163,0,40,low-grade glioma/glioneuronal tumor
+50907F04-EAAE-4C2C-B6B6-BFE62A0D0B0D,mnp-20-0149,18,medulloblastoma Group 3,0.401722,0,16,medulloblastoma
+6F2A95BF-40A9-40B0-BB11-15CA95E4A96A,mnp-20-1234,18,medulloblastoma Group 3,0.2925105,1,7,embryonal/pineal tumor
+01F806DD-7E22-430E-97C4-432BBC3775B1,mnp-20-0945,12,medulloblastoma Group 4,0.42064047,0,38,medulloblastoma
+7DD5DF6D-C6E9-41E8-BAF8-1DF6CF1C1B1B,mnp-20-0791,18,medulloblastoma Group 3,0.13665447,0,25,medulloblastoma
+9D2A8CA5-8D6A-4D88-A314-8AF8CB149E56,mnp-20-0786,12,medulloblastoma Group 4,0.2632056,0,23,medulloblastoma
+01803C2F-F25D-4158-B5BF-2EAF0AF1454E,mnp-20-0350,12,medulloblastoma Group 4,0.8330059,0,18,medulloblastoma
+8B112D22-6E3B-4AD3-A062-1D3699FBABC9,mnp-20-1123,7,"medulloblastoma, SHH-activated",0.9466993,0,34,medulloblastoma
+D722C295-9F67-491D-A829-E11F0253BDF5,mnp-20-0059,18,medulloblastoma Group 3,0.38923913,0,20,medulloblastoma
+8D79E7B0-F210-41F3-BDFC-D61B3BAD5492,mnp-20-1377,7,"medulloblastoma, SHH-activated",0.9468611,0,11,medulloblastoma
+FF58338E-30BB-4E82-8A1B-FCCDDCF29B1C,mnp-20-0947,18,medulloblastoma Group 3,0.8349985,0,13,medulloblastoma
+7783A40A-0330-48BC-8A4C-32E8782B494C,mnp-20-1164,18,medulloblastoma Group 3,0.17478822,1,5,medulloblastoma
+0226BEF3-0632-4FEF-BD0C-66670E87CA01,mnp-20-0715,7,"medulloblastoma, SHH-activated",0.27387732,0,18,medulloblastoma
+D7F3E7E2-A344-4253-9047-91E450C4C377,mnp-20-0065,12,medulloblastoma Group 4,0.64951116,0,21,medulloblastoma
+5E455AB1-ADDB-44E2-A581-1976367BE898,mnp-20-1199,12,medulloblastoma Group 4,0.4734792,0,14,medulloblastoma
+E5A6176C-E236-45A3-A9B9-D02185201D89,mnp-20-1104,12,medulloblastoma Group 4,0.09858544,0,52,medulloblastoma
+8C3476CA-90DF-4FF3-8E73-9F037B6E0FAA,mnp-20-1195,7,"medulloblastoma, SHH-activated",0.62923956,0,20,medulloblastoma
+CCCE7FBD-0CDB-4ECF-B235-878DCE8EC189,mnp-20-0778,7,"medulloblastoma, SHH-activated",0.4004756,0,30,embryonal/pineal tumor
+EC30A1EA-B177-4DA2-ACC2-C68C3A54D70C,mnp-20-1381,42,"Medulloblastoma, WNT activated",0.6154574,1,39,medulloblastoma
+BD826C68-BFE3-42B0-AADD-070858B917C3,mnp-20-1248,7,"medulloblastoma, SHH-activated",0.77966774,0,12,medulloblastoma
+AA54CA80-48EA-450E-A8DC-DBC54834758C,mnp-20-0123,42,"Medulloblastoma, WNT activated",0.9254379,0,56,medulloblastoma
+17ADDA21-4BF7-4600-B00B-34DDAF7FC99B,mnp-20-0684,7,"medulloblastoma, SHH-activated",0.39241028,1,4,medulloblastoma
+001F6A69-2186-4D7C-ACD1-5341F16B2035,mnp-20-1347,18,medulloblastoma Group 3,0.37655577,1,21,medulloblastoma
+35D54ED7-42F1-4E31-87E3-13D10FED623B,mnp-20-1197,12,medulloblastoma Group 4,0.40709272,0,19,medulloblastoma
+D7C07DBE-CF9C-45D2-AF98-3194AE069217,mnp-20-1305,12,medulloblastoma Group 4,0.7625515,0,10,medulloblastoma
+DFD2587E-3645-4931-855F-D8E5FB52CF05,mnp-20-0206,7,"medulloblastoma, SHH-activated",0.59978276,1,15,high-grade glioma
+46867DBD-3E9A-4012-963C-82995E1E499B,mnp-20-0862,7,"medulloblastoma, SHH-activated",0.58526766,0,13,medulloblastoma
+5B697174-6E55-4A9F-AD0F-E2E102DBCF5F,mnp-20-1187,7,"medulloblastoma, SHH-activated",0.8033714,0,28,medulloblastoma
+0A07490D-A154-44AE-A683-2F0F53E7F656,mnp-20-0035,12,medulloblastoma Group 4,0.7761299,1,12,medulloblastoma
+D0B234B4-BFB3-49FA-8EF9-C7C0A1BAADAB,mnp-20-1382,12,medulloblastoma Group 4,0.41211224,0,27,medulloblastoma
+9BACC4F4-596C-4EE6-974E-C78036F87208,mnp-20-1601,18,medulloblastoma Group 3,0.38482445,0,11,embryonal/pineal tumor
+9D34109E-E8E1-48E1-BF1F-2515D92E3BDD,mnp-20-1008,7,"medulloblastoma, SHH-activated",0.5812567,1,25,medulloblastoma
+4CB62E2D-48AA-4390-B5C0-2126E101E882,mnp-20-0928,18,medulloblastoma Group 3,0.56713974,0,46,medulloblastoma
+0445364A-BB7E-49F2-B1A0-BDF9E569EABA,mnp-20-0636,12,medulloblastoma Group 4,0.7582215,0,50,medulloblastoma
+6E750514-00A9-4513-994A-91696DA136E1,mnp-20-1443,12,medulloblastoma Group 4,0.7148911,1,23,medulloblastoma
+41ED00BC-B587-4B3A-A44F-2E9E095FC8BA,mnp-20-0806,7,"medulloblastoma, SHH-activated",0.47737393,0,60,medulloblastoma
+84F2FDF8-6E08-47CD-A449-B27ADF1C120D,mnp-20-1292,7,"medulloblastoma, SHH-activated",0.9773146,0,36,medulloblastoma
+6FC65B47-E61E-4A3C-84F2-B55689E7AFC1,mnp-20-0281,12,medulloblastoma Group 4,0.7227379,0,25,medulloblastoma
+2E6A6CD0-F2DF-42D9-B88F-B7DB02F5B139,mnp-20-0066,12,medulloblastoma Group 4,0.5774325,0,30,medulloblastoma
+3BA98387-2421-4427-A68C-2D75463AFFB9,mnp-20-1112,7,"medulloblastoma, SHH-activated",0.6294099,0,18,medulloblastoma
+1AA946E4-A465-4D0F-9056-9C12CAE1B21E,mnp-20-0074,12,medulloblastoma Group 4,0.20719743,0,22,medulloblastoma
+5EFF657F-001B-4EE9-B01C-7E5843DF5F41,mnp-20-0308,12,medulloblastoma Group 4,0.6442058,0,20,medulloblastoma
+6BE81C74-6342-4187-9BF7-DBC8F55308EC,mnp-20-1017,42,"Medulloblastoma, WNT activated",0.73885167,0,34,medulloblastoma
+D88D8512-D7D7-469D-8843-1BE0F508E955,mnp-20-0726,7,"medulloblastoma, SHH-activated",0.72845185,0,41,medulloblastoma
+C361A345-C465-43D6-A256-4AAE73E7AA5E,mnp-20-0843,7,"medulloblastoma, SHH-activated",0.8944888,0,17,medulloblastoma
+E0289400-2ACE-4214-A01A-A0FB6535B9B6,mnp-20-0907,18,medulloblastoma Group 3,0.7144225,0,25,medulloblastoma
+654CA753-2B72-4E4F-B29A-6D494394852C,mnp-20-1410,12,medulloblastoma Group 4,0.15200992,0,25,medulloblastoma
+4D07C032-B8CB-4635-81BD-62EF7777A4D1,mnp-20-0132,12,medulloblastoma Group 4,0.7475031,0,24,medulloblastoma
+6DEC8E9E-F947-43AE-9D99-B90D5B7E070C,mnp-20-0143,18,medulloblastoma Group 3,0.7275258,0,14,medulloblastoma
+8D46830A-4F67-4A26-B76D-1046E0B4807E,mnp-20-0089,7,"medulloblastoma, SHH-activated",0.77429664,0,26,medulloblastoma
+9E1B76AC-F5A6-489B-AD1A-382F326D4D4F,mnp-20-1371,18,medulloblastoma Group 3,0.6908102,0,14,medulloblastoma
+93800155-AC65-4A54-8A71-84EA7DAE7DAE,mnp-20-0691,12,medulloblastoma Group 4,0.5395424,0,31,medulloblastoma
+7DDB45BF-CB09-4869-9961-5672C30D22FF,mnp-20-1159,7,"medulloblastoma, SHH-activated",0.9331268,0,30,medulloblastoma
+6FA213BB-D91C-4D5A-8DAA-AD9F877E0C21,mnp-20-1332,12,medulloblastoma Group 4,0.28903547,0,36,medulloblastoma
+A60095EB-21DA-4234-9383-7B12764039D8,mnp-20-1293,7,"medulloblastoma, SHH-activated",0.18649447,0,32,no category applicable
+9FE20686-2DA5-451A-B0C5-81FFBEAF3418,mnp-20-0671,12,medulloblastoma Group 4,0.8986002,0,19,medulloblastoma
+E6A80773-6C75-43A8-B7BD-F12EF69BE061,mnp-20-0478,12,medulloblastoma Group 4,0.8177311,0,33,medulloblastoma
+BE3F565A-EB17-4709-BF7A-9558A25DD00A,mnp-20-1151,7,"medulloblastoma, SHH-activated",0.94221795,0,15,medulloblastoma
+9881CF4E-0504-4235-8D7C-F1A684A5DABC,mnp-20-1172,7,"medulloblastoma, SHH-activated",0.5373576,0,17,medulloblastoma
+78E885A5-64E8-4179-8B43-01E3EC5DC5EB,mnp-20-1538,7,"medulloblastoma, SHH-activated",0.5610085,0,44,medulloblastoma
+400002CC-AFBF-471B-BA78-5B3475A48975,mnp-20-0267,12,medulloblastoma Group 4,0.6212348,0,18,medulloblastoma
+F4118671-AD17-4AA1-B59B-533CB3E2E923,mnp-20-0797,18,medulloblastoma Group 3,0.42602807,0,25,medulloblastoma
+92AF1D2F-C792-4307-8ADF-B7706E29E016,mnp-20-0787,12,medulloblastoma Group 4,0.57531387,0,54,medulloblastoma
+893B6EAB-D504-4D0C-88B8-DA4CEF268CBE,mnp-20-0377,18,medulloblastoma Group 3,0.45810586,0,39,medulloblastoma
+381DEDB3-4DC4-4DB0-90B4-89565FB8AB54,mnp-20-0443,12,medulloblastoma Group 4,0.88184226,0,23,medulloblastoma
+E43F4730-25B0-4DEA-8C5F-E7496E5419B4,mnp-20-0638,18,medulloblastoma Group 3,0.30276558,0,17,medulloblastoma
+05A341F2-DC51-484A-886A-61D393AF6FFA,mnp-20-0369,18,medulloblastoma Group 3,0.36956593,1,28,embryonal/pineal tumor
+12FE13E8-572D-458A-ACAF-4C297163BBA9,mnp-20-1352,12,medulloblastoma Group 4,0.8118709,0,8,medulloblastoma
+049207AA-0F55-41B0-83B7-08A693C2913D,mnp-20-1216,7,"medulloblastoma, SHH-activated",0.8500845,0,49,medulloblastoma
+39544A9E-E3F5-4A49-9B5E-0F94B8C4E0CC,mnp-20-0539,7,"medulloblastoma, SHH-activated",0.3920369,0,22,medulloblastoma
+F3025D66-14BC-4132-8304-B151C69E5907,mnp-20-0836,12,medulloblastoma Group 4,0.27347133,0,43,medulloblastoma
+ABCE3935-5A47-4044-91D0-FF86B2E814FC,mnp-20-0805,12,medulloblastoma Group 4,0.76460433,0,13,medulloblastoma
+EED78F98-6245-46E4-A20A-3ABD71092D3A,mnp-20-0148,42,"Medulloblastoma, WNT activated",0.59032524,0,31,medulloblastoma
+3057DB79-B586-450C-8CDB-33A370710585,mnp-20-0010,7,"medulloblastoma, SHH-activated",0.09749405,1,14,embryonal/pineal tumor
+13B1D0BB-E6D5-49F6-8D82-BE3D7D0E26D6,mnp-20-0021,7,"medulloblastoma, SHH-activated",0.21118364,1,43,ependymal tumor
+26A4A9CA-E3C1-4A67-86C5-C1DBA517D81A,mnp-20-1000,7,"medulloblastoma, SHH-activated",0.47620916,0,27,no category applicable
+99FD0E21-B4C9-4BFC-9A55-A286BBD1EE59,mnp-20-1037,7,"medulloblastoma, SHH-activated",0.24142352,0,27,medulloblastoma
+6B34BC76-5306-4F04-AA8C-0F546E48B017,mnp-20-0135,7,"medulloblastoma, SHH-activated",0.87844336,0,22,medulloblastoma
+231DE1AD-F547-47B9-B554-3614D8B8CF9A,mnp-20-0048,12,medulloblastoma Group 4,0.3496973,0,15,medulloblastoma
+AA04C78A-401B-404D-AC2B-FF860B2FE871,mnp-20-0020,12,medulloblastoma Group 4,0.8346442,0,22,medulloblastoma
+B019C52E-DD35-4ABF-AB81-6327B8C8367E,mnp-20-0188,7,"medulloblastoma, SHH-activated",0.43400207,0,5,embryonal/pineal tumor
+36680A83-DEE4-48B0-9920-E175CCF1D4F3,mnp-20-0208,12,medulloblastoma Group 4,0.5113009,0,25,medulloblastoma
+C23A70DF-3B19-426E-BC6B-FE2A9B981E55,mnp-20-1265,7,"medulloblastoma, SHH-activated",0.96728706,0,21,medulloblastoma
+20556E2B-31A6-4811-9C4E-007526745718,mnp-20-0902,12,medulloblastoma Group 4,0.45515877,0,38,medulloblastoma
+4270013F-5E55-42A0-AE60-F26EBB4512D2,mnp-20-1215,18,medulloblastoma Group 3,0.43477482,1,4,medulloblastoma
+A171E417-0506-431D-83C4-2F7E72004409,mnp-20-1270,18,medulloblastoma Group 3,0.74869734,0,23,medulloblastoma
+8B8862D2-D0A0-4758-B96E-D904AB45BF3A,mnp-20-0534,7,"medulloblastoma, SHH-activated",0.29252174,0,29,medulloblastoma
+788EC675-85CC-49B6-9772-CA771281C651,mnp-20-1298,18,medulloblastoma Group 3,0.897958,1,8,medulloblastoma
+759CA3C8-AE21-4621-B68F-1393C0BDE19B,mnp-20-1402,12,medulloblastoma Group 4,0.52829546,0,13,medulloblastoma
+FE429479-915F-4F1A-8B64-C471FDB3EFCF,mnp-20-0930,7,"medulloblastoma, SHH-activated",0.29459256,1,5,embryonal/pineal tumor
+193C254F-D49A-46B5-9CF1-066007DFE9E1,mnp-20-1050,7,"medulloblastoma, SHH-activated",0.28063115,0,21,medulloblastoma
+2AB36E10-ED55-442D-94A7-FA6377E0F024,mnp-20-0443,12,medulloblastoma Group 4,0.82728684,0,23,medulloblastoma
+494BFB9D-4225-47B0-85D2-A6027D927C57,mnp-20-0184,7,"medulloblastoma, SHH-activated",0.43180546,0,18,medulloblastoma
+D45EAC9A-CEDF-4D01-A8C2-1F6BF58D6B8B,mnp-20-0752,7,"medulloblastoma, SHH-activated",0.60903984,0,50,medulloblastoma
+682F29BD-B719-4325-A471-4903D6AB141B,mnp-20-0453,18,medulloblastoma Group 3,0.9209658,0,33,medulloblastoma
+12D0C2E0-C347-4C6E-A25E-8DD06CDA355A,mnp-20-0363,42,"Medulloblastoma, WNT activated",0.31126553,0,37,medulloblastoma
+99D0515A-8A01-430E-AAF0-76E1FE8BDDF3,mnp-20-0271,7,"medulloblastoma, SHH-activated",0.8356128,0,26,medulloblastoma
+5C4186D0-B741-406E-9875-EFB6B6CACDA7,mnp-20-0032,18,medulloblastoma Group 3,0.6936458,0,44,medulloblastoma
+126A3EFD-9BF8-4556-B67A-8752A585CB46,mnp-20-0398,12,medulloblastoma Group 4,0.48036766,0,47,medulloblastoma
+8A507E5F-C53A-4AE1-AAEB-44769001DBF4,mnp-20-1506,12,medulloblastoma Group 4,0.46221638,0,30,medulloblastoma
+BEF40E26-1F94-4A9D-9529-02AA8C0BAA2E,mnp-20-0687,7,"medulloblastoma, SHH-activated",0.1873861,0,41,medulloblastoma
+E8A853D8-1B13-4751-A811-0DD40EA5336F,mnp-20-0255,12,medulloblastoma Group 4,0.74035513,0,19,medulloblastoma
+AEAA44E2-7D08-460D-96BE-58D44184A31B,mnp-20-1090,18,medulloblastoma Group 3,0.9054863,1,43,medulloblastoma
+4AC8049A-3EE4-4540-81BA-EAD92A588431,mnp-20-0051,12,medulloblastoma Group 4,0.8604267,0,28,medulloblastoma
+13C8C9B6-4057-4EE8-914D-B0793DC79413,mnp-20-0270,12,medulloblastoma Group 4,0.8426713,0,56,medulloblastoma
+1E3EB492-B01D-4556-AE10-F5DD2F0FFC94,mnp-20-1517,7,"medulloblastoma, SHH-activated",0.86194736,0,44,medulloblastoma
+870606A7-9A87-4484-8E16-A071C0150342,mnp-20-1055,7,"medulloblastoma, SHH-activated",0.88982284,0,55,medulloblastoma
+D7203A3A-53FE-436D-A9EF-84135DFBAEC0,mnp-20-0892,12,medulloblastoma Group 4,0.38140962,1,15,medulloblastoma
+AFAC0851-270E-4614-BAA8-FDE709619FE6,mnp-20-1567,7,"medulloblastoma, SHH-activated",0.9427913,0,50,medulloblastoma
+313260DF-CE96-4A08-A85A-699A5E9D85B4,mnp-20-0714,12,medulloblastoma Group 4,0.3352506,0,31,medulloblastoma
+3A14E270-B875-4CAD-ADD8-6240E38520D1,mnp-20-1334,12,medulloblastoma Group 4,0.6477293,0,13,medulloblastoma
+A66FDFF1-6136-41A2-8C4A-63C9DABD12E1,mnp-20-0518,7,"medulloblastoma, SHH-activated",0.96052015,0,25,medulloblastoma
+21C991A1-5AC4-462A-AFE5-D296DF819030,mnp-20-0716,18,medulloblastoma Group 3,0.8266242,0,54,medulloblastoma
+43717020-003F-4E8D-918E-307E13BBAF48,mnp-20-1205,18,medulloblastoma Group 3,0.2743914,0,17,medulloblastoma
+F1ED0469-1777-43BF-81A0-F56DFC2A2A6C,mnp-20-1076,12,medulloblastoma Group 4,0.59770286,0,35,medulloblastoma
+C6508DF1-EF3E-42C3-B40A-054F6C84E935,mnp-20-1003,12,medulloblastoma Group 4,0.48100775,0,15,medulloblastoma
+DA773E36-1132-4568-AD35-1A0F1B5043F2,mnp-20-1429,12,medulloblastoma Group 4,0.635293,0,50,medulloblastoma
+8761A295-CA4F-4DAB-8712-887D68310335,mnp-20-0214,7,"medulloblastoma, SHH-activated",0.69965655,0,24,no category applicable
+4076A1C2-8F92-4EE3-B69D-B3D04B03C63B,mnp-20-1048,7,"medulloblastoma, SHH-activated",0.6788312,0,10,medulloblastoma
+07F07A1C-9253-46B3-AC8D-1AE5F43ECFC2,mnp-20-0380,12,medulloblastoma Group 4,0.86112356,0,2,medulloblastoma
+632A1096-711D-4609-8BD6-71BF3D0945F5,mnp-20-0153,12,medulloblastoma Group 4,0.17304857,1,11,high-grade glioma
+059AEEC2-AA75-4D17-A779-54920C6499AD,mnp-20-0801,7,"medulloblastoma, SHH-activated",0.662007,1,4,medulloblastoma
+4D3E56E6-9F6D-4BAA-A50C-B901FB253F3B,mnp-20-0075,42,"Medulloblastoma, WNT activated",0.3722813,0,42,medulloblastoma
+E034BB3B-C65C-491C-86F4-4EABDB637B19,mnp-20-0068,7,"medulloblastoma, SHH-activated",0.2823206,0,11,medulloblastoma
+533311CA-AF82-45EE-803F-46C8A38AF397,mnp-20-0416,18,medulloblastoma Group 3,0.40127057,0,21,embryonal/pineal tumor
+8D81629E-46A7-415E-B00B-A127B3AD8F37,mnp-20-0360,18,medulloblastoma Group 3,0.6631118,0,13,medulloblastoma
+DED548AB-91AB-4F5C-9230-C932B52D525F,mnp-20-0056,7,"medulloblastoma, SHH-activated",0.77495366,1,9,medulloblastoma
+1CC7D4FF-3F62-4E32-B9B3-4D8A2DD73FF3,mnp-20-1248,7,"medulloblastoma, SHH-activated",0.40185294,0,12,medulloblastoma
+6005C9B4-24CB-4B59-98CF-08394D6E94F2,mnp-20-1297,7,"medulloblastoma, SHH-activated",0.252645,1,19,medulloblastoma
+066EC8BD-9E5F-4048-A088-C540B61ED662,mnp-20-0916,7,"medulloblastoma, SHH-activated",0.25686502,1,10,medulloblastoma
+52E475EC-009C-4EC1-A0BD-B1712D691946,mnp-20-1043,7,"medulloblastoma, SHH-activated",0.7858041,0,37,medulloblastoma
+D6EC7E34-59A9-4ED8-A93E-4EBDFAF87803,mnp-20-0552,7,"medulloblastoma, SHH-activated",0.5416099,0,50,medulloblastoma
+1683F591-CE8C-4782-854A-AA6385AEDDDF,mnp-20-0253,12,medulloblastoma Group 4,0.3540755,1,8,high-grade glioma
+CE62D7E3-5E0F-4E1F-A089-724B7F55ED10,mnp-20-0028,18,medulloblastoma Group 3,0.69547737,1,10,medulloblastoma
+469E015B-FCBD-420A-B210-AAD69CB31A8F,mnp-20-0866,18,medulloblastoma Group 3,0.7178115,1,2,medulloblastoma
+446151D5-82D4-402E-B846-0DA1E383BC12,mnp-20-1112,7,"medulloblastoma, SHH-activated",0.6753297,0,18,medulloblastoma
+98EE4E58-34CF-496E-94BE-06C82C8EFC0A,mnp-20-0489,18,medulloblastoma Group 3,0.9011326,0,21,medulloblastoma
+D525D23C-457D-4328-94A7-D60DAD08FF42,mnp-20-0728,18,medulloblastoma Group 3,0.32859612,1,11,medulloblastoma
+AC5395D3-AD97-4A41-BA89-6323559283A1,mnp-20-1116,12,medulloblastoma Group 4,0.911481,0,62,medulloblastoma
+8D900B26-909D-4109-A676-1FBBF7C7352A,mnp-20-0152,7,"medulloblastoma, SHH-activated",0.24805526,0,19,medulloblastoma
+F23DEE9C-AF76-40DC-BB28-65DE1D4DB6ED,mnp-20-0881,18,medulloblastoma Group 3,0.74744856,0,23,medulloblastoma
+7140A7FC-1C51-43CA-9FEE-00CE3C0CC3A0,mnp-20-1560,12,medulloblastoma Group 4,0.13428672,0,20,medulloblastoma
+D577D941-6398-46F9-AF78-0FC4B8DC16DD,mnp-20-1084,18,medulloblastoma Group 3,0.120282255,0,28,medulloblastoma
+700C2031-AFD2-4973-9E5E-3394D8195636,mnp-20-1412,7,"medulloblastoma, SHH-activated",0.70688164,0,35,medulloblastoma
+3463F111-07BF-4B72-B018-553555A6D088,mnp-20-1510,18,medulloblastoma Group 3,0.282868,1,18,medulloblastoma
+5294981A-6ACE-4989-B6F3-47BEFC5CE5BD,mnp-20-0960,12,medulloblastoma Group 4,0.9237854,0,24,medulloblastoma
+2508B8E5-3133-4AEE-BC53-C314FA401E7B,mnp-20-1394,7,"medulloblastoma, SHH-activated",0.9341318,0,61,medulloblastoma
+6143F371-A972-4FDB-9781-76A8895959FA,mnp-20-0759,7,"medulloblastoma, SHH-activated",0.3233091,1,16,medulloblastoma
+FCF0FBAE-F5DC-40EF-BB28-F7E3AC6EA45F,mnp-20-0118,18,medulloblastoma Group 3,0.82924974,0,0,medulloblastoma
+C1772C54-50CA-48C0-9A5D-AC307E81F800,mnp-20-1068,12,medulloblastoma Group 4,0.3023562,1,12,medulloblastoma
+F027457C-4BC6-4048-BBB2-B50B7D3F6DAE,mnp-20-1165,12,medulloblastoma Group 4,0.81937015,0,38,medulloblastoma
+635D621E-739C-4279-9E78-CC19FF03171C,mnp-20-1469,7,"medulloblastoma, SHH-activated",0.9679656,0,12,medulloblastoma
+FC294731-96B5-4C61-BC37-3C6A2998FF22,mnp-20-1495,12,medulloblastoma Group 4,0.4789338,0,45,medulloblastoma
+1FD645CA-369D-4CE0-BD0A-037FE650823D,mnp-20-1094,18,medulloblastoma Group 3,0.42336708,0,41,medulloblastoma
+E96148EE-4A73-40A9-9E90-CC6894811FF4,mnp-20-0461,18,medulloblastoma Group 3,0.9554432,1,31,medulloblastoma
+99825DC7-19CF-47F8-8C41-B955F8717EEA,mnp-20-1266,7,"medulloblastoma, SHH-activated",0.8826229,0,18,medulloblastoma
+9790D611-226F-4334-A88D-75C2106D130D,mnp-20-0961,12,medulloblastoma Group 4,0.69096434,0,53,medulloblastoma
+59055B4B-4FFE-4306-B3C0-52D13327DB8A,mnp-20-1365,18,medulloblastoma Group 3,0.3810312,0,34,medulloblastoma
+07A30709-AA88-4F82-995F-7E94BD4EE87B,mnp-20-1247,12,medulloblastoma Group 4,0.62499446,0,27,medulloblastoma
+9177FB1F-7D21-4F89-B516-1CEA30D5C4CC,mnp-20-0661,42,"Medulloblastoma, WNT activated",0.33725584,0,32,medulloblastoma
