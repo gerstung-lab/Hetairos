@@ -73,7 +73,7 @@ class ATransMIL(nn.Module):
         super(ATransMIL, self).__init__()
         self.pos_layer = PPEG(dim=512)
         self._fc1 = nn.Sequential(nn.Linear(embedding_size, 512), nn.ReLU())
-        self.cls_tokens = nn.Parameter(torch.randn(1, 1, 512))
+        self.cls_token = nn.Parameter(torch.randn(1, 1, 512))
         self.n_classes = n_classes
         self.layer1 = TransLayer(dim=512)
         self.layer2 = TransLayer(dim=512)
@@ -111,7 +111,7 @@ class ATransMIL(nn.Module):
 
             #---->add a unique token for each sub-bag
             B = h_sub.shape[0]
-            cls_token = self.cls_tokens.expand(B, -1, -1).cuda()
+            cls_token = self.cls_token.expand(B, -1, -1).cuda()
             h_sub = torch.cat((cls_token, h_sub), dim=1)
 
             #---->Translayer x1
