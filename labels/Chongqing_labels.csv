@@ -1,0 +1,71 @@
+slide_ID,class,MC_score
+A19,"Astrocytoma, IDH-mutant",0.9
+A36,"Astrocytoma, IDH-mutant",0.9
+A93,"Astrocytoma, IDH-mutant",0.9
+A175,"Astrocytoma, IDH-mutant",0.9
+A91,Atypical teratoid rhabdoid tumour,0.9
+A147,Atypical teratoid rhabdoid tumour,0.9
+A69,"Diffuse midline glioma, H3 K27-altered",0.9
+A135,"Diffuse midline glioma, H3 K27-altered",0.9
+A2,"glioblastoma, IDH-wildtype",0.9
+A12,"glioblastoma, IDH-wildtype",0.9
+A21,"glioblastoma, IDH-wildtype",0.9
+A26,"glioblastoma, IDH-wildtype",0.9
+A28,"glioblastoma, IDH-wildtype",0.9
+A31,"glioblastoma, IDH-wildtype",0.9
+A32,"glioblastoma, IDH-wildtype",0.9
+A35,"glioblastoma, IDH-wildtype",0.9
+A40,"glioblastoma, IDH-wildtype",0.9
+A41,"glioblastoma, IDH-wildtype",0.9
+A42,"glioblastoma, IDH-wildtype",0.9
+A43,"glioblastoma, IDH-wildtype",0.9
+A46,"glioblastoma, IDH-wildtype",0.9
+A47,"glioblastoma, IDH-wildtype",0.9
+A50,"glioblastoma, IDH-wildtype",0.9
+A62,"glioblastoma, IDH-wildtype",0.9
+A99,"glioblastoma, IDH-wildtype",0.9
+A102,"glioblastoma, IDH-wildtype",0.9
+A104,"glioblastoma, IDH-wildtype",0.9
+A106,"glioblastoma, IDH-wildtype",0.9
+A109,"glioblastoma, IDH-wildtype",0.9
+A110,"glioblastoma, IDH-wildtype",0.9
+A112,"glioblastoma, IDH-wildtype",0.9
+A156,"glioblastoma, IDH-wildtype",0.9
+A160,"glioblastoma, IDH-wildtype",0.9
+A1,"meningioma, benign",0.9
+A129,Myxopapillary ependymoma,0.9
+A131,Myxopapillary ependymoma,0.9
+A144,Myxopapillary ependymoma,0.9
+A5,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A8,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A11,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A25,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A27,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A49,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A52,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A54,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A55,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A76,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A77,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A79,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A81,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A82,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A83,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A84,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A94,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A96,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A111,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A120,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A138,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A174,"Oligodendroglioma, IDH-mutant and 1p/19q-codeleted",0.9
+A4,pilocytic astrocytoma,0.9
+A125,pilocytic astrocytoma,0.9
+A130,pilocytic astrocytoma,0.9
+A141,pilocytic astrocytoma,0.9
+A170,pilocytic astrocytoma,0.9
+A58,Pituitary adenoma,0.9
+A173,Polymorphous low-grade neuroepithelial tumour of the young,0.9
+A139,posterior fossa ependymoma group A,0.9
+A57,posterior fossa ependymoma group B,0.9
+A167,posterior fossa ependymoma group B,0.9
+A113,"supratentorial ependymoma, ZFTA fusion-positive",0.9
