@@ -1,0 +1,15 @@
+# Claude Code internal files
+.claude/
+
+# Excel files (potentially sensitive data)
+*.xlsx
+
+# Plain text files (Sankey plot data, etc.)
+*.txt
+
+# Labels directory (patient/cohort sensitive data)
+labels/
+
+# OS artifacts
+.DS_Store
+**/.DS_Store
