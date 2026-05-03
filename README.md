@@ -36,14 +36,28 @@ conda create -n hetairos python=3.10
 Step 3: Install dependencies
 ```bash
 conda activate hetairos
-pip install -r requirements.txt
+pip install -e .
 ```
-The foundation models required for the feature extraction is not included in the requirements file. Please access them from the corresponding sources and update the model paths in `/preprocessing/feature_extraction/get_features.py`, specifically at lines 75-76. We recommend using the following models: [https://huggingface.co/prov-gigapath/prov-gigapath](https://huggingface.co/prov-gigapath/prov-gigapath) (Prov-Gigapath, Xu et al., *Nature*, 2024) and [https://huggingface.co/MahmoodLab/UNI](https://huggingface.co/MahmoodLab/UNI) (UNI, Chen et al., *Nature Medicine*, 2024). The Prov-Gigapath tile-level encoder was used for the results in the paper.
+
+This installs Hetairos in editable mode and exposes command-line tools such as `hetairos-tile`, `hetairos-extract`, `hetairos-train`, `hetairos-test`, and `hetairos`.
+
+The tiling step uses OpenSlide. If the native OpenSlide library is not available in your environment, install it before running tiling, for example:
+```bash
+conda install -c conda-forge openslide
+```
+
+Optional notebook dependencies can be installed when needed:
+```bash
+pip install -e ".[plots]"
+pip install -e ".[reports]"
+```
+
+The foundation model weights required for feature extraction are not included in the package. The default feature extractor uses `hf_hub:prov-gigapath/prov-gigapath` through `timm`, so the first run may need internet access and the required Hugging Face permissions. The Prov-Gigapath tile-level encoder was used for the results in the paper. Other encoders, such as [UNI](https://huggingface.co/MahmoodLab/UNI), can be used by updating the model creation line in `hetairos/preprocessing/feature_extraction/get_features.py`.
 
 ## Usage
 This repository provides **two** main ways to use the model:
 1. **Individual modules**: Run specific task independently for customization and flexibility.
-2. **End-to-end workflow**: Run the complete pipeline from slide tiling to model training/evaluation in one using `pipeline.py`.
+2. **End-to-end workflow**: Run the complete pipeline from slide tiling to model training/evaluation in one using the `hetairos` command.
 
 ### 1. Running individual modules
 Each module is designed for a specific task. Below are the basic functionalities and usage instructions for each module:
@@ -51,41 +65,45 @@ Each module is designed for a specific task. Below are the basic functionalities
 #### :scissors: Tiling
 Purpose: Converts whole slide images (WSI) into manageable image tiles for further processing.
 ```bash
-cd preprocessing
-python -m tiling.main_create_tiles --source_dir <WSIs_store_path> --source_list <slide_path_list.txt> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
+hetairos-tile --source_dir <WSIs_store_path> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
+hetairos-tile --source_list <slide_path_list.txt> --save_dir <tiles_path> --patch_size 256 --step_size 256 --mag 20
 ```
 Key arguments:
-- `source_dir`: Path to the source slide image (.svs/.ndpi/...) directory.
-- `source_list`: Path to the text file containing the list of specific slide paths. If provided, not necessary to specify `source_dir`.
-- `save_dir`: Path to the directory where the tiles will be saved.
+- `source_dir`: Path to a directory containing slide images. The command scans this directory for `.svs`, `.ndpi`, and `.scn` files.
+- `source_list`: Path to a text file with one slide path per line. Mutually exclusive with `source_dir`.
+- `save_dir`: Path to the directory where outputs will be saved. The command creates `tiles/`, `masks/`, `stitches/`, and `slide_info_<index>.csv` under this directory.
 - `patch_size`: Size of the tile (default: 256).
 - `step_size`: Step size between neighboring tiles (default: 256).
 - `mag`: Nominal magnification level of the slide (default: 20).
+- `index`: Batch index used only to name `slide_info_<index>.csv` (default: 0).
 
-If you have access to an LSF cluster, you can use `python run_tiling.py` to parallelize the tiling process, significantly reducing the processing latency. Before that, please update the `preprocessing/run_tiling.py` file with the correct paths and parameters.
+The tiling grid is globally aligned from the slide origin. Candidate tile coordinates are filtered by the segmented tissue contours before image tiles are saved.
 
 #### :wrench: Feature extraction
 Purpose: Extracts features from the image tiles using a pre-trained model.
 ```bash
-python preprocessing/feature_extraction/get_features.py --split <tile_path_list.txt> --feature_dir <features_path> --batchsize 384
+hetairos-extract --tile_paths_file <tile_paths.txt> --feature_dir <features_path> --batchsize 768
+hetairos-extract --tile_dir <tile_dir_or_tiles_root> --feature_dir <features_path> --batchsize 768
 ```
 Key arguments:
-- `split`: Path to a .txt file listing directory paths, each corresponding to a partition of slide tile images.
+- `tile_paths_file`: Path to a .txt file with one tile-image directory per line. Each directory should contain the tile JPGs for one slide, named like `<slide_id>_x_y_<x>_<y>.jpg`. The legacy alias `--split` is also accepted.
+- `tile_dir`: Path to a directory containing tile JPGs directly, or a root directory whose immediate subdirectories each contain one slide's tile JPGs. Mutually exclusive with `tile_paths_file`.
 - `feature_dir`: Path to the directory where the extracted features will be saved.
-- `batchsize`: Batch size for feature extraction (default: 384).
+- `batchsize`: Batch size for feature extraction (default: 768).
 
-Similarly, if an LSF cluster is available, you can use `python preprocessing/run_extracting.py`. Update the parameters in `preprocessing/run_extracting.py` file before running.
+Feature extraction writes intermediate HDF5 files to `<feature_dir>/h5_files/` and PyTorch tensor files to `<feature_dir>/pt_files/`. The `.pt` filenames are derived from the tile directory names, so each tile directory should correspond to one slide ID.
 
 #### :robot: Model training/evaluation
 Purpose: To Train and evaluate the Hetairos model using features extracted in the previous step.
 ```bash
-python -m aggregator_train_val.model_run --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name> 
+hetairos-train --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode train --data_aug --soft_labels --exp_name <experiment_name>
+hetairos-test --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode test --exp_name <experiment_name>
 ``` 
 Key arguments:
 - `dataset`: Path to the directory containing the extracted features (saved in .pt format).
 - `label`: Path to the slide label CSV file, which should contain following columns slide, family, probability vector, age, and location. The format is as follows: `<slide | family | prob_vector (if soft_labels required) | age | location>`
-- `label_map`: Path to the YAML file containing the mapping of family labels to integers. (tumor_name: integer)
-- `split`: Path to the YAML file containing the train, validation, and test split information, structured as `{"train": [slide_id list], "test": [slide_id list]}`
+- `label_map`: Path to the YAML file containing the mapping of family labels to integers, structured as `{"mapping": {"tumor_name": integer_id}}`.
+- `split`: Path to the YAML file containing train and test slide IDs, structured as `{"train": [slide_id list], "test": [slide_id list]}`. The `test` split is used as the validation set during training and as the test set during testing.
 - `mode`: Specify the mode of operation (train/test).
 - `data_aug`: Enable data augmentation (default: False, store_true). This parameter is not applicable during testing.
 - `soft_labels`: Enable soft labels (default: False, store_true). This parameter is not applicable during testing.
@@ -96,10 +114,9 @@ More parameters to specify:
 - `classes`: Output class number by the classifier. Redundant classes could be set (*n*>actual classes) to improve classification performance (default: 186).
 - `cl_weight`: Weight for contrastive loss (default: 20).
 - `resume`: Resume training from the latest checkpoint (default: false, store_true).
-- `output_dir`: Path to the prediction results from testing (default: `aggregator_train_val/predictions`).
+- `output_dir`: Path to the prediction results from testing (default: `./predictions`).
 
-Other parameters can be modified in the `aggregator_train_val/config.yaml` file.
-Examples of the label mapping, split files and label CSV files can be found in the `aggregator_train_val/annot_files` directory. log files and checkpoints will be saved in the `aggregator_train_val/logs/exp_name` directory by default.
+Other training parameters can be modified in `hetairos/aggregator_train_val/config.yaml` or by passing `--config <model_config.yaml>` to `hetairos-train` / `hetairos-test`. Example label mapping and split files are provided as `Tumor_label_mapping.yaml` and `train_val_split.yaml`. Log files and checkpoints are saved under the configured `General.log_path` directory. In test mode, Hetairos loads the best checkpoint from `<General.log_path>/<exp_name>/` when a checkpoint filename contains a score such as `multi_acc=...`; otherwise it falls back to `last.ckpt` or the most recently modified checkpoint.
 
 The tumor locations that are available are: 
 - `Extracranial`
@@ -111,19 +128,52 @@ The tumor locations that are available are:
 - and `Supratentorial`
 
 ### 2. Running the end-to-end workflow
-The `pipeline.py` script is designed to run the complete pipeline from slide tiling to model training and evaluation in one go.
+The `hetairos` command is designed to run the complete pipeline from slide tiling to model training and evaluation in one go.
 
 ```bash
-python pipeline.py --tiling --slide_dir <WSIs_store_path> --slide_list <slide_path_list.txt> --tile_savedir <tiles_path> --feature_extraction --batchsize 256 --feature_dir <features_path> --model_run --dataset <dataset_path> --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode <train/test> --data_aug --soft_labels --exp_name <experiment_name>
+hetairos --tiling --slide_dir <WSIs_store_path> --tile_savedir <tiles_path> --feature_extraction --feature_dir <features_path> --model_run --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode train --exp_name <experiment_name>
+hetairos --tiling --slide_list <slide_path_list.txt> --tile_savedir <tiles_path> --feature_extraction --feature_dir <features_path> --model_run --label <label.csv> --label_map <label_mapping.yaml> --split <split_file.yaml> --mode train --exp_name <experiment_name>
 ```
 
-The key arguments `--tiling`, `--feature_extraction`, and `--model_run` are used to specify the tasks to be executed. At least one of them should be set as `True` when runnig the script. The rest of the arguments are the same as described in the individual modules.
+The key arguments `--tiling`, `--feature_extraction`, and `--model_run` are used to specify the tasks to be executed. At least one of them should be set as `True` when running the command. When feature extraction follows tiling, `hetairos` writes `<tile_savedir>/tile_paths.txt` from `<tile_savedir>/tiles/*` automatically. When model training/testing follows feature extraction, `--dataset` can be omitted and defaults to `<feature_dir>/pt_files`. For train mode, `--split` is required; for test mode, it can be omitted and will be generated from the `.pt` files in the dataset directory.
+
+Less frequently changed end-to-end settings are stored in the pipeline config file, which defaults to `hetairos/pipeline_config.yaml`. Pass `--config <pipeline_config.yaml>` to override them:
+
+```yaml
+tiling:
+  patch_size: 256
+  step_size: 256
+  mag: 20
+  index: 0
+
+feature_extraction:
+  batchsize: 768
+
+model_run:
+  model_config: null
+  model: ATransMIL
+  groups: 3
+  classes: 186
+  cl_weight: 20
+  data_aug: false
+  soft_labels: false
+  resume: false
+  accelerator: auto
+  devices: auto
+  precision: 16-mixed
+```
+
+The individual commands `hetairos-tile`, `hetairos-extract`, and `hetairos-train` still expose these advanced settings as CLI options for module-level debugging.
+
+In the end-to-end command, `--config` refers to the pipeline config shown above. In the standalone training/testing commands, `--config` refers to the model config, usually `hetairos/aggregator_train_val/config.yaml`. If `model_run.model_config` is `null` in the pipeline config, the package default model config is used. If it is set to a relative path, the path is resolved relative to the pipeline config file.
 
 ## Figure reproduction
-The scripts for reproducing the figures presented in the paper are available in the `Hetairos_plots.ipynb` directory. The necessary data files are provided in the `human_vs_machine` and `labels` directory. `matplotlib`, `seaborn`, `sklearn`, `h5py` and `pandas` are required to run the notebook.
+The scripts for reproducing the figures presented in the paper are available in the `Hetairos_plots.ipynb` directory. The necessary data files are provided in the `human_vs_machine` and `labels` directory. Install the plotting extras with `pip install -e ".[plots]"` before running the notebook.
 
 ## Hardware requirements
-The model training/evaluation and the feature extraction require a GPU with at least 11GB of memory. Feature extraction with larger batch sizes may require more memory. The tiling process can be run on a CPU with support for multi-core parallel processing to improve efficiency.
+Tiling runs on CPU and benefits from multiple cores. By default, tiling uses up to 16 workers and never more than the available CPU core count.
+
+Feature extraction and model training/evaluation are designed for GPU use. Feature extraction can fall back to CPU but will be slow for large tile sets. Model training/testing automatically selects GPU when CUDA is available and otherwise falls back to CPU; if CPU is used with mixed precision configured, the trainer falls back to `32-true` precision.
 
 ## Citation
 ```bibtex
@@ -138,10 +188,3 @@ The model training/evaluation and the feature extraction require a GPU with at l
 
 ## Acknowledgements
 This work was partially built upon implementations from [CLAM](https://github.com/mahmoodlab/CLAM) and [TransMIL](https://github.com/szc19990412/TransMIL).
-
-
-
-
-
-
-

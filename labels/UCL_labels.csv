@@ -1,0 +1,858 @@
+slide_ID,MC_score,class
+NH18-2910_15,0.439762536,pilocytic astrocytoma
+NH18-2929_12,0.99638294,pilocytic astrocytoma
+NH18-2869_16,0.995628506,"glioblastoma, IDH-wildtype"
+NH18-2768_1,0.312556793,Papillary glioneuronal tumour
+NH18-2579_1,0.999711588,"Sinonasal undifferentiated carcinoma, IDH2-mutant"
+NH20-2220,0.983356277,"meningioma, malignant"
+NH20-2141_1,0.283532264,pilocytic astrocytoma
+NH20-1927,0.999893354,Rosette-forming glioneuronal tumour
+NH20-2235,0.998379572,choroid plexus carcinoma
+NH20-1940,0.961822179,Langerhans cell histiocytosis
+NH20-2224,0.32500911,Chordoma
+NH18-921_5,0.381161533,Pleomorphic xanthoastrocytoma
+NH18-825_12,0.998665885,Ganglioglioma
+NH18-941_11,0.999999152,Subependymal giant cell astrocytoma
+NH18-823_10,0.888103461,"glioblastoma, IDH-wildtype"
+NH19-117_16,0.916296783,pilocytic astrocytoma
+NH19-450,0.994092304,"glioblastoma, IDH-wildtype"
+NH19-486_1,0.999521153,Atypical teratoid rhabdoid tumour
+NH18-2483_6,0.370686663,"meningioma, benign"
+NH18-2555_7,0.947624244,Spinal ependymoma
+NH18-2503_8,0.112265483,"supratentorial ependymoma, ZFTA fusion-positive"
+NH18-2552_4,0.226173723,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH18-2606_3,0.999978745,Spinal ependymoma
+NH20-582,0.916502361,"glioblastoma, IDH-wildtype"
+NH20-957,0.978453719,Diffuse paediatric-type high grade glioma
+NH20-955,0.999950109,"meningioma, intermediate"
+NH20-966_1,0.997755664,Schwannoma
+NH17-2533,0.999886309,control tissue
+NH20-1816,0.563698084,choroid plexus papilloma
+NH20-1806,0.999306422,"Primary intracranial sarcoma, DICER1-mutant"
+NH20-1659,0.999997675,"glioblastoma, IDH-wildtype"
+NH20-1815,0.580582671,Myxopapillary ependymoma
+NH20-1818,0.999644443,posterior fossa ependymoma group B
+NH16-1084,0.471095748,Diffuse glioneuronal tumour with oligodendroglioma-like features and nuclear clusters
+NH16-1084_1,0.471095748,Diffuse glioneuronal tumour with oligodendroglioma-like features and nuclear clusters
+NH16-783,0.092634179,Malignant melanotic nerve sheath tumour
+NH17-1482_1,0.99938987,pilocytic astrocytoma
+NH17-1496_1,0.997537478,"meningioma, benign"
+NH16-872,0.461161007,Diffuse paediatric-type high grade glioma
+NH18-1086_1,0.651034557,"glioblastoma, IDH-wildtype"
+NH18-1019_6,0.999407207,"meningioma, benign"
+NH18-1055_7,0.872411953,"medulloblastoma, SHH-activated"
+NH18-1055_3,0.872411953,"medulloblastoma, SHH-activated"
+NH18-1108_2,0.951600415,"Astrocytoma, IDH-mutant"
+NH18-1155_5,0.476646868,"Control tissue, reactive tumour microenvironment"
+NH18-973_4,0.999982667,pilocytic astrocytoma
+NH18-692_3,0.994990227,High-grade astrocytoma with piloid features
+NH18-729_4,0.79811541,Rhabdomyosarcoma
+NH18-871_14,0.40951609,Haemangioblastoma
+NH18-871_1,0.40951609,Haemangioblastoma
+NH18-864_2,0.999933471,Spinal ependymoma
+NH14-2173,0.401748854,Ganglioglioma
+NH20-686,0.993102647,"Pineoblastoma, miRNA pathway altered, group 1"
+NH20-643,0.869772925,"meningioma, malignant"
+NH20-627,0.940761748,control tissue
+NH20-42,0.80311827,"meningioma, benign"
+NH20-661,0.99266782,Diffuse paediatric-type high grade glioma
+NH20-638_1,0.993640694,Posterior fossa subependymoma
+NH19-1904,0.999988362,Neuroepithelial tumour with PATZ1 fusion
+NH19-1937,0.99999897,Myxopapillary ependymoma
+NH19-1906,0.99985277,Ganglioglioma
+NH19-1895,0.984984127,Melanoma [metastatic]
+NH19-1873_4,0.99808268,Rosette-forming glioneuronal tumour
+NH19-1870_1,0.990153173,"meningioma, benign"
+NH17-676_4,0.999332922,"glioblastoma, IDH-wildtype"
+NH17-676_6,0.999332922,"glioblastoma, IDH-wildtype"
+NH17-676_5,0.999332922,"glioblastoma, IDH-wildtype"
+NH20-958_2,0.999981331,Pleomorphic xanthoastrocytoma
+NH20-958_1,0.999981331,Pleomorphic xanthoastrocytoma
+NH20-958,0.999981331,Pleomorphic xanthoastrocytoma
+NH20-921,0.272263298,"glioblastoma, IDH-wildtype"
+NH20-893,0.992484621,CNS tumour with EP300:BCOR(L1) fusion
+NH20-895,0.990867584,"glioblastoma, IDH-wildtype"
+NH20-895_1,0.990867584,"glioblastoma, IDH-wildtype"
+NH20-895_7,0.990867584,"glioblastoma, IDH-wildtype"
+NH20-828,0.999995082,Spinal ependymoma
+NH20-1783,0.99999264,Melanocytoma
+NH20-1804,0.998297279,"supratentorial ependymoma, ZFTA fusion-positive"
+NH20-1798,0.971781002,"meningioma, malignant"
+NH20-1795_1,0.999906457,posterior fossa ependymoma group A
+NH20-1795,0.999906457,posterior fossa ependymoma group A
+NH20-1760_3,0.99794249,"glioblastoma, IDH-wildtype"
+NH20-1760_2,0.99794249,"glioblastoma, IDH-wildtype"
+NH20-1767,0.998331493,"Astrocytoma, IDH-mutant"
+NH20-1788_1,0.995970484,Ganglioglioma
+NH19-829_1,0.946266345,Supratentorial subependymoma
+NH19-864_2,0.99999681,"meningioma, benign"
+NH19-890_3,0.834816638,High-grade astrocytoma with piloid features
+NH18-2284_5,0.971295398,pilocytic astrocytoma
+NH20-337_2,0.999994021,"meningioma, intermediate"
+NH20-337_3,0.999994021,"meningioma, intermediate"
+NH20-360_4,0.757430297,Rosette-forming glioneuronal tumour
+NH20-324_7,0.996246963,papillary tumour of the pineal region
+NH20-324_8,0.996246963,papillary tumour of the pineal region
+NH20-350_3,0.99544799,medulloblastoma Group 4
+NH18-1224_9,0.288237625,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH18-1361_1,0.652065804,Diffuse paediatric-type high grade glioma
+NH18-1609_5,0.946692041,High-grade astrocytoma with piloid features
+NH18-1513_8,0.982655279,"glioblastoma, IDH-wildtype"
+NH18-1624_4,0.99511636,Atypical teratoid rhabdoid tumour
+NH18-1330_15,0.994604274,"glioblastoma, IDH-wildtype"
+NH18-1330_14,0.994604274,"glioblastoma, IDH-wildtype"
+NH20-2284,0.999950952,"meningioma, benign"
+NH20-2318,0.967211245,"glioblastoma, IDH-wildtype"
+NH20-2319,0.999666569,"glioblastoma, IDH-wildtype"
+NH20-2320,0.999999152,"glioblastoma, IDH-wildtype"
+NH20-2317,0.99994229,"glioblastoma, IDH-wildtype"
+NH20-2314,0.689038084,Atypical teratoid rhabdoid tumour
+NH19-2972_1,0.999869219,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH19-3159,0.915914132,"glioblastoma, IDH-wildtype"
+NH19-3012,0.359728447,pilocytic astrocytoma
+NH19-3074,0.990781416,pilocytic astrocytoma
+NH19-3036_1,0.966280747,"Control tissue, reactive tumour microenvironment"
+NH19-3036,0.966280747,"Control tissue, reactive tumour microenvironment"
+NH19-3125,0.93187132,"meningioma, benign"
+NH19-3142,0.586464234,Myxopapillary ependymoma
+NH19-3141,0.746813388,"meningioma, benign"
+NH20-2122,0.451021195,Dysembryoplastic neuroepithelial tumour
+NH20-2090,0.999465592,Myxopapillary ependymoma
+NH20-2082,0.999886483,"meningioma, malignant"
+NH20-2155,0.610699598,"meningioma, benign"
+NH20-2149,0.9996966,Posterior fossa subependymoma
+NH18-2750_6,0.996300451,"Astrocytoma, IDH-mutant"
+NH18-2804_1,0.997957434,Supratentorial subependymoma
+NH18-2824_4,0.999915736,"meningioma, benign"
+NH18-2829_7,0.411333105,High-grade astrocytoma with piloid features
+NH18-2826_5,0.996077985,Inflammatory microenvironment
+NH18-2825_3,0.983162074,"meningioma, intermediate"
+NH20-2494,0.999964311,Subependymal giant cell astrocytoma
+NH20-2497_H&E_C1,0.233568303,"glioblastoma, IDH-wildtype"
+NH20-2497_H&E_B1,0.233568303,"glioblastoma, IDH-wildtype"
+NH20-2463,0.999177482,"meningioma, benign"
+NH20-2474_2,0.36324429,Dysembryoplastic neuroepithelial tumour
+NH20-1919,0.788394556,Ganglioglioma
+NH20-2301,0.785004067,Langerhans cell histiocytosis
+NH20-2204,0.995084953,High-grade astrocytoma with piloid features
+NH20-2514,0.999429443,Supratentorial subependymoma
+NH19-1591,0.999953491,"glioblastoma, IDH-wildtype"
+NH19-1696_2,0.418900268,Diffuse paediatric-type high grade glioma
+NH19-2675,0.491928755,"meningioma, intermediate"
+NH19-2744_1,0.98562102,High-grade diffuse glioma of the midline/posterior fossa; H3/IDH-wildtype
+NH19-2744_3,0.98562102,High-grade diffuse glioma of the midline/posterior fossa; H3/IDH-wildtype
+NH19-2744_2,0.98562102,High-grade diffuse glioma of the midline/posterior fossa; H3/IDH-wildtype
+NH19-2850_1,0.954163513,"glioblastoma, IDH-wildtype"
+NH19-2850,0.954163513,"glioblastoma, IDH-wildtype"
+NH19-2768,0.999996155,Melanocytoma
+NH18-951_7,0.908757087,"glioblastoma, IDH-wildtype"
+NH18-951_8,0.908757087,"glioblastoma, IDH-wildtype"
+NH18-995_6,0.999999978,Pleomorphic xanthoastrocytoma
+NH17-2085_9,0.999993125,Rosette-forming glioneuronal tumour
+NH18-976_2,0.494438437,"glioblastoma, IDH-wildtype"
+NH18-976_1,0.494438437,"glioblastoma, IDH-wildtype"
+NH18-976_3,0.494438437,"glioblastoma, IDH-wildtype"
+NH18-1022_4,0.959600149,pilocytic astrocytoma
+NH18-1022_5,0.959600149,pilocytic astrocytoma
+NH20-2249_3,0.999991593,High-grade astrocytoma with piloid features
+NH20-2222,0.993541841,"meningioma, malignant"
+NH20-2278_5,0.991018046,Melanocytoma
+NH20-2212,0.916738672,"meningioma, benign"
+NH20-2263,0.996448187,"meningioma, benign"
+NH20-2275_3,0.096284096,pilocytic astrocytoma
+NH20-2242,0.447556264,"glioblastoma, IDH-wildtype"
+NH20-2358_1,0.999998789,control tissue
+NH20-2330_1,0.500878215,control tissue
+NH20-2357_1,0.999775117,normal pineal gland and pineocytoma
+NH20-2339_2,0.498467846,Diffuse paediatric-type high grade glioma
+NH20-2339_1,0.498467846,Diffuse paediatric-type high grade glioma
+NH20-2345,0.999999763,Pleomorphic xanthoastrocytoma
+NH20-2334,0.463377122,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH20-2127_3,0.430204087,High-grade astrocytoma with piloid features
+NH20-2112,0.967318747,"meningioma, benign"
+NH20-2128,0.968391507,"meningioma, benign"
+NH20-1929_2,0.999967851,Diffuse paediatric-type high grade glioma
+NH20-1983,0.449041727,"glioblastoma, IDH-wildtype"
+NH20-1911,0.976004112,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-2099,0.999993765,Pineal parenchymal tumour of intermediate differentiation
+NH20-2091,0.637801845,"meningioma, intermediate"
+NH20-2129,0.545836828,pilocytic astrocytoma
+NH19-3221,0.315778301,control tissue
+NH19-3213,0.379379417,medulloblastoma Group 3
+NH19-3207,0.994430499,control tissue
+NH19-3191,0.191747387,High-grade astrocytoma with piloid features
+NH19-3191_1,0.191747387,High-grade astrocytoma with piloid features
+NH19-3199,0.999669507,"meningioma, benign"
+NH19-3031,0.990126229,Ganglioglioma
+NH19-3187,0.677553698,"meningioma, benign"
+NH20-1265,0.999979823,Spinal ependymoma
+NH20-1278,0.995553058,pilocytic astrocytoma
+NH20-1278_1,0.995553058,pilocytic astrocytoma
+NH20-1205,0.665043644,"meningioma, benign"
+NH20-1299,0.499092033,"meningioma, benign"
+NH20-1089_3,0.999958863,Central neurocytoma
+NH20-1282,0.999691108,"Medulloblastoma, WNT activated"
+NH20-1294,0.996971226,Subependymal giant cell astrocytoma
+NH20-1307_2,0.999994746,pilocytic astrocytoma
+NH19-1137_3,0.993579415,Ganglioglioma
+NH19-900_2,0.967866957,Diffuse paediatric-type high grade glioma
+NH19-1130_4,0.884844304,Dysembryoplastic neuroepithelial tumour
+NH19-1166_5,0.418080652,pilocytic astrocytoma
+NH19-888_6,0.433744202,"Control tissue, reactive tumour microenvironment"
+NH20-1777,0.930532131,Dysembryoplastic neuroepithelial tumour
+NH20-1860_5,0.998588847,"glioblastoma, IDH-wildtype"
+NH20-1860_6,0.998588847,"glioblastoma, IDH-wildtype"
+NH20-1899,0.999343191,"meningioma, malignant"
+NH20-1883,0.22143056,High-grade astrocytoma with piloid features
+NH20-1943,0.991617726,"meningioma, benign"
+NH20-1930,0.999987907,"meningioma, benign"
+NH19-2077,0.991088714,"glioblastoma, IDH-wildtype"
+NH19-1843,0.337681576,"glioblastoma, IDH-wildtype"
+NH19-2099,0.763458989,Diffuse leptomeningeal glioneuronal tumour
+NH19-1940,0.989347071,"meningioma, benign"
+NH19-2043,0.999987865,"glioblastoma, IDH-wildtype"
+NH19-2011,0.999951207,"meningioma, intermediate"
+NH19-2019,0.726242221,spinal subependymoma
+NH19-2088_3,0.15740818,control tissue
+NH19-396,0.50401607,pilocytic astrocytoma
+NH19-489_3,0.994713822,Rosette-forming glioneuronal tumour
+NH19-476,0.941978262,pilocytic astrocytoma
+NH19-606_4,0.858879783,"supratentorial ependymoma, ZFTA fusion-positive"
+NH19-553_6,0.486734635,Ganglioglioma
+NH19-521,0.821211185,"meningioma, intermediate"
+NH20-2280,0.996423534,"meningioma, benign"
+NH20-2276,0.999987638,"meningioma, benign"
+NH20-2283,0.977565282,Posterior fossa subependymoma
+NH20-2288,0.418451785,Subependymal giant cell astrocytoma
+NH20-2259,0.996217197,"glioblastoma, IDH-wildtype"
+NH20-2168,0.229215075,"glioblastoma, IDH-wildtype"
+NH20-2243,0.453488876,"glioblastoma, IDH-wildtype"
+NH19-29_1,0.915069094,pilocytic astrocytoma
+NH19-51,0.999995175,Olfactory neuroblastoma
+NH19-2,0.418124029,High-grade astrocytoma with piloid features
+NH19-8_2,0.99974973,"meningioma, intermediate"
+NH18-2936_8,0.999981526,Myxopapillary ependymoma
+NH18-2850_9,0.999923568,Pleomorphic xanthoastrocytoma
+NH18-2918_3,0.91830731,Ganglioglioma
+NH18-2918_4,0.91830731,Ganglioglioma
+NH18-2918_5,0.91830731,Ganglioglioma
+NH18-1453_9,0.999756651,Rosette-forming glioneuronal tumour
+NH18-1453_6,0.999756651,Rosette-forming glioneuronal tumour
+NH18-1453_8,0.999756651,Rosette-forming glioneuronal tumour
+NH18-1475_3,0.441886262,"glioblastoma, IDH-wildtype"
+NH18-1475_2,0.441886262,"glioblastoma, IDH-wildtype"
+NH18-1486_4,0.493265123,Diffuse paediatric-type high grade glioma
+NH18-1423_5,0.671077647,Diffuse paediatric-type high grade glioma
+NH18-1381_10,0.48987263,Melanoma [metastatic]
+NH18-1296_1,0.99457977,Dysembryoplastic neuroepithelial tumour
+NH18-552_12,0.999986777,"supratentorial ependymoma, ZFTA fusion-positive"
+NH18-552_29,0.999986777,"supratentorial ependymoma, ZFTA fusion-positive"
+NH18-812_2,0.99997837,"Medulloblastoma, WNT activated"
+NH18-320_11,0.140902079,control tissue
+NH18-735_7,0.607223787,"medulloblastoma, SHH-activated"
+NH18-804_4,0.155114934,pilocytic astrocytoma
+NH18-646_49,0.767170214,Papillary glioneuronal tumour
+NH18-716_8,0.792499113,High-grade astrocytoma with piloid features
+NH18-741_51,0.341630471,Ganglioglioma
+NH18-741_65,0.341630471,Ganglioglioma
+NH18-741_56,0.341630471,Ganglioglioma
+NH18-741_63,0.341630471,Ganglioglioma
+NH18-741_50,0.341630471,Ganglioglioma
+NH18-741_57,0.341630471,Ganglioglioma
+NH18-741_53,0.341630471,Ganglioglioma
+NH18-741_60,0.341630471,Ganglioglioma
+NH18-741_55,0.341630471,Ganglioglioma
+NH18-741_6,0.341630471,Ganglioglioma
+NH18-741_64,0.341630471,Ganglioglioma
+NH18-741_52,0.341630471,Ganglioglioma
+NH18-99,0.447471366,Papillary glioneuronal tumour
+NH18-89,0.168158174,medulloblastoma Group 3
+NH17-2698_7,0.760357892,"glioblastoma, IDH-wildtype"
+NH17-2698,0.760357892,"glioblastoma, IDH-wildtype"
+NH18-101,0.561577937,pilocytic astrocytoma
+NH18-101_8,0.561577937,pilocytic astrocytoma
+NH18-151_1,0.332197327,Pleomorphic xanthoastrocytoma
+NH18-151_2,0.332197327,Pleomorphic xanthoastrocytoma
+NH17-3068,0.999623679,pilocytic astrocytoma
+NH18-65,0.999998355,Spinal ependymoma
+NH17-2982_1,0.11379532,"glioblastoma, IDH-wildtype"
+NH17-2839,0.91991417,control tissue
+NH19-910_6,0.999999995,"CNS Schwannoma, VGLL-fused"
+NH19-982_20,0.748709064,"medulloblastoma, SHH-activated"
+NH19-926_11,0.99996969,"meningioma, benign"
+NH19-913_14,0.999984584,"supratentorial ependymoma, ZFTA fusion-positive"
+NH19-918_12,0.852402827,"glioblastoma, IDH-wildtype"
+NH19-958_1,0.935933824,Dysembryoplastic neuroepithelial tumour
+NH19-2904,0.682381802,"Chordoid glioma, PRKCA-mutant"
+NH19-2957,0.504662459,"meningioma, intermediate"
+NH19-2975,0.999900257,"glioblastoma, IDH-wildtype"
+NH19-2953,0.981515283,"meningioma, benign"
+NH19-2944,0.478850363,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH19-2919,0.961112003,"supratentorial ependymoma, ZFTA fusion-positive"
+NH20-2305,0.943404642,"Astroblastoma, MN1-altered, MN1:BEND2-fused"
+NH20-2558,0.999998871,"meningioma, benign"
+NH20-2413,0.999456437,Schwannoma
+NH20-2489,0.991231958,"meningioma, benign"
+NH20-2512,0.621223591,"meningioma, malignant"
+NH20-2559,0.999999876,pilocytic astrocytoma
+NH20-2524,0.057532827,Ewing sarcoma
+NH19-3378,0.40324905,"glioblastoma, IDH-wildtype"
+NH19-3367,0.996118621,"meningioma, benign"
+NH19-3039,0.410920407,"glioblastoma, IDH-wildtype"
+NH19-3408,0.760749849,"meningioma, benign"
+NH19-3423,0.15023682,pilocytic astrocytoma
+NH17-2453,0.999928585,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH17-2506_6,0.908419377,Rosette-forming glioneuronal tumour
+NH17-2689_4,0.625831882,pilocytic astrocytoma
+NH17-1972_8,0.108734625,Papillary glioneuronal tumour
+NH17-2598_7,0.999998946,Diffuse paediatric-type high grade glioma
+NH15-795_2,0.165447132,medulloblastoma Group 3
+NH15-795_13,0.165447132,medulloblastoma Group 3
+NH15-795_15,0.165447132,medulloblastoma Group 3
+NH15-795_24,0.165447132,medulloblastoma Group 3
+NH15-795_14,0.165447132,medulloblastoma Group 3
+NH15-795_10,0.165447132,medulloblastoma Group 3
+NH20-458,0.153564453,Chordoma
+NH20-473_1,0.970807665,"meningioma, intermediate"
+NH20-473,0.970807665,"meningioma, intermediate"
+NH20-544,0.999987345,"glioblastoma, IDH-wildtype"
+NH20-528,0.949963129,pilocytic astrocytoma
+NH20-472_3,0.97923626,Malignant melanotic nerve sheath tumour
+NH20-417_2,0.998820344,Myxopapillary ependymoma
+NH20-1676,0.998680545,"meningioma, benign"
+NH20-1667,0.999975407,Myxopapillary ependymoma
+NH20-1668_1,0.724823016,"meningioma, benign"
+NH20-1668,0.724823016,"meningioma, benign"
+NH20-1570,0.743802496,"Astrocytoma, IDH-mutant"
+NH20-1680,0.999982472,"Diffuse midline glioma, H3 K27-altered"
+NH20-1663,0.999989065,"meningioma, benign"
+NH20-1661,0.999896664,"CNS neuroblastoma, FOXR2-altered"
+NH20-580,0.905192494,"meningioma, intermediate"
+NH20-601,0.705663576,Pleomorphic xanthoastrocytoma
+NH20-579,0.999649207,Posterior fossa subependymoma
+NH20-620,0.999986978,Posterior fossa subependymoma
+NH20-593_1,0.999846815,"meningioma, benign"
+NH20-591_1,0.678707638,"Control tissue, reactive tumour microenvironment"
+NH20-589,0.999926423,Myxopapillary ependymoma
+NH18-1680_1,0.968807427,Ganglioglioma
+NH18-1659_3,0.998906586,"glioblastoma, IDH-wildtype"
+NH18-1679_2,0.864006429,Rosette-forming glioneuronal tumour
+NH20-832_5,0.999399321,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH20-885,0.082333688,"medulloblastoma, SHH-activated"
+NH20-803_4,0.996570843,"glioblastoma, IDH-wildtype"
+NH20-803_5,0.996570843,"glioblastoma, IDH-wildtype"
+NH20-879_2,0.322238811,Chordoma
+NH20-841,0.764229361,"meningioma, intermediate"
+NH20-804_6,0.997308627,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH20-800_2,0.996983528,"meningioma, benign"
+NH20-756,0.830089719,"Astrocytoma, IDH-mutant"
+NH20-773_6,0.418821837,Ganglioglioma
+NH20-773_4,0.418821837,Ganglioglioma
+NH20-776_2,0.199760113,"Control tissue, reactive tumour microenvironment"
+NH20-779,0.99489559,"glioblastoma, IDH-wildtype"
+NH20-754,0.405405492,Malignant melanotic nerve sheath tumour
+NH20-784_1,0.5210007,Diffuse paediatric-type high grade glioma
+NH20-810_1,0.999898913,Rosette-forming glioneuronal tumour
+NH20-1578,0.926627906,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH20-1577,0.997407817,"meningioma, intermediate"
+NH20-1615,0.999997252,Myxopapillary ependymoma
+NH20-1592_2,0.996034109,Myxopapillary ependymoma
+NH20-1579_2,0.999699131,"supratentorial ependymoma, ZFTA fusion-positive"
+NH18-2253_2,0.515859097,Diffuse paediatric-type high grade glioma
+NH18-2207,0.999999955,"supratentorial ependymoma, ZFTA fusion-positive"
+NH18-2237_4,0.95002572,pilocytic astrocytoma
+NH18-2237_3,0.95002572,pilocytic astrocytoma
+NH18-2070_1,0.842821616,"glioblastoma, IDH-wildtype"
+NH20-1416,0.999952277,"Astrocytoma, IDH-mutant"
+NH20-1415,0.768610138,"glioblastoma, IDH-wildtype"
+NH20-1406,0.999890121,High-grade astrocytoma with piloid features
+NH20-1247_2,0.772010256,"glioblastoma, IDH-wildtype"
+NH20-1345,0.999963856,Melanocytoma
+NH20-1431_6,0.999876359,normal pineal gland and pineocytoma
+NH20-1431_5,0.999876359,normal pineal gland and pineocytoma
+NH20-1431_4,0.999876359,normal pineal gland and pineocytoma
+NH20-2272,0.994854983,"Control tissue, reactive tumour microenvironment"
+NH20-2392,0.493838215,Malignant melanotic nerve sheath tumour
+NH20-2380,0.738179226,"meningioma, benign"
+NH20-2385,0.998872994,Malignant melanotic nerve sheath tumour
+NH20-2390,0.999978609,"glioblastoma, IDH-wildtype"
+NH20-2387,0.997366935,"Astrocytoma, IDH-mutant"
+NH20-2394,0.999994632,"meningioma, benign"
+NH19-2539,0.969916945,"meningioma, benign"
+NH19-2371,0.338854619,"Diffuse midline glioma, H3 K27-altered"
+NH20-1961,0.999384931,"meningioma, benign"
+NH20-1967,0.80817009,"meningioma, benign"
+NH20-1936,0.97817318,pilocytic astrocytoma
+NH20-1991,0.98839798,Dysembryoplastic neuroepithelial tumour
+NH20-1970,0.385315367,Rosette-forming glioneuronal tumour
+NH20-1910,0.99998586,Myxopapillary ependymoma
+NH20-1910_1,0.99998586,Myxopapillary ependymoma
+NH20-1880,0.999997978,"meningioma, benign"
+NH20-1904,0.965383066,pilocytic astrocytoma
+NP20-32_3,0.992368741,pilocytic astrocytoma
+NP20-32_1,0.992368741,pilocytic astrocytoma
+NP20-32_6,0.992368741,pilocytic astrocytoma
+NP20-32_5,0.992368741,pilocytic astrocytoma
+NP20-32_7,0.992368741,pilocytic astrocytoma
+NP20-32_9,0.992368741,pilocytic astrocytoma
+NP20-32_2,0.992368741,pilocytic astrocytoma
+NP20-32_10,0.992368741,pilocytic astrocytoma
+NP20-32,0.992368741,pilocytic astrocytoma
+NP20-32_8,0.992368741,pilocytic astrocytoma
+NH20-1895_1,0.999986902,Posterior fossa subependymoma
+NH20-1895,0.999986902,Posterior fossa subependymoma
+NH20-1825,0.949899772,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-1858,0.56748601,"meningioma, benign"
+NH20-1894,0.991631985,"meningioma, benign"
+NH20-2182,0.73842887,"glioblastoma, IDH-wildtype"
+NH20-2137,0.59374035,"meningioma, benign"
+NH20-1990,0.074308668,medulloblastoma Group 3
+NH20-2173,0.961327874,Myxopapillary ependymoma
+NH20-2184,0.744687944,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH20-2108,0.999975977,"Astrocytoma, IDH-mutant"
+NH20-2144,0.851840546,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-2180,0.999972081,pilocytic astrocytoma
+NH16-1309,0.999778073,"glioblastoma, IDH-wildtype"
+NH20-95,0.653318366,CNS Embryonal tumour with PLAG-family amplification
+NH20-81,0.997228043,"CNS neuroblastoma, FOXR2-altered"
+NH20-81_1,0.997228043,"CNS neuroblastoma, FOXR2-altered"
+NH20-68,0.999046789,medulloblastoma Group 3
+NH20-71,0.735323078,"meningioma, intermediate"
+NH20-77,0.095636926,posterior fossa ependymoma group A
+NH20-37,0.079880818,medulloblastoma Group 3
+NH20-96,0.998853079,"meningioma, benign"
+NH20-96_1,0.998853079,"meningioma, benign"
+NH19-1449,0.999992839,Myxopapillary ependymoma
+NH19-1452,0.998133253,"meningioma, intermediate"
+NH19-1536,0.984078561,Ewing sarcoma
+NH20-2066_1,0.369886706,pilocytic astrocytoma
+NH20-2069_1,0.105536913,Diffuse paediatric-type high grade glioma
+NH20-2054,0.852560539,"glioblastoma, IDH-wildtype"
+NH20-2015,0.970028918,"meningioma, benign"
+NH20-2000,0.999762878,"Spinal ependymoma, MYCN-amplified"
+NH20-2044,0.979160656,"meningioma, intermediate"
+NH18-1313_1,0.545078259,Malignant melanotic nerve sheath tumour
+NH18-1313_15,0.545078259,Malignant melanotic nerve sheath tumour
+NH18-1313_2,0.545078259,Malignant melanotic nerve sheath tumour
+NH18-1250_16,0.489864623,Diffuse paediatric-type high grade glioma
+NH18-1269_4,0.999997765,"glioblastoma, IDH-wildtype"
+NH18-1269_5,0.999997765,"glioblastoma, IDH-wildtype"
+NH18-1271_13,0.584016539,Ganglioglioma
+NH18-1368_3,0.974305341,medulloblastoma Group 4
+NH18-1112_7,0.411459409,control tissue
+NH18-1112_8,0.411459409,control tissue
+NH18-1112_11,0.411459409,control tissue
+NH19-623_2,0.86307556,Spinal ependymoma
+NH15-1432,0.545303476,High-grade astrocytoma with piloid features
+NH19-624_5,0.999745219,"glioblastoma, IDH-wildtype"
+NH19-584_4,0.999999953,"meningioma, benign"
+NH19-622_3,0.985139906,"meningioma, intermediate"
+NH19-99_3,0.998710581,"meningioma, intermediate"
+NH19-84_2,0.999999987,"Neuroepithelial tumour, PLAGL1-fused"
+NH19-98_4,0.999889835,"meningioma, benign"
+NH19-89_1,0.356908597,"Control tissue, reactive tumour microenvironment"
+NH19-207_3,0.669766933,pilocytic astrocytoma
+NH19-310,0.73687638,Myxopapillary ependymoma
+NH19-211_1,0.999204758,"meningioma, benign"
+NH19-213,0.821010056,"meningioma, intermediate"
+NH19-210,0.536603284,Ganglioglioma
+NH20-2478_1,0.523103626,Ganglioglioma
+NH20-2430_1,0.417791085,control tissue
+NH20-2445,0.297492081,"glioblastoma, IDH-wildtype"
+NH20-2461,0.961422208,"Astrocytoma, IDH-mutant"
+NH20-2454,0.99994375,"meningioma, benign"
+NH20-2470,0.999960622,"meningioma, benign"
+NH20-666_1,0.159259191,medulloblastoma Group 3
+NH20-678_5,0.991613312,medulloblastoma Group 3
+NH20-689_2,0.972977904,pilocytic astrocytoma
+NH20-689_1,0.972977904,pilocytic astrocytoma
+NH20-689,0.972977904,pilocytic astrocytoma
+NH20-679,0.50435271,"glioblastoma, IDH-wildtype"
+NH20-667,0.485094595,Diffuse paediatric-type high grade glioma
+NH20-655_1,0.996481839,Spinal ependymoma
+NH20-677_1,0.739467152,Dysembryoplastic neuroepithelial tumour
+NH20-123,0.999825661,"glioblastoma, IDH-wildtype"
+NH20-119,0.999995265,"meningioma, benign"
+NH20-119_1,0.999995265,"meningioma, benign"
+NH20-147,0.998479491,"Astrocytoma, IDH-mutant"
+NH20-107,0.99991596,pilocytic astrocytoma
+NH20-143,0.578162602,pilocytic astrocytoma
+NH20-159,0.885262491,"meningioma, intermediate"
+NH20-161,0.994102897,posterior fossa ependymoma group A
+NH20-2034,0.993045174,pilocytic astrocytoma
+NH20-2048,0.691219928,"glioblastoma, IDH-wildtype"
+NH20-2020,0.996721891,Spinal ependymoma
+NH20-2046,0.995369983,"meningioma, intermediate"
+NH20-1965_2,0.999773777,"meningioma, benign"
+NH20-1493,0.300098542,High-grade diffuse glioma of the midline/posterior fossa; H3/IDH-wildtype
+NH20-1534,0.999952376,"supratentorial ependymoma, ZFTA fusion-positive"
+NH20-1467,0.452109765,Ganglioglioma
+NH20-1467_1,0.452109765,Ganglioglioma
+NH20-1480,0.729151111,control tissue
+NH20-1492,0.904759063,"medulloblastoma, SHH-activated"
+NH20-1535,0.987459593,"medulloblastoma, SHH-activated"
+NH18-1660_1,0.998475879,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH18-1714_3,0.9818841,Rhabdomyosarcoma
+NH18-1829_2,0.834618607,Dysembryoplastic neuroepithelial tumour
+NH19-1732,0.25625263,"glioblastoma, IDH-wildtype"
+NH19-1905,0.285082142,Germinoma
+NH19-1863_4,0.999993844,normal pineal gland and pineocytoma
+NH19-968_6,0.242660312,"glioblastoma, IDH-wildtype"
+NH19-1024_12,0.769148641,pilocytic astrocytoma
+NH19-964_4,0.999867413,medulloblastoma Group 4
+NH19-1047_3,0.999059335,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH19-1017_5,0.295847761,"meningioma, SMARCE1-altered"
+NH19-967_2,0.207272942,control tissue
+NH19-961_9,0.219589952,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH20-1330,0.999974753,"glioblastoma, IDH-wildtype"
+NH20-1342,0.999699164,"meningioma, benign"
+NH20-1311,0.999999848,medulloblastoma Group 3
+NH20-1339,0.999614233,posterior fossa ependymoma group B
+NH20-1336,0.5628915,"meningioma, intermediate"
+NH20-1329,0.99456563,posterior fossa ependymoma group A
+NH20-1304_6,0.766171448,High-grade diffuse glioma of the midline/posterior fossa; H3/IDH-wildtype
+NH18-2439_6,0.068380494,posterior fossa ependymoma group A
+NH18-2443_1,0.142038796,Atypical teratoid rhabdoid tumour
+NH18-2352_5,0.994391612,posterior fossa ependymoma group B
+NH18-2352_4,0.994391612,posterior fossa ependymoma group B
+NH18-2412_3,0.999231205,"meningioma, benign"
+NH19-2157_1,0.986761337,Pleomorphic xanthoastrocytoma
+NH19-2119,0.999479242,"meningioma, intermediate"
+NH19-2097,0.4329552,"Chordoid glioma, PRKCA-mutant"
+NH19-2115,0.88831478,"meningioma, benign"
+NH19-2024_2,0.329892138,High-grade astrocytoma with piloid features
+NH19-2183,0.947991702,"meningioma, benign"
+NH19-3165,0.363273295,Malignant melanotic nerve sheath tumour
+NH19-3119,0.999999182,Spinal ependymoma
+NH19-2876,0.710955045,control tissue
+NH19-3189,0.999999851,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-1618,0.864637083,"meningioma, intermediate"
+NH20-1649,0.99999034,Pineal parenchymal tumour of intermediate differentiation
+NH20-1610,0.149729841,Malignant melanotic nerve sheath tumour
+NH20-1550,0.999894854,pilocytic astrocytoma
+NH20-1513,0.673072211,Ganglioglioma
+NH20-1621,0.530829423,pilocytic astrocytoma
+NH20-1052,0.999905565,"meningioma, benign"
+NH20-1092,0.211080625,"meningioma, benign"
+NH20-1092_1,0.211080625,"meningioma, benign"
+NH20-1081,0.971676401,"glioblastoma, IDH-wildtype"
+NH20-896_4,0.196361467,"supratentorial ependymoma, ZFTA fusion-positive"
+NH20-1077_1,0.687068816,"glioblastoma, IDH-wildtype"
+NH20-1077,0.687068816,"glioblastoma, IDH-wildtype"
+NH20-1118_3,0.846846946,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-1118_4,0.846846946,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-1023_1,0.183340784,Ganglioglioma
+NH20-1023,0.183340784,Ganglioglioma
+NH18-2665_3,0.999010578,Pleomorphic xanthoastrocytoma
+NH18-2738_7,0.990721217,Dysembryoplastic neuroepithelial tumour
+NH18-2678_2,0.978955831,Diffuse paediatric-type high grade glioma
+NH18-2669_1,0.863432114,Diffuse paediatric-type high grade glioma
+NH18-2748_4,0.340806848,Diffuse paediatric-type high grade glioma
+NH17-2503_36,0.999532687,Neuroepithelial tumour with PATZ1 fusion
+NH18-663_25,0.989132736,"glioblastoma, IDH-wildtype"
+NH18-586_19,0.184970353,spinal subependymoma
+NH18-145_31,0.970242061,Diffuse paediatric-type high grade glioma
+NH18-145_14,0.970242061,Diffuse paediatric-type high grade glioma
+NH18-145_33,0.970242061,Diffuse paediatric-type high grade glioma
+NH18-145_30,0.970242061,Diffuse paediatric-type high grade glioma
+NH18-595_22,0.999641406,Rosette-forming glioneuronal tumour
+NH18-514_35,0.319668163,Diffuse paediatric-type high grade glioma
+NH18-550_21,0.999979347,Ewing sarcoma
+NH19-2886,0.999733166,"glioblastoma, IDH-wildtype"
+NH19-2879,0.864018954,Diffuse paediatric-type high grade glioma
+NH19-2709,0.999962438,"meningioma, benign"
+NH19-2770,0.999527469,"meningioma, benign"
+NH19-2854,0.960007255,Solitary fibrous tumour / haemangiopericytoma
+NH20-1460_1,0.998986577,Central neurocytoma
+NH20-1447,0.999699131,Spinal ependymoma
+NH20-1358_4,0.370881061,Ganglioglioma
+NH20-1414_2,0.998890731,"Astrocytoma, IDH-mutant"
+NH20-1481,0.960872875,"meningioma, benign"
+NH20-1452_2,0.997893079,"meningioma, benign"
+NH18-1963_8,0.999926193,Pleomorphic xanthoastrocytoma
+NH18-1963_9,0.999926193,Pleomorphic xanthoastrocytoma
+NH18-1878_10,0.162187428,"glioblastoma, IDH-wildtype"
+NH18-1921_1,0.997249516,"meningioma, benign"
+NH18-1780_6,0.906973195,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH18-1924_5,0.999435051,medulloblastoma Group 4
+NH18-1925_3,0.998298105,"Diffuse hemispheric glioma, H3 G34-mutant"
+NH19-1281,0.888903636,Diffuse paediatric-type high grade glioma
+NH19-1530,0.999927454,pilocytic astrocytoma
+NH19-1534_4,0.846902331,"medulloblastoma, SHH-activated"
+NH19-1493,0.350960554,medulloblastoma Group 3
+NH19-1517,0.758726888,Ganglioglioma
+NH19-1383_1,0.298819691,pilocytic astrocytoma
+NH19-1444,0.999437014,pilocytic astrocytoma
+NH19-1450_3,0.47110672,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH19-1385,0.679265666,"meningioma, benign"
+NH19-1445_1,0.999982855,posterior fossa ependymoma group A
+NH19-395,0.323079592,"glioblastoma, IDH-wildtype"
+NH19-421,0.992642968,"meningioma, benign"
+NH19-421_2,0.992642968,"meningioma, benign"
+NH19-410,0.951691705,"glioblastoma, IDH-wildtype"
+NH19-471,0.617681463,"glioblastoma, IDH-wildtype"
+NH20-1038,0.960761097,"medulloblastoma, SHH-activated"
+NH20-1036,0.997597838,"meningioma, benign"
+NH20-983,0.46612537,Atypical teratoid rhabdoid tumour
+NH20-1026_1,0.99597749,"Control tissue, reactive tumour microenvironment"
+NH20-1026_11,0.99597749,"Control tissue, reactive tumour microenvironment"
+NH20-1026_12,0.99597749,"Control tissue, reactive tumour microenvironment"
+NH20-1017,0.638414374,"glioblastoma, IDH-wildtype"
+NH18-2050_1,0.679347986,"Astrocytoma, IDH-mutant"
+NH18-2063_2,0.999841606,"Diffuse midline glioma, H3 K27-altered"
+NH20-1685,0.314290805,Dysembryoplastic neuroepithelial tumour
+NH20-1715,0.570207372,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH20-1720,0.999985289,"meningioma, benign"
+NH20-1677,0.354634202,"Angiocentric glioma, MYB/MYBL1-altered"
+NH20-1719,0.816507588,"meningioma, intermediate"
+NH20-1691,0.168213474,"glioblastoma, IDH-wildtype"
+NH20-1359,0.278290075,Diffuse paediatric-type high grade glioma
+NH20-1714_1,0.482045749,Papillary craniopharyngioma
+NH19-1216_4,0.999493089,Haemangioblastoma
+NH19-1225_7,0.294940223,"medulloblastoma, SHH-activated"
+NH19-255,0.999509084,"meningioma, benign"
+NH19-828_9,0.72033756,Rosette-forming glioneuronal tumour
+NH19-828_8,0.72033756,Rosette-forming glioneuronal tumour
+NH19-828_10,0.72033756,Rosette-forming glioneuronal tumour
+NH19-1282_3,0.999978498,Spinal ependymoma
+NH19-1308_6,0.999971473,High-grade astrocytoma with piloid features
+NH19-1280_1,0.075872473,pilocytic astrocytoma
+NH20-1539,0.987400299,Schwannoma
+NH20-1519,0.998735816,"meningioma, intermediate"
+NH20-1538,0.263482479,Subependymal giant cell astrocytoma
+NH20-704,0.872695888,"meningioma, intermediate"
+NH20-1545,0.999999845,"meningioma, benign"
+NH20-1563,0.898799986,Plexiform neurofibroma
+NH20-1547,0.99999634,"meningioma, benign"
+NH20-1497_1,0.999943057,"meningioma, benign"
+NH20-1148_1,0.999766046,"meningioma, benign"
+NH20-1197,0.999995595,Myxopapillary ependymoma
+NH20-1177,0.146446282,Neuroepithelial tumour with PATZ1 fusion
+NH20-1177_1,0.146446282,Neuroepithelial tumour with PATZ1 fusion
+NH20-1163,0.53336195,"glioblastoma, IDH-wildtype"
+NH20-1059_6,0.095240997,Diffuse paediatric-type high grade glioma
+NH20-1059_4,0.095240997,Diffuse paediatric-type high grade glioma
+NH20-1147,0.998417674,pilocytic astrocytoma
+NH20-1185_1,0.983143413,High-grade astrocytoma with piloid features
+NH20-1185,0.983143413,High-grade astrocytoma with piloid features
+NH20-1185_2,0.983143413,High-grade astrocytoma with piloid features
+NH20-1185_3,0.983143413,High-grade astrocytoma with piloid features
+NH20-1172_2,0.30383445,Ganglioglioma
+NH20-1172,0.30383445,Ganglioglioma
+NH20-1172_1,0.30383445,Ganglioglioma
+NH20-1238,0.847460471,Melanoma [metastatic]
+NH20-1209,0.069333299,posterior fossa ependymoma group A
+NH20-1204,0.99770517,pilocytic astrocytoma
+NH20-1248,0.999714827,"glioblastoma, IDH-wildtype"
+NH20-1228,0.973942167,"meningioma, benign"
+NH19-1815_3,0.999949216,Solitary fibrous tumour / haemangiopericytoma
+NH19-1726,0.999212381,"meningioma, benign"
+NH19-1721_2,0.999931193,"meningioma, benign"
+NH19-1818,0.998789694,"meningioma, intermediate"
+NH19-1741,0.999976747,pilocytic astrocytoma
+NH19-1714_2,0.996539678,"meningioma, intermediate"
+NH18-1981_5,0.462293238,Dysembryoplastic neuroepithelial tumour
+NH18-1912_6,0.779255371,"Diffuse midline glioma, H3 K27-altered"
+NH17-2971_1,0.999935908,choroid plexus papilloma
+NH17-3065,0.990907964,"glioblastoma, IDH-wildtype"
+NH17-3065_2,0.990907964,"glioblastoma, IDH-wildtype"
+NH17-2845,0.266091964,Ganglioglioma
+NH16-2151,0.997425651,Schwannoma
+NH17-2904,0.998370982,pilocytic astrocytoma
+NH19-759_3,0.994949973,"supratentorial ependymoma, ZFTA fusion-positive"
+NH19-673_2,0.950319184,pilocytic astrocytoma
+NH19-687_1,0.965425142,Dysembryoplastic neuroepithelial tumour
+NH19-3442,0.591590056,Germinoma
+NH19-3483,0.999931504,"meningioma, benign"
+NH19-3505,0.828221997,"meningioma, benign"
+NH19-3466,0.999724531,High-grade astrocytoma with piloid features
+NH19-3485,0.99997545,"supratentorial ependymoma, ZFTA fusion-positive"
+NH19-3447,0.984154844,Pleomorphic xanthoastrocytoma
+NH19-3503,0.637280568,pilocytic astrocytoma
+NH19-3510,0.534278412,"glioblastoma, IDH-wildtype"
+NH19-3261,0.960076487,pilocytic astrocytoma
+NH19-3233,0.559187588,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH19-3257,0.978981539,"Control tissue, reactive tumour microenvironment"
+NH19-3259,0.929301841,posterior fossa ependymoma group B
+NH19-3235_2,0.99893585,Extraventricular neurocytoma
+NH19-3256,0.471598312,Pituitary adenoma
+NH19-3344,0.999992025,posterior fossa ependymoma group A
+NH19-3108,0.989752181,"meningioma, benign"
+NH19-239,0.999923823,Diffuse leptomeningeal glioneuronal tumour
+NH19-354,0.999940356,Posterior fossa subependymoma
+NH20-2164_2,0.51486562,"diffuse glioma, MYB- or MYBL1-altered"
+NH20-2164_1,0.51486562,"diffuse glioma, MYB- or MYBL1-altered"
+NH17-696,0.999895505,Solitary fibrous tumour / haemangiopericytoma
+NH08-412,0.958028572,Solitary fibrous tumour / haemangiopericytoma
+NH20-2085_1,0.999857967,Solitary fibrous tumour / haemangiopericytoma
+NH20-2021_1,0.94103718,Diffuse paediatric-type high grade glioma
+NH20-2183_3,0.315329207,"Control tissue, reactive tumour microenvironment"
+NH20-2183_5,0.315329207,"Control tissue, reactive tumour microenvironment"
+NH20-2183_4,0.315329207,"Control tissue, reactive tumour microenvironment"
+NH19-1163,0.76599607,"glioblastoma, IDH-wildtype"
+NH19-1305,0.058924393,medulloblastoma Group 4
+NH19-1323_1,0.525181235,spinal subependymoma
+NH19-1376,0.072780241,medulloblastoma Group 3
+NH19-1371_2,0.175313342,medulloblastoma Group 3
+NH19-1379,0.999782032,papillary tumour of the pineal region
+NH19-1375,0.159673428,CIC-rearranged sarcoma
+NH19-3385,0.702923774,"glioblastoma, IDH-wildtype"
+NH19-3363,0.91932995,pilocytic astrocytoma
+NH19-3342,0.744260675,"Control tissue, reactive tumour microenvironment"
+NH19-3342_1,0.744260675,"Control tissue, reactive tumour microenvironment"
+NH19-3238,0.265326792,pilocytic astrocytoma
+NH19-3406_6,0.988264156,"Chordoid glioma, PRKCA-mutant"
+NH19-3328,0.999977376,"meningioma, benign"
+NH19-3325,0.999999737,"supratentorial ependymoma, ZFTA fusion-positive"
+NH19-189_2,0.674525813,pilocytic astrocytoma
+NH19-195,0.996530235,pilocytic astrocytoma
+NH19-146_3,0.952402234,Diffuse leptomeningeal glioneuronal tumour
+NH19-197_3,0.999996352,pilocytic astrocytoma
+NH19-119_4,0.538967619,"Control tissue, reactive tumour microenvironment"
+NH19-192_1,0.999935893,pilocytic astrocytoma
+NH19-144_5,0.351300856,Papillary glioneuronal tumour
+NH19-1703,0.295616756,High-grade astrocytoma with piloid features
+NH19-2023,0.07198966,"Sinonasal undifferentiated carcinoma, IDH2-mutant"
+NH19-2003_1,0.439517487,High-grade astrocytoma with piloid features
+NH19-1638,0.961388657,"glioblastoma, IDH-wildtype"
+NH20-2223,0.970826119,Diffuse paediatric-type high grade glioma
+NH20-2355,0.99999031,"supratentorial ependymoma, ZFTA fusion-positive"
+NH20-2365,0.200744245,"glioblastoma, IDH-wildtype"
+NH20-2382_1,0.318964534,pilocytic astrocytoma
+NH20-2264,0.998951356,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-2253,0.2955941,"glioblastoma, IDH-wildtype"
+NH20-2253_3,0.2955941,"glioblastoma, IDH-wildtype"
+NH20-2344,0.98893932,pilocytic astrocytoma
+NH20-2416,0.927714288,"diffuse glioma, MYB- or MYBL1-altered"
+NH20-2267,0.999993667,"glioblastoma, IDH-wildtype"
+NH20-2388,0.94076452,"meningioma, malignant"
+NH20-403,0.996626671,pilocytic astrocytoma
+NH20-126,0.99695701,High-grade astrocytoma with piloid features
+NH20-204,0.371029906,"glioblastoma, IDH-wildtype"
+NH20-450_1,0.999999315,Spinal ependymoma
+NH20-435,0.999999484,"glioblastoma, IDH-wildtype"
+NH20-469,0.999985913,"meningioma, benign"
+NH19-1083_5,0.999994174,Spinal ependymoma
+NH19-1063_3,0.999991541,High-grade astrocytoma with piloid features
+NH19-1069_4,0.595149389,Retinoblastoma
+NH19-1072_2,0.333045365,Malignant melanotic nerve sheath tumour
+NH18-2624_3,0.999913044,"glioblastoma, IDH-wildtype"
+NH18-2660_4,0.998979805,"Astroblastoma, MN1-altered, MN1:BEND2-fused"
+NH17-1919,0.996372914,CNS tumour with BCOR internal tandem duplication
+NH20-1686,0.99978014,Pleomorphic xanthoastrocytoma
+NH20-1872,0.992304318,"meningioma, intermediate"
+NH20-1827,0.745023459,"glioblastoma, IDH-wildtype"
+NH20-1850,0.999881909,Supratentorial subependymoma
+NH20-1826,0.99992902,"meningioma, benign"
+NH20-1881,0.946404007,"meningioma, benign"
+NH20-1862_7,0.992140217,"glioblastoma, IDH-wildtype"
+NH20-1817,0.996543293,"meningioma, intermediate"
+NH20-1684,0.697103787,Diffuse paediatric-type high grade glioma
+NH20-1733,0.999979586,"meningioma, intermediate"
+NH20-1692,0.995176373,"meningioma, benign"
+NH20-1666,0.999883777,Myxopapillary ependymoma
+NH20-1631,0.924095453,"glioblastoma, IDH-wildtype"
+NH19-3014_1,0.998530114,Pleomorphic xanthoastrocytoma
+NH19-3014,0.998530114,Pleomorphic xanthoastrocytoma
+NH19-2997,0.999997896,"glioblastoma, IDH-wildtype"
+NH19-2951,0.728222545,"glioblastoma, IDH-wildtype"
+NU19-123,0.993611656,"glioblastoma, IDH-wildtype"
+NH19-2993,0.999410117,Schwannoma
+NH19-3048_1,0.443398396,Dysembryoplastic neuroepithelial tumour
+NH19-3048,0.443398396,Dysembryoplastic neuroepithelial tumour
+NH20-1316,0.999870414,"meningioma, benign"
+NH20-1316_1,0.999870414,"meningioma, benign"
+NH20-1385,0.967212123,"meningioma, intermediate"
+NH20-1364_3,0.999990171,pilocytic astrocytoma
+NH20-1391,0.55349734,"glioblastoma, IDH-wildtype"
+NH20-1363,0.99133079,Anaplastic neuroepithelial tumour with condensed nuclei
+NH20-1366,0.999067509,"meningioma, benign"
+NH19-682_2,0.999783128,Pleomorphic xanthoastrocytoma
+NH19-742_1,0.379402014,"Control tissue, reactive tumour microenvironment"
+NH19-818_5,0.970565991,"glioblastoma, IDH-wildtype"
+NH19-717_6,0.202229958,Polymorphous low-grade neuroepithelial tumour of the young
+NH19-664_3,0.245526865,"Diffuse midline glioma, H3 K27-altered"
+NH18-2183_6,0.999961075,"meningioma, benign"
+NH18-2183_5,0.999961075,"meningioma, benign"
+NH18-1828_3,0.997850914,Diffuse paediatric-type high grade glioma
+NH18-2236_2,0.221085058,pilocytic astrocytoma
+NH18-2160_1,0.98395957,"Astrocytoma, IDH-mutant"
+NH20-500,0.966142264,pilocytic astrocytoma
+NH19-1947,0.948004125,"meningioma, malignant"
+NH19-1961_2,0.936815291,"Astrocytoma, IDH-mutant"
+NH19-1984,0.999998221,Intraocular medulloepithelioma
+NH19-1984_2,0.999998221,Intraocular medulloepithelioma
+NH17-2912,0.9930488,"glioblastoma, IDH-wildtype"
+NH17-2739_10,0.365860877,spinal subependymoma
+NH17-2226_4,0.299326181,medulloblastoma Group 3
+NH17-2797_4,0.99999978,Extraventricular neurocytoma
+NH19-1430_1,0.997377613,Schwannoma
+NH19-1430_4,0.997377613,Schwannoma
+NH19-1430,0.997377613,Schwannoma
+NH19-1430_3,0.997377613,Schwannoma
+NH19-1430_2,0.997377613,Schwannoma
+NH20-1751,0.999981454,Myxopapillary ependymoma
+NH20-1738,0.997648759,"meningioma, benign"
+NH20-1778,0.440197806,Ganglioglioma
+NH18-2815,0.17798636,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-1754,0.861381168,"meningioma, benign"
+NH17-1776_26,0.222838046,Spinal ependymoma
+NH17-1654_3,0.992996473,Diffuse paediatric-type high grade glioma
+NH17-1158,0.473440102,Ganglioglioma
+NH17-1746_10,0.226432982,Ganglioglioma
+NH17-1579_7,0.573407738,Melanoma [metastatic]
+NH17-1579_12,0.573407738,Melanoma [metastatic]
+NH17-1579_9,0.573407738,Melanoma [metastatic]
+NH17-1735_1,0.999814725,Haemangioblastoma
+NH17-1786_6,0.997789722,Posterior fossa subependymoma
+NH20-570,0.959275841,pilocytic astrocytoma
+NH09-1467,0.796394535,Dysembryoplastic neuroepithelial tumour
+NH20-336,0.613087944,"glioblastoma, IDH-wildtype"
+NH20-568_1,0.996402629,"Astroblastoma, MN1-altered, MN1:BEND2-fused"
+NH20-564,0.593294164,"Myxoid glioneuronal tumour, PDGFRA-mutant"
+NH20-567_2,0.349707229,Ganglioglioma
+NH20-397_4,0.999999262,Pleomorphic xanthoastrocytoma
+NH20-232,0.371941588,Infant-type hemispheric glioma
+NH20-270,0.99998173,posterior fossa ependymoma group B
+NH20-269,0.971810782,Dysembryoplastic neuroepithelial tumour
+NH20-250,0.441627843,"glioblastoma, IDH-wildtype"
+NH20-170,0.996298169,"meningioma, intermediate"
+NH20-240,0.133885614,medulloblastoma Group 3
+NH17-560,0.999898558,"glioblastoma, IDH-wildtype"
+NH20-743,0.993551083,"glioblastoma, IDH-wildtype"
+NH20-732,0.56936736,"medulloblastoma, SHH-activated"
+NH20-668,0.996246512,"glioblastoma, IDH-wildtype"
+NH20-708,0.985655059,Myxopapillary ependymoma
+NH20-703,0.999260392,"Adult-type diffuse high grade glioma, IDH-wildtype"
+NH20-641,0.98779158,"meningioma, benign"
+NH18-1196_7,0.999027755,Diffuse paediatric-type high grade glioma
+NH18-1228_3,0.999980626,Spinal ependymoma
+NH18-1259_5,0.931640065,Myxopapillary ependymoma
+NH18-1234_1,0.996547504,"diffuse glioma, MYB- or MYBL1-altered"
+NH18-1233_4,0.414418419,"glioblastoma, IDH-wildtype"
+NH18-1178_2,0.866839961,"medulloblastoma, SHH-activated"
+NH20-874,0.079157774,Pituitary adenoma
+NH20-847_6,0.152761651,Neuroepithelial tumour with PATZ1 fusion
+NH20-834_2,0.695996231,"Control tissue, reactive tumour microenvironment"
+NH20-865,0.143202185,"supratentorial ependymoma, ZFTA fusion-positive"
+NH20-807_1,0.15636631,medulloblastoma Group 4
+NH18-292_23,0.156714602,medulloblastoma Group 3
+NH18-292_22,0.156714602,medulloblastoma Group 3
+NH18-292_2,0.156714602,medulloblastoma Group 3
+NH18-301_30,0.134480583,Malignant melanotic nerve sheath tumour
+NH18-301_1,0.134480583,Malignant melanotic nerve sheath tumour
+NH18-301_29,0.134480583,Malignant melanotic nerve sheath tumour
+NH18-51_14,0.941466218,Dysembryoplastic neuroepithelial tumour
+NH18-199_10,0.99999943,Infant-type hemispheric glioma
+NH18-198_21,0.494674364,Ganglioglioma
+NH17-2936_4,0.941278642,"Primary intracranial sarcoma, DICER1-mutant"
+NH17-2936_2,0.941278642,"Primary intracranial sarcoma, DICER1-mutant"
+NH17-2936,0.941278642,"Primary intracranial sarcoma, DICER1-mutant"
+NH17-2936_1,0.941278642,"Primary intracranial sarcoma, DICER1-mutant"
+NH17-2936_3,0.941278642,"Primary intracranial sarcoma, DICER1-mutant"
+NH18-258_33,0.42297815,Diffuse paediatric-type high grade glioma
+NH18-258_6,0.42297815,Diffuse paediatric-type high grade glioma
+NH18-258_3,0.42297815,Diffuse paediatric-type high grade glioma
+NH18-258_17,0.42297815,Diffuse paediatric-type high grade glioma
+NH18-258_7,0.42297815,Diffuse paediatric-type high grade glioma
+NH18-258_16,0.42297815,Diffuse paediatric-type high grade glioma

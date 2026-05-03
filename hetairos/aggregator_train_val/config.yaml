@@ -1,0 +1,46 @@
+General:
+    accelerator: auto
+    devices: auto
+    precision: 16-mixed
+    epochs: 100 
+    grad_acc: 2
+    patience: 10
+    mode: test
+    log_path: ./aggregator_train_val/logs/
+    seed: 13
+
+Data:
+    data_dir: ./aggregator_train_val/data/dataset
+    data_split: ./aggregator_train_val/annot_files/split.yaml
+    label_file: ./aggregator_train_val/annot_files/labels.csv
+    aug: True
+    soft_labels: False
+    preds_save: ./aggregator_train_val/results/
+    label_mapping: ./aggregator_train_val/102_classes.yaml
+    batch_size: 1 
+    age_loc_drop_prob: 0.7
+    aug_prob: 0.7
+    cls_count: 186
+    loc_dict: {'Extracranial': 0, 'Infratentorial': 1, 'Intra- or Peri-Ventricular': 2, 'Intra- or Supra-Sellar': 3, 'Pineal': 4, 'Spinal': 5, 'Supratentorial': 6}
+    dim_age_embed: 32
+
+Model:
+    exp_name: Default
+    name: ATransMIL
+    n_classes: 186
+    embedding_size: 1536
+    group_num: 3
+    aug: False
+    soft_labels: False
+    dim_age_embed: 32
+    cl_w: 20
+    
+Optimizer:
+    opt: lookahead_radam
+    lr: 0.00001
+    opt_eps: null 
+    opt_betas: null
+    momentum: null 
+    weight_decay: 0.00001
+
+
