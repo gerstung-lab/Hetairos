@@ -13,3 +13,13 @@ labels/
 # OS artifacts
 .DS_Store
 **/.DS_Store
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# Backup files
+*.bak
