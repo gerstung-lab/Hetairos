@@ -1,5 +1,7 @@
 # Claude Code internal files
 .claude/
+CLAUDE.md
+AGENTS.md
 
 # Excel files (potentially sensitive data)
 *.xlsx
@@ -9,6 +11,9 @@
 
 # Labels directory (patient/cohort sensitive data)
 labels/
+
+# Prediction outputs
+predictions/
 
 # OS artifacts
 .DS_Store
@@ -23,3 +28,5 @@ dist/
 
 # Backup files
 *.bak
+
+human_vs_machine/
