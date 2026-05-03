@@ -6,7 +6,32 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import multiprocessing as mp
-from .utils import *
+from hetairos.preprocessing.tiling.slide_lib.utils import (
+    filter_contours,
+    move_small,
+    hysteresis_threshold,
+    get_binary_closing,
+    scaleContourDim,
+    scaleHolesDim,
+    isInContour,
+    process_coord_candidate,
+    save_tiles,
+    DrawMapFromCoords,
+    pen_filter,
+    find_best_seg_level,
+)
+
+
+def get_worker_count(task_count: int | None = None)->int:
+    workers = min(mp.cpu_count(), 16)
+    if task_count is not None:
+        workers = min(workers, task_count)
+    return max(1, workers)
+
+
+def get_global_aligned_range(start: int | float, stop: int | float, step: int | float)->np.ndarray:
+    aligned_start = int(start // step) * int(step)
+    return np.arange(aligned_start, stop, step=step)
 
 
 def segment(wsi: openslide.OpenSlide)->tuple[list, list, Image.Image, float]:
@@ -14,10 +39,10 @@ def segment(wsi: openslide.OpenSlide)->tuple[list, list, Image.Image, float]:
 
     try:
         seg_level = find_best_seg_level(wsi, 1024) # 1024 is the reference size for segmentation
-    except:
+    except Exception:
         seg_level = -1
 
-    img = np.array(wsi.read_region((0, 0), seg_level, wsi.level_dimensions[seg_level]).convert('RGB'))  # doing segmentation at the mag level closest to 1024x1024 
+    img = np.array(wsi.read_region((0, 0), seg_level, wsi.level_dimensions[seg_level]).convert('RGB'))  # doing segmentation at the mag level closest to 1024x1024
     img_gray = 255 - cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)  # convert to grayscale and invert
     # r_pen = pen_filter(img, 'red')
     g_pen = pen_filter(img, 'green')
@@ -31,7 +56,7 @@ def segment(wsi: openslide.OpenSlide)->tuple[list, list, Image.Image, float]:
     contours, hierarchy = cv2.findContours(bw, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
     hierarchy = np.squeeze(hierarchy, axis=(0,))[:, 2:]
     foreground_contours, hole_contours = filter_contours(contours, hierarchy, {'a_t':0.2 * scaled_ref_patch_area, 'a_h':  scaled_ref_patch_area, 'max_n_holes':10})
-    
+
     # save mask file
     line_thickness = int(100 / scale)
     cv2.drawContours(img, foreground_contours, -1, (0, 255, 0), line_thickness, lineType=cv2.LINE_8)
@@ -45,10 +70,10 @@ def segment(wsi: openslide.OpenSlide)->tuple[list, list, Image.Image, float]:
     return contours_tissue, holes_tissue, img, time.time() - start_time
 
 
-def patching(wsi: openslide.OpenSlide, contours: list, holes: list, tile_save_dir: str, 
+def patching(wsi: openslide.OpenSlide, contours: list, holes: list, tile_save_dir: str,
              patch_size: float | int, mag_level: float | int, step_size: float | int, slide_path: str)->tuple[list, float, pd.DataFrame]:
     start_time = time.time()
-    
+
     highest_mag = int(wsi.properties['openslide.objective-power'])
     highest_downsample = int(highest_mag/mag_level)  # downsample factor for the highest magnification
     patch_level = wsi.get_best_level_for_downsample(highest_downsample)  # find the best level for tiling
@@ -63,22 +88,18 @@ def patching(wsi: openslide.OpenSlide, contours: list, holes: list, tile_save_di
         start_x, start_y, w, h = cv2.boundingRect(cont)
         stop_x = start_x + w
         stop_y = start_y + h
-        # print("Bounding Box:", start_x, start_y, w, h)
-        # print("Contour Area:", cv2.contourArea(cont))
 
         cont_check_fn = isInContour(contour=cont, patch_size=ref_patch_size, center_shift=0.5)
-        x_range = np.arange(start_x, stop_x, step=ref_step_size)
-        y_range = np.arange(start_y, stop_y, step=ref_step_size)
+        x_range = get_global_aligned_range(start_x, stop_x, ref_step_size)
+        y_range = get_global_aligned_range(start_y, stop_y, ref_step_size)
         x_coords, y_coords = np.meshgrid(x_range, y_range, indexing='ij')
         coord_candidates = np.array([x_coords.flatten(), y_coords.flatten()]).transpose()
 
         # multiprocessing
-        num_workers = mp.cpu_count()
-        num_workers = int(num_workers / 2)  # use half of the available cores (could be adjusted based on the memory usage)
-        pool = mp.Pool(processes=num_workers)
+        num_workers = get_worker_count(len(coord_candidates))
         iterable = [(coord, holes[cont_idx], ref_patch_size, cont_check_fn) for coord in coord_candidates]
-        results = pool.starmap(process_coord_candidate, iterable)
-        pool.close()
+        with mp.Pool(processes=num_workers) as pool:
+            results = pool.starmap(process_coord_candidate, iterable)
 
         results = np.array([result for result in results if result is not None])
         print('Extracted {} points within the contour'.format(len(results)))
@@ -101,7 +122,7 @@ def patching(wsi: openslide.OpenSlide, contours: list, holes: list, tile_save_di
     return coord_record, time.time() - start_time
 
 
-def stitching(wsi: openslide.OpenSlide, coords: list, patch_size: float | int, mag_level: float | int, step_size: float | int, 
+def stitching(wsi: openslide.OpenSlide, coords: list, patch_size: float | int, mag_level: float | int, step_size: float | int,
               downscale: float | int = 64)->tuple[Image.Image, float]:
     start_time = time.time()
 
@@ -137,47 +158,46 @@ def segment_tiling(source: str, save_dir: str, tile_save_dir: str, mask_save_dir
         slide_name = os.path.splitext(os.path.basename(slide_path))[0]
         print(f"\nprogress: {i+1}/{len(df)}")
         print(f"processing {slide_name}")
-        
+
         try:
-            wsi = openslide.open_slide(slide_path)
-
-            try:
-                df.loc[i, 'slide_mpp'] = float(wsi.properties['aperio.MPP'])
-            except (KeyError, ValueError):
+            with openslide.open_slide(slide_path) as wsi:
                 try:
-                    df.loc[i, 'slide_mpp'] = float(wsi.properties['openslide.mpp-y'])
+                    df.loc[i, 'slide_mpp'] = float(wsi.properties['aperio.MPP'])
                 except (KeyError, ValueError):
-                    df.loc[i, 'slide_mpp'] = 'NA'
+                    try:
+                        df.loc[i, 'slide_mpp'] = float(wsi.properties['openslide.mpp-y'])
+                    except (KeyError, ValueError):
+                        df.loc[i, 'slide_mpp'] = 'NA'
 
-            try:
-                if 'openslide.objective-power' in wsi.properties:
-                    df.loc[i, 'slide_mag'] = float(wsi.properties['openslide.objective-power'])
-                else:
-                    df.loc[i, 'slide_mag'] = float(wsi.properties['aperio.AppMag'])
-            except (KeyError, ValueError):
-                df.loc[i, 'slide_mag'] = 'NA'
-                print(f"slide {slide_name} has no magnification information")
-                continue
+                try:
+                    if 'openslide.objective-power' in wsi.properties:
+                        df.loc[i, 'slide_mag'] = float(wsi.properties['openslide.objective-power'])
+                    else:
+                        df.loc[i, 'slide_mag'] = float(wsi.properties['aperio.AppMag'])
+                except (KeyError, ValueError):
+                    df.loc[i, 'slide_mag'] = 'NA'
+                    print(f"slide {slide_name} has no magnification information")
+                    continue
 
-            contour_coord, hole_coord, mask, seg_time_elapsed = segment(wsi)
-            mask.save(os.path.join(mask_save_dir, f'{slide_name}.jpg'))
+                contour_coord, hole_coord, mask, seg_time_elapsed = segment(wsi)
+                mask.save(os.path.join(mask_save_dir, f'{slide_name}.jpg'))
 
-            coords, tile_time_elapsed = patching(wsi, contour_coord, hole_coord, tile_save_dir, patch_size, mag_level, step_size, slide_path)
+                coords, tile_time_elapsed = patching(wsi, contour_coord, hole_coord, tile_save_dir, patch_size, mag_level, step_size, slide_path)
 
-            heatmap, stitch_time_elapsed = stitching(wsi, coords, patch_size, mag_level, step_size, downscale=64)
-            heatmap.save(os.path.join(stitch_save_dir, slide_name+'.jpg'))
+                heatmap, stitch_time_elapsed = stitching(wsi, coords, patch_size, mag_level, step_size, downscale=64)
+                heatmap.save(os.path.join(stitch_save_dir, slide_name+'.jpg'))
 
-            print(f"segmentation took {seg_time_elapsed:.2f} seconds")
-            print(f"patching took {tile_time_elapsed:.2f} seconds")
-            print(f"stitching took {stitch_time_elapsed:.2f} seconds")
-            seg_time += seg_time_elapsed
-            tile_time += tile_time_elapsed
-            stitch_time += stitch_time_elapsed
-        
+                print(f"segmentation took {seg_time_elapsed:.2f} seconds")
+                print(f"patching took {tile_time_elapsed:.2f} seconds")
+                print(f"stitching took {stitch_time_elapsed:.2f} seconds")
+                seg_time += seg_time_elapsed
+                tile_time += tile_time_elapsed
+                stitch_time += stitch_time_elapsed
+
         except openslide.OpenSlideError:
             with open(os.path.join(save_dir, 'error_slides.txt'), 'a') as f:
                 f.write(df['slide_path'][i]+'\n')
-    
+
     os.makedirs(os.path.join(save_dir, 'slide_info'), exist_ok=True)
     df.to_csv(os.path.join(save_dir, 'slide_info', f'slide_info_{index}.csv'), index=False)
     print(f"\nslide info (mpp, magnification) saved to {os.path.join(save_dir, f'slide_info_{index}.csv')}")
@@ -189,6 +209,3 @@ def segment_tiling(source: str, save_dir: str, tile_save_dir: str, mask_save_dir
     print(f"average stiching time in s per slide: {stitch_time:.2f}")
 
     return seg_time+tile_time+stitch_time
-        
-
-

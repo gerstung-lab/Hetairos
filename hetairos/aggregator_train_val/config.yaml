@@ -1,4 +1,6 @@
 General:
+    accelerator: auto
+    devices: auto
     precision: 16-mixed
     epochs: 100 
     grad_acc: 2

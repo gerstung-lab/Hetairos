@@ -5,7 +5,15 @@ import pytorch_lightning as pl
 from torch.utils.data import Dataset, DataLoader
 import ast
 import pandas as pd
-from .utils import *
+# Bug fix G: explicit imports instead of `from .utils import *`
+from hetairos.aggregator_train_val.utils import (
+    read_yaml,
+    label_vec_generator,
+    age_augmentation,
+    loc_augmentation,
+    get_positional_encoding,
+    get_loc_representation,
+)
 from dataclasses import dataclass
 from typing import Union
 
@@ -15,17 +23,17 @@ from typing import Union
 class Sample:
     data_path: str  # Path to the data file (.pt file containing tensor data)
     label: Union[int, torch.Tensor]  # Label for the sample, can be an integer or tensor
-    slide_id: str  
-    age: Union[int, float] 
-    location: str  
+    slide_id: str
+    age: Union[int, float]
+    location: str
 
 
 # Custom dataset class for handling the dataset of slide images
 class LocalDataset(Dataset):
     """
-    A custom PyTorch Dataset for managing slide images, including data loading, augmentation, 
+    A custom PyTorch Dataset for managing slide images, including data loading, augmentation,
     and label generation for training and testing.
-    
+
     Attributes:
         data_dir (str): Directory where data files are stored.
         split (list): List of slide IDs to be included in the dataset.
@@ -42,12 +50,12 @@ class LocalDataset(Dataset):
         self.data_split = split
         self.labels = labels.set_index('slide')  # Set slide as the index for easy lookup
         self.labels.index = self.labels.index.astype(str)
-        self.mapping = mapping 
+        self.mapping = mapping
         self.mode = mode  # Mode can be 'train' or 'test'
-        self.augmentation = augmentation  
-        self.soft_labels = soft_labels 
-        self.loc_dict = loc_dict  
-        self.dim_age_embed = kwargs['dim_age_embed']  
+        self.augmentation = augmentation
+        self.soft_labels = soft_labels
+        self.loc_dict = loc_dict
+        self.dim_age_embed = kwargs['dim_age_embed']
 
         existing_files = set(os.listdir(self.data_dir))
         existing_files = [os.path.splitext(x)[0] for x in existing_files]
@@ -65,11 +73,11 @@ class LocalDataset(Dataset):
                         label = torch.tensor(ast.literal_eval(self.labels.loc[slide]['prob_vector']))  # Soft label as probability vector
                     else:
                         label = int(self.mapping[self.labels.loc[slide]['family']])  # Convert family label to integer label
-                    
+
                     # Append valid sample to the dataset
-                    self.data.append(Sample(data_path=os.path.join(self.data_dir, slide + '.pt'), 
+                    self.data.append(Sample(data_path=os.path.join(self.data_dir, slide + '.pt'),
                                             label=label, slide_id=slide,
-                                            age=self.labels.loc[slide]['age'], 
+                                            age=self.labels.loc[slide]['age'],
                                             location=self.labels.loc[slide]['location']))
                 else:
                     print(f"Slide {slide} has missing label information")
@@ -90,7 +98,7 @@ class LocalDataset(Dataset):
                 data1 = data1[np.random.choice(data1.shape[0], data0.shape[0], replace=True)]  # Sample from data1 to match the shape of data0
                 label1 = sample.label
                 w0 = np.random.rand()  # Weight for mixing two samples
-                
+
                 # Create augmented data by linear interpolation of two samples
                 aug_data = w0 * data0 + (1 - w0) * data1
                 aug_label = label_vec_generator(label0=label0, label1=label1, w0=w0, soft_labels=self.soft_labels, cls_count=self.cls_count)
@@ -111,11 +119,11 @@ class LocalDataset(Dataset):
             age0 = get_positional_encoding(self.data[idx].age, self.dim_age_embed)
             loc0 = get_loc_representation(self.data[idx].location, self.loc_dict)
             return data0, age0, loc0, label0, slide_id0
-        
+
     def __len__(self):
         return len(self.data)
-    
-    
+
+
 class DataModule(pl.LightningDataModule):
     """
     DataModule for managing data loading and preparation for PyTorch Lightning training.
@@ -125,8 +133,8 @@ class DataModule(pl.LightningDataModule):
         data_split (str): Path to YAML file containing train/test split information.
         batch_size (int): Batch size for training and validation. Defaults to 1.
         kwargs: Additional keyword arguments for data configuration.
-    """       
-    def __init__(self, data_dir, data_split, batch_size=1, **kwargs): 
+    """
+    def __init__(self, data_dir, data_split, batch_size=1, **kwargs):
         super().__init__()
         self.data_dir = data_dir
         self.data_split = read_yaml(data_split)  # Read train/test split information from YAML file
@@ -134,18 +142,18 @@ class DataModule(pl.LightningDataModule):
 
         # Load mapping from string labels to numerical labels
         self.str2label_mapping = read_yaml(kwargs['label_mapping'])['mapping']
-        self.soft_labels = kwargs['soft_labels']  
-        self.aug = kwargs['aug'] 
+        self.soft_labels = kwargs['soft_labels']
+        self.aug = kwargs['aug']
 
         # Parameters for augmentation
-        self.aug_params = {'age_loc_drop_prob': kwargs['age_loc_drop_prob'], 'aug_prob': kwargs['aug_prob'], 
+        self.aug_params = {'age_loc_drop_prob': kwargs['age_loc_drop_prob'], 'aug_prob': kwargs['aug_prob'],
                            'cls_count': kwargs['cls_count']}
-        
+
         self.loc_dict = kwargs['loc_dict']
         self.dim_age_embed = kwargs['dim_age_embed']  # Dimension for age embedding
 
         self.batch_size = int(batch_size)
-    
+
     def prepare_data(self):
         pass
 
@@ -157,17 +165,17 @@ class DataModule(pl.LightningDataModule):
 
         if stage == 'test':
             self.test_dataset = self._initialize_dataset('test')
-    
+
     def _initialize_dataset(self, split_key):
         # Helper function to initialize dataset for given split
         aug = self.aug if split_key == 'train' else False  # Apply augmentation only during training
-        return LocalDataset(data_dir=self.data_dir, split=self.data_split[split_key], labels=self.labels, 
+        return LocalDataset(data_dir=self.data_dir, split=self.data_split[split_key], labels=self.labels,
                             mapping=self.str2label_mapping, soft_labels=self.soft_labels, augmentation=aug,
                             loc_dict=self.loc_dict, dim_age_embed=self.dim_age_embed, mode=split_key, **self.aug_params)
 
     def train_dataloader(self):
         return DataLoader(self.train_dataset, batch_size=self.batch_size, num_workers=8, shuffle=True)
-    
+
     def val_dataloader(self):
         return DataLoader(self.val_dataset, batch_size=self.batch_size, num_workers=8, shuffle=False)
 

@@ -37,7 +37,7 @@ def read_yaml(fpath: str)->dict:
 
     with open(fpath, "r") as file:
         yml = yaml.safe_load(file)
-        
+
     return Dict(yml)
 
 
@@ -46,9 +46,9 @@ def read_yaml(fpath: str)->dict:
 def load_loggers(cfg):
     log_path = cfg.General.log_path
     Path(log_path).mkdir(exist_ok=True, parents=True)
-    cfg.log_path = Path(log_path) / f'{cfg.Model.exp_name}' 
-    print(f'---->Log dir: {cfg.log_path}') 
-     
+    cfg.log_path = Path(log_path) / f'{cfg.Model.exp_name}'
+    print(f'---->Log dir: {cfg.log_path}')
+
     log_dir = cfg.log_path / 'wandb'
     Path(log_dir).mkdir(exist_ok=True, parents=True) # in case wandb fails to store the logs
     wandb_logger = pl_loggers.WandbLogger(project='Hetairos', save_dir=str(cfg.log_path), name=cfg.Model.exp_name)
@@ -72,7 +72,7 @@ def load_callbacks(cfg):
         mode='max'
     )
     Mycallbacks.append(early_stop_callback)
-    
+
     # Model checkpoint callback to save the best model based on acc
     if cfg.General.mode == 'train' :
         Mycallbacks.append(ModelCheckpoint(monitor = 'multi_acc',
@@ -127,7 +127,7 @@ def get_positional_encoding(age, d_model):
     else:
         raise ValueError('Invalid age input.')
 
-    
+
     position = np.arange(0, d_model, 2)
     div_term = np.exp(position * -np.log(10000.0) / d_model)
     pos_encoding = np.zeros(d_model)
@@ -153,7 +153,6 @@ def loc_augmentation(loc0, loc1, w0, drop_prob, loc_dict):
     loc1 = loc1 if np.random.rand() < drop_prob else torch.zeros_like(loc1)
     aug_loc = w0 * loc0 + (1 - w0) * loc1
     return aug_loc.to(torch.float32)
-
 
 
 def update_ema_variables(old_params, new_params, current_epoch):

@@ -8,7 +8,7 @@ import typing as tp
 from typing import Union
 import skimage.filters as sk_filters
 from PIL import Image
-from .constants_color import PENS_RGB
+from hetairos.preprocessing.tiling.slide_lib.constants_color import PENS_RGB
 import multiprocessing as mp
 import concurrent.futures
 
@@ -22,7 +22,7 @@ def filter_contours(contours: list, hierarchy: np.array, filter_params: dict)->t
     # find indices of foreground contours (parent == -1)
     hierarchy_1 = np.flatnonzero(hierarchy[:,1] == -1)
     all_holes = []
-    
+
     # loop through foreground contour indices
     for cont_idx in hierarchy_1:
         # actual contour
@@ -35,13 +35,13 @@ def filter_contours(contours: list, hierarchy: np.array, filter_params: dict)->t
         hole_areas = [cv2.contourArea(contours[hole_idx]) for hole_idx in holes]
         # actual area of foreground contour region
         a = a - np.array(hole_areas).sum()
-        if a == 0: 'continue'
-        if tuple((filter_params['a_t'],)) < tuple((a,)): 
+        if a == 0: continue  # Bug fix F: was `'continue'` (dead string literal), now real continue
+        if tuple((filter_params['a_t'],)) < tuple((a,)):
             filtered.append(cont_idx)
             all_holes.append(holes)
 
     foreground_contours = [contours[cont_idx] for cont_idx in filtered]
-    
+
     hole_contours = []
     for hole_ids in all_holes:
         unfiltered_holes = [contours[idx] for idx in hole_ids ]
@@ -49,7 +49,7 @@ def filter_contours(contours: list, hierarchy: np.array, filter_params: dict)->t
         # take max_n_holes largest holes by area
         unfilered_holes = unfilered_holes[:filter_params['max_n_holes']]
         filtered_holes = []
-        
+
         # filter these holes
         for hole in unfilered_holes:
             if cv2.contourArea(hole) > filter_params['a_h']:
@@ -82,7 +82,7 @@ def gray_filter(rgb: np.array, tolerance: int | float=23)->np.array:
 def get_gradient_magnitude(im: np.ndarray) -> np.ndarray:
     """
     Calculate the gradient magnitude of a given image.
-    
+
     Parameters
     ----------
     im : numpy array
@@ -107,7 +107,7 @@ def get_gradient_magnitude(im: np.ndarray) -> np.ndarray:
 def get_binary_closing(im: np.ndarray, kernel_size: int = 11) -> np.ndarray:
     """
     Perform binary closing operation on a given image.
-    
+
     Parameters
     ----------
     im : numpy array
@@ -129,7 +129,7 @@ def get_binary_closing(im: np.ndarray, kernel_size: int = 11) -> np.ndarray:
 def get_magnitude_closing(im: np.ndarray, kernel_size: int = 11) -> np.ndarray:
     """
     Perform binary closing operation on the gradient magnitude of a given image.
-    
+
     Parameters
     ----------
     im : numpy array
@@ -156,8 +156,8 @@ def scaleHolesDim(contours: list, scale: int | float)->list:
 
 
 class Contour_Checking_fn(object):
-	# Defining __call__ method 
-	def __call__(self, pt): 
+	# Defining __call__ method
+	def __call__(self, pt):
 		raise NotImplementedError
 
 
@@ -166,7 +166,7 @@ class isInContour(Contour_Checking_fn):
 		self.cont = contour
 		self.patch_size = patch_size
 		self.shift = int(patch_size//2*center_shift)
-	def __call__(self, pt: np.array)->int: 
+	def __call__(self, pt: np.array)->int:
 		center = (pt[0]+self.patch_size//2, pt[1]+self.patch_size//2)
 		if self.shift > 0:
 			all_points = [(center[0]-self.shift, center[1]-self.shift),
@@ -176,7 +176,7 @@ class isInContour(Contour_Checking_fn):
 						  ]
 		else:
 			all_points = [center]
-		
+
 		for points in all_points:
 			if cv2.pointPolygonTest(self.cont, tuple(np.array(points).astype(float)), False) >= 0:
 				return 1
@@ -187,7 +187,7 @@ def isInHoles(holes: list, pt: np.array, patch_size: int|float)->int:
     for hole in holes:
         if cv2.pointPolygonTest(hole, (pt[0]+patch_size/2, pt[1]+patch_size/2), False) > 0:
             return 1
-    
+
     return 0
 
 
@@ -215,7 +215,7 @@ def isBlackPatch(patch: np.array, thresh: int|float=50)->bool:
 
 
 def tileWriter(wsi: openslide.OpenSlide, coord: Union[np.array, tuple], attr_dict: dict)->bool:
-    patch = wsi.read_region(coord, attr_dict['patch_level'], 
+    patch = wsi.read_region(coord, attr_dict['patch_level'],
                             (int(attr_dict['patch_size']*attr_dict['downsample']), int(attr_dict['patch_size']*attr_dict['downsample']))).convert('RGB')
     patch = np.array(patch.resize((attr_dict['patch_size'], attr_dict['patch_size'])))
     # if not isWhitePatch(patch) and  and get_magnitude_closing(patch).mean() > 0.35 and gray_filter(patch):
@@ -227,18 +227,38 @@ def tileWriter(wsi: openslide.OpenSlide, coord: Union[np.array, tuple], attr_dic
         return None
 
 
-def save_tiles(slide_path: str, asset_dict: dict, attr_dict: dict)->np.array:
+def tile_worker(slide_path: str, coords: np.ndarray, attr_dict: dict)->list:
     wsi = openslide.open_slide(slide_path)
+    filtered_coords = []
+    try:
+        for coord in coords:
+            result = tileWriter(wsi, coord, attr_dict)
+            if result is not None:
+                filtered_coords.append(result)
+    finally:
+        wsi.close()
+    return filtered_coords
+
+
+def get_worker_count(task_count: int | None = None)->int:
+    workers = min(mp.cpu_count(), 16)
+    if task_count is not None:
+        workers = min(workers, task_count)
+    return max(1, workers)
+
+
+def save_tiles(slide_path: str, asset_dict: dict, attr_dict: dict)->np.array:
     coords = asset_dict['coords']
     coords = coords[1:] if np.array_equal(coords[0], np.array([0, 0])) else coords
-    num_workers = mp.cpu_count()
-    num_workers = (num_workers / 2)
+    if len(coords) == 0:
+        return np.array([])
+    num_workers = get_worker_count(len(coords))
+    coord_chunks = [chunk for chunk in np.array_split(coords, num_workers) if len(chunk) > 0]
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
-        results = executor.map(tileWriter, [wsi]*len(coords), coords, [attr_dict]*len(coords))
+        results = executor.map(tile_worker, [slide_path]*len(coord_chunks), coord_chunks, [attr_dict]*len(coord_chunks))
     filtered_coords = []
-    for item in results:
-        if item is not None:
-            filtered_coords.append(item)
+    for chunk_results in results:
+        filtered_coords.extend(chunk_results)
     return np.array(filtered_coords)
 
 
@@ -311,6 +331,5 @@ def find_best_seg_level(wsi, width: int)->int:
     for idx, dim in enumerate(level_dims):
         abs_ls.append(abs(dim[0] - width))
     best_level = np.argmin(abs_ls)
-    
-    return best_level
 
+    return best_level

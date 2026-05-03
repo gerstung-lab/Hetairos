@@ -1,0 +1,21 @@
+tiling:
+  patch_size: 256
+  step_size: 256
+  mag: 20
+  index: 0
+
+feature_extraction:
+  batchsize: 768
+
+model_run:
+  model_config: null
+  model: ATransMIL
+  groups: 3
+  classes: 186
+  cl_weight: 20
+  data_aug: false
+  soft_labels: false
+  resume: false
+  accelerator: auto
+  devices: auto
+  precision: 16-mixed
