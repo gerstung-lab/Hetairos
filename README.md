@@ -1,9 +1,6 @@
 # 🧠 AI-based histopathological classification of central nervous system tumours
 
-[[`Paper`]()] [[`BibTeX`](#Citation)]
-
-Darui Jin*, Artem Shmatko*, Areeba Patel*, Ramin Rahmanzade, Rouzbeh Banan, Lukas Friedrich,  Philipp Sievers, Stefan Hamelmann, Daniel Schrimpf, Kirsten Göbel, Henri Bogumil, Sybren L.N. Maas,  Martin Sill, Felix Hinz, Abigail Suwala, Felix Keller, Antje Habel, Gleb Rukhovich, Samuel Rutz, Obada Al-Halabi, Sebastian Ille, Janik Sehrig, Bogdana Suchorska, Olfat Ahmad, Dominik Sturm, David Reuss, Pieter Wesseling, Adelheid Wöhrer, Frank Heppner, Christel Herold-Mende, Sandro Krieg, Wolfgang Wick, David TW Jones, Stefan Pfister, Maysa Al-Hussaini, Yanghao Hou, Felipe D’almeida Costa, Leonille Schweizer, Luca Bertero, Till Acker, Arnault Tauziede-Espariat, Pascale Varlet, Sebastian Brandner, Andreas von Deimling, Xiangzhi Bai, Felix Sahm, Moritz Gerstung (*Equal contribution)
-
+[[`Paper`](https://doi.org/10.1038/s43018-026-01186-3)] [[`BibTeX`](#Citation)]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![Hetairos Model](img/workflow_icon.png)
@@ -177,12 +174,12 @@ Feature extraction and model training/evaluation are designed for GPU use. Featu
 
 ## Citation
 ```bibtex
-@article{jin2024ai,
-  title={AI-based histopathological classification of central nervous system tumours},
-  author={Jin, Darui and Shmatko, Artem and Patel, Areeba, ..., Sahm, Felix and Gerstung, Moritz},
-  journal={medRxiv},
-  year={2024},
-  publisher={Cold Spring Harbor Laboratory Press}
+@article{jin2026hetairos, 
+  title={Hetairos is a histology-based artificial intelligence model for predicting central nervous system tumour methylation subtypes},
+  author={Jin, Darui and Shmatko, Artem and Patel, Areeba and Rutz, Samuel and Friedrich, Lukas and Banan, Rouzbeh and Rahmanzade, Ramin and Sievers, Philipp and Hamelmann, Stefan and Schrimpf, Daniel and Göbel, Kirsten and Bogumil, Henri and Maas, Sybren L. N. and Sill, Martin and Hinz, Felix E. and Suwala, Abigail K. and Keller, Felix and Habel, Antje and Rukhovich, Gleb and Zettl, Ferdinand and Alhalabi, Obada T. and Ille, Sebastian and Sehring, Jannik and Amsel, Daniel and Wiestler, Benedikt and Lago, Pedro Piovesan and Suchorska, Bogdana and Ahmad, Olfat and Sturm, Dominik and Reuss, David and Wesseling, Pieter and Wöhrer, Adelheid and Heppner, Frank L. and Blümcke, Ingmar and Delbridge, Claire and Jakobs, Martin and Herold-Mende, Christel and Krieg, Sandro M. and Wick, Wolfgang and Jones, David T. W. and Pfister, Stefan M. and Al-Hussaini, Maysa and Hou, Yanghao and D'Almeida Costa, Felipe and Schweizer, Leonille and Bertero, Luca and Acker, Till and Tauziede-Espariat, Arnault and Varlet, Pascale and Merkler, Doron and Egervari, Kristof and Dohmen, Hildegard and Zoroquiain, Pablo and Gejman, Roger and Brandner, Sebastian and Bai, Xiangzhi and von Deimling, Andreas and Sahm, Felix and Gerstung, Moritz},
+  journal={Nature Cancer},
+  year={2026},
+  publisher={Springer Nature}
 }
 ```
 
